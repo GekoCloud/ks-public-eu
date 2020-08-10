@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>search on </title>
+    <link>https://kubesphere.eu/search/</link>
+    <description>Recent content in search on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="https://kubesphere.eu/search/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+.logo {
+  height: 32px; }
+
+.header-div {
+  max-width: 1160px;
+  margin: 0px auto;
+  text-align: center; }
+  .header-div .list-div {
+    text-align: left;
+    margin-top: 80px; }
+    .header-div .list-div ul li {
+      margin-bottom: 10px; }
+      .header-div .list-div ul li h3 {
+        position: relative;
+        margin-bottom: 0px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.75;
+        color: #303e5a; }
+      .header-div .list-div ul li p {
+        font-size: 12px;
+        line-height: 2;
+        letter-spacing: 0.4px;
+        color: #657d95;
+        margin-bottom: 4px; }
+        .header-div .list-div ul li p a {
+          display: inline-block;
+          padding-right: 20px;
+          margin: 4px 20px 4px 0px;
+          border-right: 1px solid #d5dee7; }
+        .header-div .list-div ul li p a:last-of-type {
+          padding-right: 0px;
+          border-right: none; }

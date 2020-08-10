@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>KubeSphere | The Kubernetes platform tailored for hybrid multicloud on </title>
+    <link>https://kubesphere.eu/</link>
+    <description>Recent content in KubeSphere | The Kubernetes platform tailored for hybrid multicloud on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="https://kubesphere.eu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>aaaaaa</title>
+      <link>https://kubesphere.eu/docs/quick-start/second/third/aaa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/docs/quick-start/second/third/aaa/</guid>
+      <description>test test</description>
+    </item>
+    
+    <item>
+      <title>quick-start-guide</title>
+      <link>https://kubesphere.eu/docs/quick-start/quick-start-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/docs/quick-start/quick-start-guide/</guid>
+      <description>test test</description>
+    </item>
+    
+    <item>
+      <title>what-is-kubesphere</title>
+      <link>https://kubesphere.eu/docs/introductions/what-is-kubesphere/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/docs/introductions/what-is-kubesphere/</guid>
+      <description>test test</description>
+    </item>
+    
+    <item>
+      <title>all-in-one</title>
+      <link>https://kubesphere.eu/docs/introductions/all-in-one/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/docs/introductions/all-in-one/</guid>
+      <description>test test</description>
+    </item>
+    
+    <item>
+      <title>second-a</title>
+      <link>https://kubesphere.eu/docs/quick-start/second/a/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/docs/quick-start/second/a/</guid>
+      <description>test test</description>
+    </item>
+    
+    <item>
+      <title>A Container Platform: What is the Value of KubeSphere</title>
+      <link>https://kubesphere.eu/blogs/value-of-kubesphere/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/blogs/value-of-kubesphere/</guid>
+      <description>A Promising Newcomer As a promising newcomer of the cloud native family, KubeSphere has gained widespread recognition among its users and developers since it joined the open source community nearly two years ago. This article illustrates the position and value of KubeSphere from scratch in a straightforward way and sheds light on why different teams have chosen KubeSphere.
+For Enterprises KubeSphere is a multi-tenant container platform built on Kubernetes with applications at its core.</description>
+    </item>
+    
+    <item>
+      <title>Anchnet</title>
+      <link>https://kubesphere.eu/case/anchnet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/case/anchnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aqara</title>
+      <link>https://kubesphere.eu/case/aqara/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/case/aqara/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Benlai</title>
+      <link>https://kubesphere.eu/case/benlai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/case/benlai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloud Native Observability: Log Management</title>
+      <link>https://kubesphere.eu/conferences/logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/conferences/logging/</guid>
+      <description>As logs often contain very valuable information, log management represents an important part of cloud native observability. Logs feature a standard output (stdout) in containers and Kubernetes, which is different from physical machines or virtual machines. This means the collection, analysis and management of logs at the platform level can be carried out in a unified fashion, which demonstrates the unique value of logs. This article introduces a major solution to log management (EFK) in the cloud native area, FluentBit Operator developed by the KubeSphere team and some practices of KubeSphere in multi-tenant log management.</description>
+    </item>
+    
+    <item>
+      <title>contribution request</title>
+      <link>https://kubesphere.eu/contribution/request/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/contribution/request/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Development Practices of CSI Storage Plugins - Part Ⅰ</title>
+      <link>https://kubesphere.eu/conferences/csi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/conferences/csi/</guid>
+      <description>Many users will transfer their apps to Kubernetes, where storage underlies applications. As users deploy their apps on the Kubernetes, some existing storage plugins are unable to satisfy the growing needs in terms of both diversity and functionality. This is why we need to accelerate the development of new storage plugins, and integrate QingCloud storage services with Kubernetes and KubeSphere.
+Kubernetes Storage Plugin Classification In this article, we will focus on the development practices of Kubernetes storage plugins based on CSI.</description>
+    </item>
+    
+    <item>
+      <title>Embrace KubeSphere Spanish Community and European Market: Geko and KubeSphere Build Partnership</title>
+      <link>https://kubesphere.eu/news/kubesphere-geko-partnership/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/news/kubesphere-geko-partnership/</guid>
+      <description>July 22, 2020 - KubeSphere and Geko are pleased to announce a joint partnership to deliver outstanding value to KubeSphere users in Spain, and further to Europe. As part of KubeSphere’s endeavor to bring the fruitful result of open source to users around the world, this marks a great milestone for the container platform as we are embracing a more diversified and vibrant community.
+Spain is home to one of the most active open source communities in Europe.</description>
+    </item>
+    
+    <item>
+      <title>Huaxia Bank</title>
+      <link>https://kubesphere.eu/case/huaxia-bank/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/case/huaxia-bank/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Maxnerva</title>
+      <link>https://kubesphere.eu/case/maxnerva/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/case/maxnerva/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Monitoring Kubernetes Control Plane using KubeSphere</title>
+      <link>https://kubesphere.eu/blogs/monitoring-k8s-control-plane/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/blogs/monitoring-k8s-control-plane/</guid>
+      <description>Introduction to Kubernetes Control Plane In a Kubernetes cluster, there are two machines roles including master nodes and worker nodes. The master node runs the Kubernetes control plane, which is responsible for the management of the worker nodes, makes scheduling decisions, and implements changes to drive the cluster to a desired state. The worker nodes, as the name implies, they run the workloads and Pod on them.
+As is shown in the graph, there are four components running in the Kubernetes control plane, each of them is critical for running a healthy Kubernetes cluster, they act as the different roles within the cluster:</description>
+    </item>
+    
+    <item>
+      <title>partner request</title>
+      <link>https://kubesphere.eu/partner/request/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/partner/request/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Porter: An Innovative Cloud Native Service Proxy in CNCF Landscape</title>
+      <link>https://kubesphere.eu/blogs/porter-in-cncf-landscape/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/blogs/porter-in-cncf-landscape/</guid>
+      <description>Porter, a load balancer developed for bare metal Kubernetes clusters, was officially included in CNCF Landscape last week. This marks a great milestone for its parent project KubeSphere as it continues to deliver cloud native technologies to the wider community.
+Cloud Native Computing Foundation, or CNCF, was built for the establishment of sustainable ecosystems for cloud native software. Its Interactive Landscape is dynamically generated, serving as a technology roadmap for various industries.</description>
+    </item>
+    
+    <item>
+      <title>Porter: An Open Source Load Balancer for Kubernetes in a Bare Metal Environment</title>
+      <link>https://kubesphere.eu/conferences/porter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/conferences/porter/</guid>
+      <description>We know that we can use the service of LoadBalancer in the Kubernetes cluster to expose backend workloads externally. Cloud providers often offer cloud LoadBalancer plugins, which requires the cluster to be deployed on a specific IaaS platform. However, many enterprise users often deploy the Kubernetes cluster on bare metal, especially when it is used for the production environment. For the local bare metal cluster, Kubernetes does not provide LB implementation.</description>
+    </item>
+    
+    <item>
+      <title>Radore and KubeSphere: Walk into the Future of Hybrid Cloud and Build Ecosystem Together</title>
+      <link>https://kubesphere.eu/news/kubesphere-radore-partnership/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/news/kubesphere-radore-partnership/</guid>
+      <description>June 30, 2020 - In the online launch event of KubeSphere v3.0, Ray Zhou, leader of KubeSphere project, officially announced the exciting news of establishing a strong partnership with Radore, a Turkish enterprise with over 14 years of expertise. The cooperation aims to provide diversified cloud computing solutions for both Turkish companies and individuals, laying a solid foundation for KubeSphere to go global in the future.
+“In fact, it is Radore that came to us first.</description>
+    </item>
+    
+    <item>
+      <title>Spanish and Traditional Chinese Localization Available in KubeSphere Web Console</title>
+      <link>https://kubesphere.eu/news/spanish-traditional-chinese-available/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/news/spanish-traditional-chinese-available/</guid>
+      <description>The web console of KubeSphere v3.0 now supports the localization of Spanish and Traditional Chinese. In User Settings, you can select the language of web console in the drop-down menu.
+Here, we would like to thank Geko Cloud, our Spanish partner that provides the Spanish localization. This serves as a great start for the cooperation between KubeSphere and Geko as the two sides promise to further develop the Spanish community. With a brand-new Spanish web console, KubeSphere aims to create better user experiences for users around the world who prefer Spanish UI.</description>
+    </item>
+    
+    <item>
+      <title>VNG</title>
+      <link>https://kubesphere.eu/case/vng/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/case/vng/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
