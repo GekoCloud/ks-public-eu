@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head>
-    <meta charset="utf-8">
-    <title>可观察性</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。">
-    <meta name="keywords" content="KubeSphere, Kubernetes, 容器平台, DevOps, 混合云">
-    
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="可观察性"/>
-    <meta property="og:description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。"/>
-    <meta property="og:image" content="https://kubesphere.eu/images/common/snapshot-zh.png"/>
-    <meta property="og:url" content="https://kubesphere.eu/zh/observability/"/><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>可观察性</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。">
+<meta name="keywords" content="KubeSphere, Kubernetes, 容器平台, DevOps, 混合云">
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="可观察性"/>
+<meta property="og:description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。"/>
+<meta property="og:image" content="https://kubesphere.eu/images/common/snapshot-zh.png"/>
+<meta property="og:url" content="https://kubesphere.eu/zh/observability/"/>
+
+<meta name="docsearch:language" content="zh-CN" /><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
 <link rel="stylesheet" href="/fonts/ProximaNova/stylesheet.css">
 <link rel="stylesheet" href="/css/jquery.modal.min.css">
+<link rel="stylesheet" href="/css/viewer.min.css">
 
 
-<link rel="stylesheet" href="/scss/common.min.231017c86cd515edabfb120a6dea96794866be35d0acc497324cf11af412465d.css">
+<link rel="stylesheet" href="/scss/common.min.2609da8369d542ae986bff4177fbfc203af18dbe4861bfc3c504a9ce09f23046.css">
 
 
 
@@ -28,15 +32,24 @@
 
 
 
+
+
+
 <script src='/js/jquery-3.5.0.min.js'></script>
-    <script src='/js/jquery.modal.min.js'></script>
-</head><body>
+<script src='/js/viewer.min.js'></script>
+<script src='/js/jquery.modal.min.js'></script>
+
+
+
+</head>
+
+<body>
 <header class="navigation">
     
     <div class="join-div">
         <div class="content">
-            👏 KubeSphere v3.0 即将正式 GA！<a href="https://www.qingcloud.com/kubesphere2020#tz2" target="_blank" rel="noopener noreferrer">免费回看 v3.0 发布会视频 📺</a>
-            <a href="https://kubesphere.com.cn/forum/d/1625-kubesphere-3-0" target="_blank" rel="noopener noreferrer">或参与社区帮助测试 v3.0 →</a>
+            🚀 KubeSphere v3.0.0 正式 GA！<a href="https://www.qingcloud.com/kubesphere2020#tz2" target="_blank" rel="noopener noreferrer">免费回看 v3.0 发布会视频 📺</a>
+            <a href="https://kubesphere.com.cn/forum/d/2062-awesome-kubesphere-kubesphere-3-0" target="_blank" rel="noopener noreferrer">了解一键快速安装入门的最佳方式📚 →</a>
             <img id="close-join" src="/images/header/close.svg" alt="close">
         </div>
     </div>
@@ -135,10 +148,47 @@
 
                 
                 
-                <li >
+
+                
+                
                     
-                    <a href="https://kubesphere.com.cn/docs/zh-CN/" target="_blank" rel="noopener noreferrer">文档中心</a>
+                
                     
+                
+                    
+                
+                    
+                
+
+                <li  class="menu-li" >
+                    <span class='menu-span'>文档中心</span>
+                    <ul class="dropdown-menu menu-4">
+                        
+                        <li >
+                            
+                            <a href="/zh/docs/">v3.0.0</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-1.docs.kubesphere.io/docs/zh-CN/" target="_blank" rel="noopener noreferrer">v2.1.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-0.docs.kubesphere.io/docs/zh-CN/" target="_blank" rel="noopener noreferrer">v2.0.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v1-0.docs.kubesphere.io/docs/zh-CN/" target="_blank" rel="noopener noreferrer">v1.0.0</a>
+                            
+                        </li>
+                        
+                    </ul>
                 </li>
                 
 
@@ -208,7 +258,7 @@
                 
                 <li >
                     
-                    <a href="https://kubesphere.com.cn/forum" target="_blank" rel="noopener noreferrer">用户论坛</a>
+                    <a data-docs="用户论坛" href="https://kubesphere.com.cn/forum" target="_blank" rel="noopener noreferrer">用户论坛</a>
                     
                 </li>
                 
@@ -331,7 +381,40 @@
 
             
             
-            <li ><a href="https://kubesphere.com.cn/docs/zh-CN/">文档中心</a></li>
+
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+
+            <li data-check="0"  class="menu-li" >
+                <span class='menu-span'>文档中心</span>
+                <ul class="dropdown-menu">
+                    
+                    <li >
+                        <a href="/zh/docs/">v3.0.0</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-1.docs.kubesphere.io/docs/zh-CN/">v2.1.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-0.docs.kubesphere.io/docs/zh-CN/">v2.0.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v1-0.docs.kubesphere.io/docs/zh-CN/">v1.0.0</a>
+                    </li>
+                    
+                </ul>
+            </li>
             
 
             
@@ -386,7 +469,7 @@
 
             
             
-            <li ><a href="https://kubesphere.com.cn/forum">用户论坛</a></li>
+            <li ><a data-docs="用户论坛" href="https://kubesphere.com.cn/forum">用户论坛</a></li>
             
 
             
@@ -466,6 +549,8 @@ var bindClickClose = function() {
         $('.main-section').removeClass('padding')
     })
 }
+
+var language = 'zh'
 
 bindClickClose()
 
@@ -721,6 +806,22 @@ bindClickModalLi()
                                 
                                 
                                 <a href="https://kubesphere.com.cn/forum" target="_blank" rel="noopener noreferrer">中文论坛</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.io" target="_blank" rel="noopener noreferrer">全球站</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.eu" target="_blank" rel="noopener noreferrer">欧洲站</a>
+                                
+                                
+                                
+                                <a href="https://kubesphereturkey.com" target="_blank" rel="noopener noreferrer">土耳其站</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.es" target="_blank" rel="noopener noreferrer">西班牙站</a>
                                 
                                 
                             </li>

@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="en-US"><head>
-    <meta charset="utf-8">
-    <title>news</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="KubeSphere is a distributed operating system managing cloud native applications with Kubernetes as its kernel, and provides plug-and-play architecture for the seamless integration of third-party applications to boost its ecosystem.">
-    <meta name="keywords" content="KubeSphere, Kubernetes, container platform, DevOps, hybrid cloud, cloud native">
-    
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="news"/>
-    <meta property="og:description" content="KubeSphere is a distributed operating system managing cloud native applications with Kubernetes as its kernel, and provides plug-and-play architecture for the seamless integration of third-party applications to boost its ecosystem."/>
-    <meta property="og:image" content="https://kubesphere.eu/images/common/snapshot-en.png"/>
-    <meta property="og:url" content="https://kubesphere.eu/news/"/><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<title>news</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="KubeSphere is a distributed operating system managing cloud native applications with Kubernetes as its kernel, and provides plug-and-play architecture for the seamless integration of third-party applications to boost its ecosystem.">
+<meta name="keywords" content="KubeSphere, Kubernetes, container platform, DevOps, hybrid cloud, cloud native">
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="news"/>
+<meta property="og:description" content="KubeSphere is a distributed operating system managing cloud native applications with Kubernetes as its kernel, and provides plug-and-play architecture for the seamless integration of third-party applications to boost its ecosystem."/>
+<meta property="og:image" content="https://kubesphere.eu/images/common/snapshot-en.png"/>
+<meta property="og:url" content="https://kubesphere.eu/news/"/>
+
+<meta name="docsearch:language" content="en-US" /><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
 <link rel="stylesheet" href="/fonts/ProximaNova/stylesheet.css">
 <link rel="stylesheet" href="/css/jquery.modal.min.css">
+<link rel="stylesheet" href="/css/viewer.min.css">
 
 
-<link rel="stylesheet" href="/scss/common.min.231017c86cd515edabfb120a6dea96794866be35d0acc497324cf11af412465d.css">
+<link rel="stylesheet" href="/scss/common.min.2609da8369d542ae986bff4177fbfc203af18dbe4861bfc3c504a9ce09f23046.css">
 
 
 
@@ -28,9 +32,18 @@
 
 
 
+
+
+
 <script src='/js/jquery-3.5.0.min.js'></script>
-    <script src='/js/jquery.modal.min.js'></script>
-</head><body>
+<script src='/js/viewer.min.js'></script>
+<script src='/js/jquery.modal.min.js'></script>
+
+
+
+</head>
+
+<body>
 <header class="navigation">
     
     <div class="common-layout">
@@ -127,10 +140,47 @@
 
                 
                 
-                <li >
+
+                
+                
                     
-                    <a href="https://kubesphere.io/docs/" target="_blank" rel="noopener noreferrer">Documentation</a>
+                
                     
+                
+                    
+                
+                    
+                
+
+                <li  class="menu-li" >
+                    <span class='menu-span'>Documentation</span>
+                    <ul class="dropdown-menu menu-4">
+                        
+                        <li >
+                            
+                            <a href="/docs/">v3.0.0</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-1.docs.kubesphere.io/docs" target="_blank" rel="noopener noreferrer">v2.1.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-0.docs.kubesphere.io/docs/" target="_blank" rel="noopener noreferrer">v2.0.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v1-0.docs.kubesphere.io/docs/" target="_blank" rel="noopener noreferrer">v1.0.0</a>
+                            
+                        </li>
+                        
+                    </ul>
                 </li>
                 
 
@@ -306,7 +356,40 @@
 
             
             
-            <li ><a href="https://kubesphere.io/docs/">Documentation</a></li>
+
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+
+            <li data-check="0"  class="menu-li" >
+                <span class='menu-span'>Documentation</span>
+                <ul class="dropdown-menu">
+                    
+                    <li >
+                        <a href="/docs/">v3.0.0</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-1.docs.kubesphere.io/docs">v2.1.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-0.docs.kubesphere.io/docs/">v2.0.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v1-0.docs.kubesphere.io/docs/">v1.0.0</a>
+                    </li>
+                    
+                </ul>
+            </li>
             
 
             
@@ -431,6 +514,8 @@ var bindClickClose = function() {
     })
 }
 
+var language = 'en'
+
 bindClickClose()
 
 bindScrollChangeHeader()
@@ -458,7 +543,15 @@ bindClickModalLi()
 
 <section class="section-2">
     <div class="common-layout">
-      <div class='news-list' data-origin='[{&#34;description&#34;:&#34;The CNCF accepted Porter, a load balancer meant for bare-metal Kubernetes clusters, in its Landscape. Porter uses BGP and ECMP to load balance traffic in self-hosted Kubernetes clusters.&#34;,&#34;image&#34;:&#34;https://ap3.qingstor.com/kubesphere-website/docs/porter-deployment.png&#34;,&#34;link&#34;:&#34;https://www.infoq.com/news/2020/07/porter-kubernetes-bare-metal/&#34;,&#34;title&#34;:&#34;Bare-Metal Kubernetes Load Balancer Porter Included in CNCF Landscape&#34;},{&#34;description&#34;:&#34;Geko and Turtle Chang contribute to the localization of Spanish and Traditional Chinese.&#34;,&#34;image&#34;:&#34;https://ap3.qingstor.com/kubesphere-website/docs/KubeSphere-language-setting.png&#34;,&#34;link&#34;:&#34;spanish-traditional-chinese-available&#34;,&#34;title&#34;:&#34;Spanish and Traditional Chinese Localization Available in KubeSphere Web Console&#34;},{&#34;description&#34;:&#34;KubeSphere and Geko will work together for the same aspiration to deliver more for the wider open source community in China, Spain and beyond.&#34;,&#34;image&#34;:&#34;https://pek3b.qingstor.com/kubesphere-docs/png/20200725083630.png&#34;,&#34;link&#34;:&#34;kubesphere-geko-partnership&#34;,&#34;title&#34;:&#34;Embrace KubeSphere Spanish Community and European Market: Geko and KubeSphere Build Partnership&#34;},{&#34;description&#34;:&#34;KubeSphere and Radore will work to build and promote both ecosystems as we embark on the journey to the era of hybrid cloud.&#34;,&#34;image&#34;:&#34;https://ap3.qingstor.com/kubesphere-website/docs/Radore-KubeSphere-cooperation.jpeg&#34;,&#34;link&#34;:&#34;kubesphere-radore-partnership&#34;,&#34;title&#34;:&#34;Radore and KubeSphere: Walk into the Future of Hybrid Cloud and Build Ecosystem Together&#34;}]'>
+      <div class='news-list' data-origin='[{&#34;description&#34;:&#34;That&#39;s a Killer! KubeSphere 3.0.0 is Now Generally Available!&#34;,&#34;image&#34;:null,&#34;link&#34;:&#34;kubesphere-3.0.0-ga-announcement&#34;,&#34;title&#34;:&#34;KubeSphere 3.0.0 GA: Born for Hybrid Cloud Apps&#34;},{&#34;description&#34;:&#34;The CNCF accepted Porter, a load balancer meant for bare-metal Kubernetes clusters, in its Landscape. Porter uses BGP and ECMP to load balance traffic in self-hosted Kubernetes clusters.&#34;,&#34;image&#34;:&#34;https://ap3.qingstor.com/kubesphere-website/docs/porter-deployment.png&#34;,&#34;link&#34;:&#34;https://www.infoq.com/news/2020/07/porter-kubernetes-bare-metal/&#34;,&#34;title&#34;:&#34;Bare-Metal Kubernetes Load Balancer Porter Included in CNCF Landscape&#34;},{&#34;description&#34;:&#34;Geko and Turtle Chang contribute to the localization of Spanish and Traditional Chinese.&#34;,&#34;image&#34;:&#34;https://ap3.qingstor.com/kubesphere-website/docs/KubeSphere-language-setting.png&#34;,&#34;link&#34;:&#34;spanish-traditional-chinese-available&#34;,&#34;title&#34;:&#34;Spanish and Traditional Chinese Localization Available in KubeSphere Web Console&#34;},{&#34;description&#34;:&#34;KubeSphere and Geko will work together for the same aspiration to deliver more for the wider open source community in China, Spain and beyond.&#34;,&#34;image&#34;:&#34;https://pek3b.qingstor.com/kubesphere-docs/png/20200725083630.png&#34;,&#34;link&#34;:&#34;kubesphere-geko-partnership&#34;,&#34;title&#34;:&#34;Embrace KubeSphere Spanish Community and European Market: Geko and KubeSphere Build Partnership&#34;},{&#34;description&#34;:&#34;KubeSphere and Radore will work to build and promote both ecosystems as we embark on the journey to the era of hybrid cloud.&#34;,&#34;image&#34;:&#34;https://ap3.qingstor.com/kubesphere-website/docs/Radore-KubeSphere-cooperation.jpeg&#34;,&#34;link&#34;:&#34;kubesphere-radore-partnership&#34;,&#34;title&#34;:&#34;Radore and KubeSphere: Walk into the Future of Hybrid Cloud and Build Ecosystem Together&#34;}]'>
+        
+        <div class="news-div">
+          <h2>
+            <a href="kubesphere-3.0.0-ga-announcement" target="_blank" rel="noopener noreferrer">KubeSphere 3.0.0 GA: Born for Hybrid Cloud Apps</a>
+          </h2>
+          <p>That&#39;s a Killer! KubeSphere 3.0.0 is Now Generally Available!</p>
+          <img src="" alt="KubeSphere 3.0.0 GA: Born for Hybrid Cloud Apps">
+        </div>
         
         <div class="news-div">
           <h2>
@@ -661,7 +754,23 @@ bindClickModalLi()
                                 
                                 
                                 
+                                <a href="https://kubesphere.io" target="_blank" rel="noopener noreferrer">Global Site</a>
+                                
+                                
+                                
                                 <a href="https://kubesphere.com.cn/" target="_blank" rel="noopener noreferrer">China Site</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.eu" target="_blank" rel="noopener noreferrer">Europe Site</a>
+                                
+                                
+                                
+                                <a href="https://kubesphereturkey.com" target="_blank" rel="noopener noreferrer">Turkey Site</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.es" target="_blank" rel="noopener noreferrer">Spain Site</a>
                                 
                                 
                             </li>

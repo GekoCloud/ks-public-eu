@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cluster Administration on </title>
+    <link>https://kubesphere.eu/zh/docs/cluster-administration/</link>
+    <description>Recent content in Cluster Administration on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    
+	<atom:link href="https://kubesphere.eu/zh/docs/cluster-administration/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>StorageClass</title>
+      <link>https://kubesphere.eu/zh/docs/cluster-administration/storageclass/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/cluster-administration/storageclass/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nodes</title>
+      <link>https://kubesphere.eu/zh/docs/cluster-administration/nodes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/cluster-administration/nodes/</guid>
+      <description>TBD</description>
+    </item>
+    
+  </channel>
+</rss>

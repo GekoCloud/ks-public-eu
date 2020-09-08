@@ -1,22 +1,32 @@
+
+
+
 <!DOCTYPE html>
-<html lang="en-US"><head>
-    <meta charset="utf-8">
-    <title>Spanish and Traditional Chinese Localization Available in KubeSphere Web Console</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="The web console of KubeSphere v3.0 now supports the localization of Spanish and Traditional Chinese.">
-    <meta name="keywords" content="KubeSphere, Localization, Community Contribution">
-    
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="Spanish and Traditional Chinese Localization Available in KubeSphere Web Console"/>
-    <meta property="og:description" content="The web console of KubeSphere v3.0 now supports the localization of Spanish and Traditional Chinese."/>
-    <meta property="og:image" content="https://kubesphere.eu/images/common/snapshot-en.png"/>
-    <meta property="og:url" content="https://kubesphere.eu/news/spanish-traditional-chinese-available/"/><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<title>Spanish and Traditional Chinese Localization Available in KubeSphere Web Console</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="The web console of KubeSphere v3.0 now supports the localization of Spanish and Traditional Chinese.">
+<meta name="keywords" content="KubeSphere, Localization, Community Contribution">
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Spanish and Traditional Chinese Localization Available in KubeSphere Web Console"/>
+<meta property="og:description" content="The web console of KubeSphere v3.0 now supports the localization of Spanish and Traditional Chinese."/>
+<meta property="og:image" content="https://kubesphere.eu/images/common/snapshot-en.png"/>
+<meta property="og:url" content="https://kubesphere.eu/news/spanish-traditional-chinese-available/"/>
+
+<meta name="docsearch:language" content="en-US" /><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
 <link rel="stylesheet" href="/fonts/ProximaNova/stylesheet.css">
 <link rel="stylesheet" href="/css/jquery.modal.min.css">
+<link rel="stylesheet" href="/css/viewer.min.css">
 
 
-<link rel="stylesheet" href="/scss/common.min.231017c86cd515edabfb120a6dea96794866be35d0acc497324cf11af412465d.css">
+<link rel="stylesheet" href="/scss/common.min.2609da8369d542ae986bff4177fbfc203af18dbe4861bfc3c504a9ce09f23046.css">
+
+
+
 
 
 
@@ -26,14 +36,21 @@
 
 
 <script src='/js/jquery-3.5.0.min.js'></script>
-    <script src='/js/jquery.modal.min.js'></script>
+<script src='/js/viewer.min.js'></script>
+<script src='/js/jquery.modal.min.js'></script>
+
+
+
+
+    <link rel="stylesheet" href="/scss/content.min.6449d9b70a690e2af632efccd8330582e94e8cdb9f50e3685549ec99aebf21f6.css">
+    
+    
+    <link rel="stylesheet" href="/scss/markdown.min.c7ae5c06f4ee53016ce7cbe563306f09e8380cc2829cb558aca9567a32952dee.css">
 </head>
-<link rel="stylesheet" href="/scss/content.min.093bd10744e47f38d16a8a6578205f56e541320624d4a1824e4f644cda282153.css">
 
-
-<link rel="stylesheet" href="/scss/markdown.min.336f9da22c47298f01a8686a9c0f193a9970a9bee602bf4cf57254e5b6da1f95.css">
 
 <body>
+  
 <header class="navigation">
     
     <div class="common-layout">
@@ -130,10 +147,47 @@
 
                 
                 
-                <li >
+
+                
+                
                     
-                    <a href="https://kubesphere.io/docs/" target="_blank" rel="noopener noreferrer">Documentation</a>
+                
                     
+                
+                    
+                
+                    
+                
+
+                <li  class="menu-li" >
+                    <span class='menu-span'>Documentation</span>
+                    <ul class="dropdown-menu menu-4">
+                        
+                        <li >
+                            
+                            <a href="/docs/">v3.0.0</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-1.docs.kubesphere.io/docs" target="_blank" rel="noopener noreferrer">v2.1.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-0.docs.kubesphere.io/docs/" target="_blank" rel="noopener noreferrer">v2.0.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v1-0.docs.kubesphere.io/docs/" target="_blank" rel="noopener noreferrer">v1.0.0</a>
+                            
+                        </li>
+                        
+                    </ul>
                 </li>
                 
 
@@ -307,7 +361,40 @@
 
             
             
-            <li ><a href="https://kubesphere.io/docs/">Documentation</a></li>
+
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+
+            <li data-check="0"  class="menu-li" >
+                <span class='menu-span'>Documentation</span>
+                <ul class="dropdown-menu">
+                    
+                    <li >
+                        <a href="/docs/">v3.0.0</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-1.docs.kubesphere.io/docs">v2.1.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-0.docs.kubesphere.io/docs/">v2.0.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v1-0.docs.kubesphere.io/docs/">v1.0.0</a>
+                    </li>
+                    
+                </ul>
+            </li>
             
 
             
@@ -432,6 +519,8 @@ var bindClickClose = function() {
     })
 }
 
+var language = 'en'
+
 bindClickClose()
 
 bindScrollChangeHeader()
@@ -445,36 +534,40 @@ bindClickModalLi()
 
 
 </script>
-<section class="main-section ">
-    <div class="common-layout">
-        <div class='breadcrumb'>
-            <span><a href='/news'>news</a> > </span>
-            <span>Spanish and Traditional Chinese Localization Available in KubeSphere Web Console</span>
-        </div>
-        <div class='main-div'>
-            <div class='author'>Feynman, Sherlock</div>
-            <div class='date'>Published on：2020-07-27</div>
-            <h1>Spanish and Traditional Chinese Localization Available in KubeSphere Web Console</h1>
-            <div class="share-1"><div class="share">
-  <a href="http://twitter.com/share?url=https%3a%2f%2fkubesphere.eu%2fnews%2fspanish-traditional-chinese-available%2f&text=Spanish%20and%20Traditional%20Chinese%20Localization%20Available%20in%20KubeSphere%20Web%20Console" target="_blank" rel="noopener noreferrer">
+
+  <section class="main-section ">
+      <div class="common-layout">
+          <div class='breadcrumb'>
+              
+              <span><a href='/news'>news</a> > </span>
+              <span>Spanish and Traditional Chinese Localization Available in KubeSphere Web Console</span>
+          </div>
+          <div class='main-div'>
+              <div class='author'>Feynman, Sherlock</div>
+              <div class='date'>Published on：2020-07-27</div>
+              <h1>Spanish and Traditional Chinese Localization Available in KubeSphere Web Console</h1>
+              <div class="share-1">
+                  <div class="share">
+  <a data-type="twitter" href="http://twitter.com/share?url=&text=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Twitter.svg" alt="twitter icon">
   </a>
-  <a href="http://reddit.com/submit?url=https%3a%2f%2fkubesphere.eu%2fnews%2fspanish-traditional-chinese-available%2f&title=Spanish%20and%20Traditional%20Chinese%20Localization%20Available%20in%20KubeSphere%20Web%20Console" target="_blank" rel="noopener noreferrer">
+  <a data-type="reddit" href="http://reddit.com/submit?url=&title=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Reddit.svg" alt="reddit icon">
   </a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fkubesphere.eu%2fnews%2fspanish-traditional-chinese-available%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="facebook" href="http://www.facebook.com/sharer.php?u=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Facebook.svg" alt="facebook icon">
   </a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fkubesphere.eu%2fnews%2fspanish-traditional-chinese-available%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Linkedin.svg" alt="linkedin icon">
   </a>
-  <a href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkubesphere.eu%2fnews%2fspanish-traditional-chinese-available%2f&t=Spanish%20and%20Traditional%20Chinese%20Localization%20Available%20in%20KubeSphere%20Web%20Console" target="_blank" rel="noopener noreferrer">
+  <a data-type="hackernews" href="https://news.ycombinator.com/submitlink?u=&t=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/HackerNews.svg" alt="hackernews icon">
   </a>
-</div></div>
-            <div class='content'>
-                <div class='md-body'>
-                    <p>The web console of KubeSphere v3.0 now supports the localization of Spanish and Traditional Chinese. In User Settings, you can select the language of web console in the drop-down menu.</p>
+</div>
+              </div>
+              <div class='content'>
+                  <div class='md-body'>
+                      <p>The web console of KubeSphere v3.0 now supports the localization of Spanish and Traditional Chinese. In User Settings, you can select the language of web console in the drop-down menu.</p>
 <p><img src="https://ap3.qingstor.com/kubesphere-website/docs/KubeSphere-language-setting.png" alt="KubeSphere-language-setting"></p>
 <p>Here, we would like to thank <a href="https://geko.cloud/">Geko Cloud</a>, our Spanish partner that provides the Spanish localization. This serves as a great start for the cooperation between KubeSphere and Geko as the two sides promise to further develop the Spanish community. With a brand-new Spanish web console, KubeSphere aims to create better user experiences for users around the world who prefer Spanish UI.</p>
 <p><img src="https://ap3.qingstor.com/kubesphere-website/docs/KubeSphere-spanish.png" alt="KubeSphere-Spanish-console"></p>
@@ -483,32 +576,35 @@ bindClickModalLi()
 <p>Community represents an essential part of KubeSphere. The localization provided by them is an excellent example of how community members can contribute to the open source platform so that everyone can benefit.</p>
 <p>We expect more languages to be supported in KubeSphere Console. If you are also interested in contributing to the localization of KubeSphere, please don’t hesitate to tell us and a <a href="https://github.com/kubesphere/community/blob/master/sig-docs/localization/how-to-localize-console.md">guide</a> is available for reference.</p>
 
-                </div>
-            </div>
-            <div class="share-2"><div class="share">
-  <a href="http://twitter.com/share?url=https%3a%2f%2fkubesphere.eu%2fnews%2fspanish-traditional-chinese-available%2f&text=Spanish%20and%20Traditional%20Chinese%20Localization%20Available%20in%20KubeSphere%20Web%20Console" target="_blank" rel="noopener noreferrer">
+                  </div>
+              </div>
+              <div class="share-2">
+                  <div class="share">
+  <a data-type="twitter" href="http://twitter.com/share?url=&text=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Twitter.svg" alt="twitter icon">
   </a>
-  <a href="http://reddit.com/submit?url=https%3a%2f%2fkubesphere.eu%2fnews%2fspanish-traditional-chinese-available%2f&title=Spanish%20and%20Traditional%20Chinese%20Localization%20Available%20in%20KubeSphere%20Web%20Console" target="_blank" rel="noopener noreferrer">
+  <a data-type="reddit" href="http://reddit.com/submit?url=&title=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Reddit.svg" alt="reddit icon">
   </a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fkubesphere.eu%2fnews%2fspanish-traditional-chinese-available%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="facebook" href="http://www.facebook.com/sharer.php?u=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Facebook.svg" alt="facebook icon">
   </a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fkubesphere.eu%2fnews%2fspanish-traditional-chinese-available%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Linkedin.svg" alt="linkedin icon">
   </a>
-  <a href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkubesphere.eu%2fnews%2fspanish-traditional-chinese-available%2f&t=Spanish%20and%20Traditional%20Chinese%20Localization%20Available%20in%20KubeSphere%20Web%20Console" target="_blank" rel="noopener noreferrer">
+  <a data-type="hackernews" href="https://news.ycombinator.com/submitlink?u=&t=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/HackerNews.svg" alt="hackernews icon">
   </a>
-</div></div>
-        </div>
-        <div class='aside aside-fixed'>
-            <div class='title'>Table of Contents</div>
-            <div class='tabs'><nav id="TableOfContents"></nav></div>
-        </div>
-    </div>
-</section><footer>
+</div>
+              </div>
+          </div>
+          <div class='aside aside-fixed'>
+              <div class='title'>Table of Contents</div>
+              <div class='tabs'><nav id="TableOfContents"></nav></div>
+          </div>
+      </div>
+  </section>
+  <footer>
     
     <div class="footer">
         <div class="footer-main common-layout">
@@ -624,7 +720,23 @@ bindClickModalLi()
                                 
                                 
                                 
+                                <a href="https://kubesphere.io" target="_blank" rel="noopener noreferrer">Global Site</a>
+                                
+                                
+                                
                                 <a href="https://kubesphere.com.cn/" target="_blank" rel="noopener noreferrer">China Site</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.eu" target="_blank" rel="noopener noreferrer">Europe Site</a>
+                                
+                                
+                                
+                                <a href="https://kubesphereturkey.com" target="_blank" rel="noopener noreferrer">Turkey Site</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.es" target="_blank" rel="noopener noreferrer">Spain Site</a>
                                 
                                 
                             </li>
@@ -735,7 +847,15 @@ bindClickModalLi()
     bindSubmit()
     bindHideMessage()
 </script>
-<script src='/js/aside.js'></script>
+
+  <script src='/js/aside.js'></script>
+  <script src='/js/markdown-tab.js'></script>
+
+  <script>
+    var viewer = new Viewer(document.querySelector('.md-body'), {
+        url: 'src'
+    })
+  </script>
 </body>
 
 </html>

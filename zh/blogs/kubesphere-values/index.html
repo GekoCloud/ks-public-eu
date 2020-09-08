@@ -1,22 +1,32 @@
+
+
+
 <!DOCTYPE html>
-<html lang="zh-CN"><head>
-    <meta charset="utf-8">
-    <title>一文说清 KubeSphere 容器平台的价值</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。">
-    <meta name="keywords" content="KubeSphere, Kubernetes, 容器平台, DevOps, 混合云">
-    
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="一文说清 KubeSphere 容器平台的价值"/>
-    <meta property="og:description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。"/>
-    <meta property="og:image" content="https://pek3b.qingstor.com/kubesphere-docs/png/20200410130334.png"/>
-    <meta property="og:url" content="https://kubesphere.eu/zh/blogs/kubesphere-values/"/><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<title>一文说清 KubeSphere 容器平台的价值</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。">
+<meta name="keywords" content="KubeSphere, Kubernetes, 容器平台, DevOps, 混合云">
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="一文说清 KubeSphere 容器平台的价值"/>
+<meta property="og:description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。"/>
+<meta property="og:image" content="https://pek3b.qingstor.com/kubesphere-docs/png/20200410130334.png"/>
+<meta property="og:url" content="https://kubesphere.eu/zh/blogs/kubesphere-values/"/>
+
+<meta name="docsearch:language" content="zh-CN" /><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
 <link rel="stylesheet" href="/fonts/ProximaNova/stylesheet.css">
 <link rel="stylesheet" href="/css/jquery.modal.min.css">
+<link rel="stylesheet" href="/css/viewer.min.css">
 
 
-<link rel="stylesheet" href="/scss/common.min.231017c86cd515edabfb120a6dea96794866be35d0acc497324cf11af412465d.css">
+<link rel="stylesheet" href="/scss/common.min.2609da8369d542ae986bff4177fbfc203af18dbe4861bfc3c504a9ce09f23046.css">
+
+
+
 
 
 
@@ -26,20 +36,27 @@
 
 
 <script src='/js/jquery-3.5.0.min.js'></script>
-    <script src='/js/jquery.modal.min.js'></script>
+<script src='/js/viewer.min.js'></script>
+<script src='/js/jquery.modal.min.js'></script>
+
+
+
+
+    <link rel="stylesheet" href="/scss/content.min.6449d9b70a690e2af632efccd8330582e94e8cdb9f50e3685549ec99aebf21f6.css">
+    
+    
+    <link rel="stylesheet" href="/scss/markdown.min.c7ae5c06f4ee53016ce7cbe563306f09e8380cc2829cb558aca9567a32952dee.css">
 </head>
-<link rel="stylesheet" href="/scss/content.min.093bd10744e47f38d16a8a6578205f56e541320624d4a1824e4f644cda282153.css">
 
-
-<link rel="stylesheet" href="/scss/markdown.min.336f9da22c47298f01a8686a9c0f193a9970a9bee602bf4cf57254e5b6da1f95.css">
 
 <body>
+  
 <header class="navigation">
     
     <div class="join-div">
         <div class="content">
-            👏 KubeSphere v3.0 即将正式 GA！<a href="https://www.qingcloud.com/kubesphere2020#tz2" target="_blank" rel="noopener noreferrer">免费回看 v3.0 发布会视频 📺</a>
-            <a href="https://kubesphere.com.cn/forum/d/1625-kubesphere-3-0" target="_blank" rel="noopener noreferrer">或参与社区帮助测试 v3.0 →</a>
+            🚀 KubeSphere v3.0.0 正式 GA！<a href="https://www.qingcloud.com/kubesphere2020#tz2" target="_blank" rel="noopener noreferrer">免费回看 v3.0 发布会视频 📺</a>
+            <a href="https://kubesphere.com.cn/forum/d/2062-awesome-kubesphere-kubesphere-3-0" target="_blank" rel="noopener noreferrer">了解一键快速安装入门的最佳方式📚 →</a>
             <img id="close-join" src="/images/header/close.svg" alt="close">
         </div>
     </div>
@@ -138,10 +155,47 @@
 
                 
                 
-                <li >
+
+                
+                
                     
-                    <a href="https://kubesphere.com.cn/docs/zh-CN/" target="_blank" rel="noopener noreferrer">文档中心</a>
+                
                     
+                
+                    
+                
+                    
+                
+
+                <li  class="menu-li" >
+                    <span class='menu-span'>文档中心</span>
+                    <ul class="dropdown-menu menu-4">
+                        
+                        <li >
+                            
+                            <a href="/zh/docs/">v3.0.0</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-1.docs.kubesphere.io/docs/zh-CN/" target="_blank" rel="noopener noreferrer">v2.1.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-0.docs.kubesphere.io/docs/zh-CN/" target="_blank" rel="noopener noreferrer">v2.0.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v1-0.docs.kubesphere.io/docs/zh-CN/" target="_blank" rel="noopener noreferrer">v1.0.0</a>
+                            
+                        </li>
+                        
+                    </ul>
                 </li>
                 
 
@@ -211,7 +265,7 @@
                 
                 <li >
                     
-                    <a href="https://kubesphere.com.cn/forum" target="_blank" rel="noopener noreferrer">用户论坛</a>
+                    <a data-docs="用户论坛" href="https://kubesphere.com.cn/forum" target="_blank" rel="noopener noreferrer">用户论坛</a>
                     
                 </li>
                 
@@ -332,7 +386,40 @@
 
             
             
-            <li ><a href="https://kubesphere.com.cn/docs/zh-CN/">文档中心</a></li>
+
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+
+            <li data-check="0"  class="menu-li" >
+                <span class='menu-span'>文档中心</span>
+                <ul class="dropdown-menu">
+                    
+                    <li >
+                        <a href="/zh/docs/">v3.0.0</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-1.docs.kubesphere.io/docs/zh-CN/">v2.1.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-0.docs.kubesphere.io/docs/zh-CN/">v2.0.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v1-0.docs.kubesphere.io/docs/zh-CN/">v1.0.0</a>
+                    </li>
+                    
+                </ul>
+            </li>
             
 
             
@@ -387,7 +474,7 @@
 
             
             
-            <li ><a href="https://kubesphere.com.cn/forum">用户论坛</a></li>
+            <li ><a data-docs="用户论坛" href="https://kubesphere.com.cn/forum">用户论坛</a></li>
             
 
             
@@ -468,6 +555,8 @@ var bindClickClose = function() {
     })
 }
 
+var language = 'zh'
+
 bindClickClose()
 
 bindScrollChangeHeader()
@@ -481,36 +570,40 @@ bindClickModalLi()
 
 
 </script>
-<section class="main-section  padding">
-    <div class="common-layout">
-        <div class='breadcrumb'>
-            <span><a href='/zh/blogs'>技术博客</a> > </span>
-            <span>一文说清 KubeSphere 容器平台的价值</span>
-        </div>
-        <div class='main-div'>
-            <div class='author'>Feynman, Ray</div>
-            <div class='date'>发布于：2020-04-10</div>
-            <h1>一文说清 KubeSphere 容器平台的价值</h1>
-            <div class="share-1"><div class="share">
-  <a href="http://twitter.com/share?url=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fkubesphere-values%2f&text=%e4%b8%80%e6%96%87%e8%af%b4%e6%b8%85%20KubeSphere%20%e5%ae%b9%e5%99%a8%e5%b9%b3%e5%8f%b0%e7%9a%84%e4%bb%b7%e5%80%bc" target="_blank" rel="noopener noreferrer">
+
+  <section class="main-section  padding">
+      <div class="common-layout">
+          <div class='breadcrumb'>
+              
+              <span><a href='/zh/blogs'>技术博客</a> > </span>
+              <span>一文说清 KubeSphere 容器平台的价值</span>
+          </div>
+          <div class='main-div'>
+              <div class='author'>Feynman, Ray</div>
+              <div class='date'>发布于：2020-04-10</div>
+              <h1>一文说清 KubeSphere 容器平台的价值</h1>
+              <div class="share-1">
+                  <div class="share">
+  <a data-type="twitter" href="http://twitter.com/share?url=&text=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Twitter.svg" alt="twitter icon">
   </a>
-  <a href="http://reddit.com/submit?url=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fkubesphere-values%2f&title=%e4%b8%80%e6%96%87%e8%af%b4%e6%b8%85%20KubeSphere%20%e5%ae%b9%e5%99%a8%e5%b9%b3%e5%8f%b0%e7%9a%84%e4%bb%b7%e5%80%bc" target="_blank" rel="noopener noreferrer">
+  <a data-type="reddit" href="http://reddit.com/submit?url=&title=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Reddit.svg" alt="reddit icon">
   </a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fkubesphere-values%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="facebook" href="http://www.facebook.com/sharer.php?u=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Facebook.svg" alt="facebook icon">
   </a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fkubesphere-values%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Linkedin.svg" alt="linkedin icon">
   </a>
-  <a href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fkubesphere-values%2f&t=%e4%b8%80%e6%96%87%e8%af%b4%e6%b8%85%20KubeSphere%20%e5%ae%b9%e5%99%a8%e5%b9%b3%e5%8f%b0%e7%9a%84%e4%bb%b7%e5%80%bc" target="_blank" rel="noopener noreferrer">
+  <a data-type="hackernews" href="https://news.ycombinator.com/submitlink?u=&t=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/HackerNews.svg" alt="hackernews icon">
   </a>
-</div></div>
-            <div class='content'>
-                <div class='md-body'>
-                    <p>KubeSphere 作为云原生家族 <strong>后起之秀</strong>，开源近两年的时间以来收获了诸多用户与开发者的认可。本文通过大白话从零诠释 KubeSphere 的定位与价值，以及不同团队为什么会选择 KubeSphere。</p>
+</div>
+              </div>
+              <div class='content'>
+                  <div class='md-body'>
+                      <p>KubeSphere 作为云原生家族 <strong>后起之秀</strong>，开源近两年的时间以来收获了诸多用户与开发者的认可。本文通过大白话从零诠释 KubeSphere 的定位与价值，以及不同团队为什么会选择 KubeSphere。</p>
 <h2 id="对于企业-kubesphere-是什么">对于企业 KubeSphere 是什么</h2>
 <p>KubeSphere 是在 Kubernetes 之上构建的 <strong>多租户</strong> 容器平台，以应用为中心，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。使用 KubeSphere 不仅能够帮助企业在公有云或私有化数据中心快速搭建 Kubernetes 集群，还提供了一套功能丰富的向导式操作界面。</p>
 <!-- raw HTML omitted -->
@@ -546,29 +639,31 @@ bindClickModalLi()
 <h2 id="如何安装-kubesphere">如何安装 KubeSphere</h2>
 <p>KubeSphere 支持部署和运行在包括 公有云、私有云、虚机、物理机 和 Kubernetes 等任何基础设施之上，并支持在线与离线安装，可参考 <a href="https://kubesphere.com.cn/docs/zh-CN/installation/intro/">KubeSphere 官方文档</a> 进行安装。</p>
 
-                </div>
-            </div>
-            <div class="share-2"><div class="share">
-  <a href="http://twitter.com/share?url=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fkubesphere-values%2f&text=%e4%b8%80%e6%96%87%e8%af%b4%e6%b8%85%20KubeSphere%20%e5%ae%b9%e5%99%a8%e5%b9%b3%e5%8f%b0%e7%9a%84%e4%bb%b7%e5%80%bc" target="_blank" rel="noopener noreferrer">
+                  </div>
+              </div>
+              <div class="share-2">
+                  <div class="share">
+  <a data-type="twitter" href="http://twitter.com/share?url=&text=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Twitter.svg" alt="twitter icon">
   </a>
-  <a href="http://reddit.com/submit?url=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fkubesphere-values%2f&title=%e4%b8%80%e6%96%87%e8%af%b4%e6%b8%85%20KubeSphere%20%e5%ae%b9%e5%99%a8%e5%b9%b3%e5%8f%b0%e7%9a%84%e4%bb%b7%e5%80%bc" target="_blank" rel="noopener noreferrer">
+  <a data-type="reddit" href="http://reddit.com/submit?url=&title=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Reddit.svg" alt="reddit icon">
   </a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fkubesphere-values%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="facebook" href="http://www.facebook.com/sharer.php?u=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Facebook.svg" alt="facebook icon">
   </a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fkubesphere-values%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Linkedin.svg" alt="linkedin icon">
   </a>
-  <a href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fkubesphere-values%2f&t=%e4%b8%80%e6%96%87%e8%af%b4%e6%b8%85%20KubeSphere%20%e5%ae%b9%e5%99%a8%e5%b9%b3%e5%8f%b0%e7%9a%84%e4%bb%b7%e5%80%bc" target="_blank" rel="noopener noreferrer">
+  <a data-type="hackernews" href="https://news.ycombinator.com/submitlink?u=&t=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/HackerNews.svg" alt="hackernews icon">
   </a>
-</div></div>
-        </div>
-        <div class='aside aside-fixed'>
-            <div class='title'>目录</div>
-            <div class='tabs'><nav id="TableOfContents">
+</div>
+              </div>
+          </div>
+          <div class='aside aside-fixed'>
+              <div class='title'>目录</div>
+              <div class='tabs'><nav id="TableOfContents">
   <ul>
     <li><a href="#对于企业-kubesphere-是什么">对于企业 KubeSphere 是什么</a></li>
     <li><a href="#对于开发者-kubesphere-是什么">对于开发者 KubeSphere 是什么</a></li>
@@ -578,9 +673,10 @@ bindClickModalLi()
     <li><a href="#如何安装-kubesphere">如何安装 KubeSphere</a></li>
   </ul>
 </nav></div>
-        </div>
-    </div>
-</section><footer>
+          </div>
+      </div>
+  </section>
+  <footer>
     
     <div class="footer">
         <div class="footer-main common-layout">
@@ -707,6 +803,22 @@ bindClickModalLi()
                                 <a href="https://kubesphere.com.cn/forum" target="_blank" rel="noopener noreferrer">中文论坛</a>
                                 
                                 
+                                
+                                <a href="https://kubesphere.io" target="_blank" rel="noopener noreferrer">全球站</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.eu" target="_blank" rel="noopener noreferrer">欧洲站</a>
+                                
+                                
+                                
+                                <a href="https://kubesphereturkey.com" target="_blank" rel="noopener noreferrer">土耳其站</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.es" target="_blank" rel="noopener noreferrer">西班牙站</a>
+                                
+                                
                             </li>
                         
                         
@@ -815,7 +927,15 @@ bindClickModalLi()
     bindSubmit()
     bindHideMessage()
 </script>
-<script src='/js/aside.js'></script>
+
+  <script src='/js/aside.js'></script>
+  <script src='/js/markdown-tab.js'></script>
+
+  <script>
+    var viewer = new Viewer(document.querySelector('.md-body'), {
+        url: 'src'
+    })
+  </script>
 </body>
 
 </html>

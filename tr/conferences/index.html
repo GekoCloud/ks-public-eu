@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="tr-TR"><head>
-    <meta charset="utf-8">
-    <title>page1</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="page1"/>
-    <meta property="og:description" content=""/>
-    <meta property="og:image" content=""/>
-    <meta property="og:url" content="https://kubesphere.eu/tr/conferences/"/><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
+<html lang="tr-TR">
+<head>
+<meta charset="utf-8">
+<title>page1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="page1"/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content=""/>
+<meta property="og:url" content="https://kubesphere.eu/tr/conferences/"/>
+
+<meta name="docsearch:language" content="tr-TR" /><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
 <link rel="stylesheet" href="/fonts/ProximaNova/stylesheet.css">
 <link rel="stylesheet" href="/css/jquery.modal.min.css">
+<link rel="stylesheet" href="/css/viewer.min.css">
 
 
-<link rel="stylesheet" href="/scss/common.min.231017c86cd515edabfb120a6dea96794866be35d0acc497324cf11af412465d.css">
+<link rel="stylesheet" href="/scss/common.min.2609da8369d542ae986bff4177fbfc203af18dbe4861bfc3c504a9ce09f23046.css">
 
 
 
@@ -28,9 +32,18 @@
 
 
 
+
+
+
 <script src='/js/jquery-3.5.0.min.js'></script>
-    <script src='/js/jquery.modal.min.js'></script>
-</head><body>
+<script src='/js/viewer.min.js'></script>
+<script src='/js/jquery.modal.min.js'></script>
+
+
+
+</head>
+
+<body>
 <header class="navigation">
     
     <div class="common-layout">
@@ -171,7 +184,7 @@
                 
                 <li >
                     
-                    <a href="/tr/docs">Dokümantasyon</a>
+                    <a data-docs="Dokümantasyon" href="/tr/docs">Dokümantasyon</a>
                     
                 </li>
                 
@@ -366,7 +379,7 @@
 
             
             
-            <li ><a href="/tr/docs">Dokümantasyon</a></li>
+            <li ><a data-docs="Dokümantasyon" href="/tr/docs">Dokümantasyon</a></li>
             
 
             
@@ -478,6 +491,8 @@ var bindClickClose = function() {
         $('.main-section').removeClass('padding')
     })
 }
+
+var language = 'tr'
 
 bindClickClose()
 

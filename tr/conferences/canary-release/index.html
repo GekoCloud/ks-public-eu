@@ -1,22 +1,32 @@
+
+
+
 <!DOCTYPE html>
-<html lang="tr-TR"><head>
-    <meta charset="utf-8">
-    <title>Managing Canary Release of Microservice Application on Kubernetes with Istio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="Managing Canary Release of Microservice Application on Kubernetes with Istio"/>
-    <meta property="og:description" content=""/>
-    <meta property="og:image" content=""/>
-    <meta property="og:url" content="https://kubesphere.eu/tr/conferences/canary-release/"/><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<title>Managing Canary Release of Microservice Application on Kubernetes with Istio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Managing Canary Release of Microservice Application on Kubernetes with Istio"/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content=""/>
+<meta property="og:url" content="https://kubesphere.eu/tr/conferences/canary-release/"/>
+
+<meta name="docsearch:language" content="tr-TR" /><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
 <link rel="stylesheet" href="/fonts/ProximaNova/stylesheet.css">
 <link rel="stylesheet" href="/css/jquery.modal.min.css">
+<link rel="stylesheet" href="/css/viewer.min.css">
 
 
-<link rel="stylesheet" href="/scss/common.min.231017c86cd515edabfb120a6dea96794866be35d0acc497324cf11af412465d.css">
+<link rel="stylesheet" href="/scss/common.min.2609da8369d542ae986bff4177fbfc203af18dbe4861bfc3c504a9ce09f23046.css">
+
+
+
 
 
 
@@ -26,14 +36,21 @@
 
 
 <script src='/js/jquery-3.5.0.min.js'></script>
-    <script src='/js/jquery.modal.min.js'></script>
+<script src='/js/viewer.min.js'></script>
+<script src='/js/jquery.modal.min.js'></script>
+
+
+
+
+    <link rel="stylesheet" href="/scss/content.min.6449d9b70a690e2af632efccd8330582e94e8cdb9f50e3685549ec99aebf21f6.css">
+    
+    
+    <link rel="stylesheet" href="/scss/markdown.min.c7ae5c06f4ee53016ce7cbe563306f09e8380cc2829cb558aca9567a32952dee.css">
 </head>
-<link rel="stylesheet" href="/scss/content.min.093bd10744e47f38d16a8a6578205f56e541320624d4a1824e4f644cda282153.css">
 
-
-<link rel="stylesheet" href="/scss/markdown.min.336f9da22c47298f01a8686a9c0f193a9970a9bee602bf4cf57254e5b6da1f95.css">
 
 <body>
+  
 <header class="navigation">
     
     <div class="common-layout">
@@ -174,7 +191,7 @@
                 
                 <li >
                     
-                    <a href="/tr/docs">Dokümantasyon</a>
+                    <a data-docs="Dokümantasyon" href="/tr/docs">Dokümantasyon</a>
                     
                 </li>
                 
@@ -365,7 +382,7 @@
 
             
             
-            <li ><a href="/tr/docs">Dokümantasyon</a></li>
+            <li ><a data-docs="Dokümantasyon" href="/tr/docs">Dokümantasyon</a></li>
             
 
             
@@ -478,6 +495,8 @@ var bindClickClose = function() {
     })
 }
 
+var language = 'tr'
+
 bindClickClose()
 
 bindScrollChangeHeader()
@@ -491,36 +510,40 @@ bindClickModalLi()
 
 
 </script>
-<section class="main-section ">
-    <div class="common-layout">
-        <div class='breadcrumb'>
-            <span><a href='/tr/conferences'>KubeCon &amp; QCon</a> > </span>
-            <span>Managing Canary Release of Microservice Application on Kubernetes with Istio</span>
-        </div>
-        <div class='main-div'>
-            <div class='author'>xxx</div>
-            <div class='date'>Published on：</div>
-            <h1>Managing Canary Release of Microservice Application on Kubernetes with Istio</h1>
-            <div class="share-1"><div class="share">
-  <a href="http://twitter.com/share?url=https%3a%2f%2fkubesphere.eu%2ftr%2fconferences%2fcanary-release%2f&text=Managing%20Canary%20Release%20of%20Microservice%20Application%20on%20Kubernetes%20with%20Istio" target="_blank" rel="noopener noreferrer">
+
+  <section class="main-section ">
+      <div class="common-layout">
+          <div class='breadcrumb'>
+              
+              <span><a href='/tr/conferences'>KubeCon &amp; QCon</a> > </span>
+              <span>Managing Canary Release of Microservice Application on Kubernetes with Istio</span>
+          </div>
+          <div class='main-div'>
+              <div class='author'>xxx</div>
+              <div class='date'>Published on：</div>
+              <h1>Managing Canary Release of Microservice Application on Kubernetes with Istio</h1>
+              <div class="share-1">
+                  <div class="share">
+  <a data-type="twitter" href="http://twitter.com/share?url=&text=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Twitter.svg" alt="twitter icon">
   </a>
-  <a href="http://reddit.com/submit?url=https%3a%2f%2fkubesphere.eu%2ftr%2fconferences%2fcanary-release%2f&title=Managing%20Canary%20Release%20of%20Microservice%20Application%20on%20Kubernetes%20with%20Istio" target="_blank" rel="noopener noreferrer">
+  <a data-type="reddit" href="http://reddit.com/submit?url=&title=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Reddit.svg" alt="reddit icon">
   </a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fkubesphere.eu%2ftr%2fconferences%2fcanary-release%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="facebook" href="http://www.facebook.com/sharer.php?u=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Facebook.svg" alt="facebook icon">
   </a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fkubesphere.eu%2ftr%2fconferences%2fcanary-release%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Linkedin.svg" alt="linkedin icon">
   </a>
-  <a href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkubesphere.eu%2ftr%2fconferences%2fcanary-release%2f&t=Managing%20Canary%20Release%20of%20Microservice%20Application%20on%20Kubernetes%20with%20Istio" target="_blank" rel="noopener noreferrer">
+  <a data-type="hackernews" href="https://news.ycombinator.com/submitlink?u=&t=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/HackerNews.svg" alt="hackernews icon">
   </a>
-</div></div>
-            <div class='content'>
-                <div class='md-body'>
-                    <p>Istio’s service mesh is able to manage traffic distribution with complete independence from deployment scaling, which enables a simpler, yet significantly more functional way to realize canary release and rollout. It allows users to introduce a new version of a service by first testing it using a small percentage of user traffic, and then if all goes well, increase, possibly gradually in increments, the percentage while simultaneously phasing out the old version.</p>
+</div>
+              </div>
+              <div class='content'>
+                  <div class='md-body'>
+                      <p>Istio’s service mesh is able to manage traffic distribution with complete independence from deployment scaling, which enables a simpler, yet significantly more functional way to realize canary release and rollout. It allows users to introduce a new version of a service by first testing it using a small percentage of user traffic, and then if all goes well, increase, possibly gradually in increments, the percentage while simultaneously phasing out the old version.</p>
 <p>KubeSphere provides three kind of grayscale strategies based on Istio, including blue-green deployment, canary release and traffic mirroring. Without modifying the source code, KubeSphere can realize grayscale, traffic governance, tracing, traffic monitoring and other service mesh features.</p>
 <h2 id="what-is-bookinfo-application">What is Bookinfo Application</h2>
 <p>The Bookinfo application is broken into four separate microservices (There are 3 versions of the reviews microservice):</p>
@@ -603,29 +626,31 @@ bindClickModalLi()
 </blockquote>
 <p><img src="https://pek3b.qingstor.com/kubesphere-docs/png/20190719001945.png" alt=""></p>
 
-                </div>
-            </div>
-            <div class="share-2"><div class="share">
-  <a href="http://twitter.com/share?url=https%3a%2f%2fkubesphere.eu%2ftr%2fconferences%2fcanary-release%2f&text=Managing%20Canary%20Release%20of%20Microservice%20Application%20on%20Kubernetes%20with%20Istio" target="_blank" rel="noopener noreferrer">
+                  </div>
+              </div>
+              <div class="share-2">
+                  <div class="share">
+  <a data-type="twitter" href="http://twitter.com/share?url=&text=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Twitter.svg" alt="twitter icon">
   </a>
-  <a href="http://reddit.com/submit?url=https%3a%2f%2fkubesphere.eu%2ftr%2fconferences%2fcanary-release%2f&title=Managing%20Canary%20Release%20of%20Microservice%20Application%20on%20Kubernetes%20with%20Istio" target="_blank" rel="noopener noreferrer">
+  <a data-type="reddit" href="http://reddit.com/submit?url=&title=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Reddit.svg" alt="reddit icon">
   </a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fkubesphere.eu%2ftr%2fconferences%2fcanary-release%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="facebook" href="http://www.facebook.com/sharer.php?u=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Facebook.svg" alt="facebook icon">
   </a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fkubesphere.eu%2ftr%2fconferences%2fcanary-release%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Linkedin.svg" alt="linkedin icon">
   </a>
-  <a href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkubesphere.eu%2ftr%2fconferences%2fcanary-release%2f&t=Managing%20Canary%20Release%20of%20Microservice%20Application%20on%20Kubernetes%20with%20Istio" target="_blank" rel="noopener noreferrer">
+  <a data-type="hackernews" href="https://news.ycombinator.com/submitlink?u=&t=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/HackerNews.svg" alt="hackernews icon">
   </a>
-</div></div>
-        </div>
-        <div class='aside aside-fixed'>
-            <div class='title'>Table of Contents</div>
-            <div class='tabs'><nav id="TableOfContents">
+</div>
+              </div>
+          </div>
+          <div class='aside aside-fixed'>
+              <div class='title'>Table of Contents</div>
+              <div class='tabs'><nav id="TableOfContents">
   <ul>
     <li><a href="#what-is-bookinfo-application">What is Bookinfo Application</a></li>
     <li><a href="#objective">Objective</a></li>
@@ -643,9 +668,10 @@ bindClickModalLi()
     </li>
   </ul>
 </nav></div>
-        </div>
-    </div>
-</section><footer>
+          </div>
+      </div>
+  </section>
+  <footer>
     
     <div class="footer">
         <div class="footer-main common-layout">
@@ -868,7 +894,15 @@ bindClickModalLi()
     bindSubmit()
     bindHideMessage()
 </script>
-<script src='/js/aside.js'></script>
+
+  <script src='/js/aside.js'></script>
+  <script src='/js/markdown-tab.js'></script>
+
+  <script>
+    var viewer = new Viewer(document.querySelector('.md-body'), {
+        url: 'src'
+    })
+  </script>
 </body>
 
 </html>

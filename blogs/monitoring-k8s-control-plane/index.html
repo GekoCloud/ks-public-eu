@@ -1,22 +1,32 @@
+
+
+
 <!DOCTYPE html>
-<html lang="en-US"><head>
-    <meta charset="utf-8">
-    <title>Monitoring Kubernetes Control Plane using KubeSphere</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="KubeSphere leverages tools including Prometheus, Kube-state-metrics Node-exporter, ServiceMonitor, as well as the predefined rules in PrometheusRule, providing the monitoring metrics from application to infrastructure out of box.">
-    <meta name="keywords" content="Kubernetes, KubeSphere, Monitoring, Prometheus">
-    
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="Monitoring Kubernetes Control Plane using KubeSphere"/>
-    <meta property="og:description" content="KubeSphere leverages tools including Prometheus, Kube-state-metrics Node-exporter, ServiceMonitor, as well as the predefined rules in PrometheusRule, providing the monitoring metrics from application to infrastructure out of box."/>
-    <meta property="og:image" content="https://pek3b.qingstor.com/kubesphere-docs/png/20200328170549.png"/>
-    <meta property="og:url" content="https://kubesphere.eu/blogs/monitoring-k8s-control-plane/"/><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<title>Monitoring Kubernetes Control Plane using KubeSphere</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="KubeSphere leverages tools including Prometheus, Kube-state-metrics Node-exporter, ServiceMonitor, as well as the predefined rules in PrometheusRule, providing the monitoring metrics from application to infrastructure out of box.">
+<meta name="keywords" content="Kubernetes, KubeSphere, Monitoring, Prometheus">
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Monitoring Kubernetes Control Plane using KubeSphere"/>
+<meta property="og:description" content="KubeSphere leverages tools including Prometheus, Kube-state-metrics Node-exporter, ServiceMonitor, as well as the predefined rules in PrometheusRule, providing the monitoring metrics from application to infrastructure out of box."/>
+<meta property="og:image" content="https://pek3b.qingstor.com/kubesphere-docs/png/20200328170549.png"/>
+<meta property="og:url" content="https://kubesphere.eu/blogs/monitoring-k8s-control-plane/"/>
+
+<meta name="docsearch:language" content="en-US" /><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
 <link rel="stylesheet" href="/fonts/ProximaNova/stylesheet.css">
 <link rel="stylesheet" href="/css/jquery.modal.min.css">
+<link rel="stylesheet" href="/css/viewer.min.css">
 
 
-<link rel="stylesheet" href="/scss/common.min.231017c86cd515edabfb120a6dea96794866be35d0acc497324cf11af412465d.css">
+<link rel="stylesheet" href="/scss/common.min.2609da8369d542ae986bff4177fbfc203af18dbe4861bfc3c504a9ce09f23046.css">
+
+
+
 
 
 
@@ -26,14 +36,21 @@
 
 
 <script src='/js/jquery-3.5.0.min.js'></script>
-    <script src='/js/jquery.modal.min.js'></script>
+<script src='/js/viewer.min.js'></script>
+<script src='/js/jquery.modal.min.js'></script>
+
+
+
+
+    <link rel="stylesheet" href="/scss/content.min.6449d9b70a690e2af632efccd8330582e94e8cdb9f50e3685549ec99aebf21f6.css">
+    
+    
+    <link rel="stylesheet" href="/scss/markdown.min.c7ae5c06f4ee53016ce7cbe563306f09e8380cc2829cb558aca9567a32952dee.css">
 </head>
-<link rel="stylesheet" href="/scss/content.min.093bd10744e47f38d16a8a6578205f56e541320624d4a1824e4f644cda282153.css">
 
-
-<link rel="stylesheet" href="/scss/markdown.min.336f9da22c47298f01a8686a9c0f193a9970a9bee602bf4cf57254e5b6da1f95.css">
 
 <body>
+  
 <header class="navigation">
     
     <div class="common-layout">
@@ -130,10 +147,47 @@
 
                 
                 
-                <li >
+
+                
+                
                     
-                    <a href="https://kubesphere.io/docs/" target="_blank" rel="noopener noreferrer">Documentation</a>
+                
                     
+                
+                    
+                
+                    
+                
+
+                <li  class="menu-li" >
+                    <span class='menu-span'>Documentation</span>
+                    <ul class="dropdown-menu menu-4">
+                        
+                        <li >
+                            
+                            <a href="/docs/">v3.0.0</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-1.docs.kubesphere.io/docs" target="_blank" rel="noopener noreferrer">v2.1.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-0.docs.kubesphere.io/docs/" target="_blank" rel="noopener noreferrer">v2.0.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v1-0.docs.kubesphere.io/docs/" target="_blank" rel="noopener noreferrer">v1.0.0</a>
+                            
+                        </li>
+                        
+                    </ul>
                 </li>
                 
 
@@ -307,7 +361,40 @@
 
             
             
-            <li ><a href="https://kubesphere.io/docs/">Documentation</a></li>
+
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+
+            <li data-check="0"  class="menu-li" >
+                <span class='menu-span'>Documentation</span>
+                <ul class="dropdown-menu">
+                    
+                    <li >
+                        <a href="/docs/">v3.0.0</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-1.docs.kubesphere.io/docs">v2.1.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-0.docs.kubesphere.io/docs/">v2.0.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v1-0.docs.kubesphere.io/docs/">v1.0.0</a>
+                    </li>
+                    
+                </ul>
+            </li>
             
 
             
@@ -432,6 +519,8 @@ var bindClickClose = function() {
     })
 }
 
+var language = 'en'
+
 bindClickClose()
 
 bindScrollChangeHeader()
@@ -445,36 +534,40 @@ bindClickModalLi()
 
 
 </script>
-<section class="main-section ">
-    <div class="common-layout">
-        <div class='breadcrumb'>
-            <span><a href='/blogs'>Technology Blogs</a> > </span>
-            <span>Monitoring Kubernetes Control Plane using KubeSphere</span>
-        </div>
-        <div class='main-div'>
-            <div class='author'>Feynman, Guangzhe</div>
-            <div class='date'>Published on：2020-03-28</div>
-            <h1>Monitoring Kubernetes Control Plane using KubeSphere</h1>
-            <div class="share-1"><div class="share">
-  <a href="http://twitter.com/share?url=https%3a%2f%2fkubesphere.eu%2fblogs%2fmonitoring-k8s-control-plane%2f&text=Monitoring%20Kubernetes%20Control%20Plane%20using%20KubeSphere" target="_blank" rel="noopener noreferrer">
+
+  <section class="main-section ">
+      <div class="common-layout">
+          <div class='breadcrumb'>
+              
+              <span><a href='/blogs'>Technology Blogs</a> > </span>
+              <span>Monitoring Kubernetes Control Plane using KubeSphere</span>
+          </div>
+          <div class='main-div'>
+              <div class='author'>Feynman, Guangzhe</div>
+              <div class='date'>Published on：2020-03-28</div>
+              <h1>Monitoring Kubernetes Control Plane using KubeSphere</h1>
+              <div class="share-1">
+                  <div class="share">
+  <a data-type="twitter" href="http://twitter.com/share?url=&text=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Twitter.svg" alt="twitter icon">
   </a>
-  <a href="http://reddit.com/submit?url=https%3a%2f%2fkubesphere.eu%2fblogs%2fmonitoring-k8s-control-plane%2f&title=Monitoring%20Kubernetes%20Control%20Plane%20using%20KubeSphere" target="_blank" rel="noopener noreferrer">
+  <a data-type="reddit" href="http://reddit.com/submit?url=&title=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Reddit.svg" alt="reddit icon">
   </a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fkubesphere.eu%2fblogs%2fmonitoring-k8s-control-plane%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="facebook" href="http://www.facebook.com/sharer.php?u=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Facebook.svg" alt="facebook icon">
   </a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fkubesphere.eu%2fblogs%2fmonitoring-k8s-control-plane%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Linkedin.svg" alt="linkedin icon">
   </a>
-  <a href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkubesphere.eu%2fblogs%2fmonitoring-k8s-control-plane%2f&t=Monitoring%20Kubernetes%20Control%20Plane%20using%20KubeSphere" target="_blank" rel="noopener noreferrer">
+  <a data-type="hackernews" href="https://news.ycombinator.com/submitlink?u=&t=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/HackerNews.svg" alt="hackernews icon">
   </a>
-</div></div>
-            <div class='content'>
-                <div class='md-body'>
-                    <h2 id="introduction-to-kubernetes-control-plane">Introduction to Kubernetes Control Plane</h2>
+</div>
+              </div>
+              <div class='content'>
+                  <div class='md-body'>
+                      <h2 id="introduction-to-kubernetes-control-plane">Introduction to Kubernetes Control Plane</h2>
 <p>In a Kubernetes cluster, there are two machines roles including master nodes and worker nodes. The master node runs the Kubernetes control plane, which is responsible for the management of the worker nodes, makes scheduling decisions, and implements changes to drive the cluster to a desired state. The worker nodes, as the name implies, they run the workloads and Pod on them.</p>
 <p><img src="https://pek3b.qingstor.com/kubesphere-docs/png/20200328170549.png" alt=""></p>
 <p>As is shown in the graph, there are four components running in the Kubernetes control plane, each of them is critical for running a healthy Kubernetes cluster, they act as the different roles within the cluster:</p>
@@ -560,29 +653,31 @@ NOTE：Please modify the default password after login.
 <span style="color:#75715e">#####################################################</span>
 </code></pre></div><p><img src="https://pek3b.qingstor.com/kubesphere-docs/png/20200329101752.png" alt=""></p>
 
-                </div>
-            </div>
-            <div class="share-2"><div class="share">
-  <a href="http://twitter.com/share?url=https%3a%2f%2fkubesphere.eu%2fblogs%2fmonitoring-k8s-control-plane%2f&text=Monitoring%20Kubernetes%20Control%20Plane%20using%20KubeSphere" target="_blank" rel="noopener noreferrer">
+                  </div>
+              </div>
+              <div class="share-2">
+                  <div class="share">
+  <a data-type="twitter" href="http://twitter.com/share?url=&text=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Twitter.svg" alt="twitter icon">
   </a>
-  <a href="http://reddit.com/submit?url=https%3a%2f%2fkubesphere.eu%2fblogs%2fmonitoring-k8s-control-plane%2f&title=Monitoring%20Kubernetes%20Control%20Plane%20using%20KubeSphere" target="_blank" rel="noopener noreferrer">
+  <a data-type="reddit" href="http://reddit.com/submit?url=&title=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Reddit.svg" alt="reddit icon">
   </a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fkubesphere.eu%2fblogs%2fmonitoring-k8s-control-plane%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="facebook" href="http://www.facebook.com/sharer.php?u=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Facebook.svg" alt="facebook icon">
   </a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fkubesphere.eu%2fblogs%2fmonitoring-k8s-control-plane%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Linkedin.svg" alt="linkedin icon">
   </a>
-  <a href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkubesphere.eu%2fblogs%2fmonitoring-k8s-control-plane%2f&t=Monitoring%20Kubernetes%20Control%20Plane%20using%20KubeSphere" target="_blank" rel="noopener noreferrer">
+  <a data-type="hackernews" href="https://news.ycombinator.com/submitlink?u=&t=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/HackerNews.svg" alt="hackernews icon">
   </a>
-</div></div>
-        </div>
-        <div class='aside aside-fixed'>
-            <div class='title'>Table of Contents</div>
-            <div class='tabs'><nav id="TableOfContents">
+</div>
+              </div>
+          </div>
+          <div class='aside aside-fixed'>
+              <div class='title'>Table of Contents</div>
+              <div class='tabs'><nav id="TableOfContents">
   <ul>
     <li><a href="#introduction-to-kubernetes-control-plane">Introduction to Kubernetes Control Plane</a></li>
     <li><a href="#why-monitoring-control-plane">Why Monitoring Control Plane</a></li>
@@ -602,9 +697,10 @@ NOTE：Please modify the default password after login.
     <li><a href="#deploy-kubesphere">Deploy KubeSphere</a></li>
   </ul>
 </nav></div>
-        </div>
-    </div>
-</section><footer>
+          </div>
+      </div>
+  </section>
+  <footer>
     
     <div class="footer">
         <div class="footer-main common-layout">
@@ -720,7 +816,23 @@ NOTE：Please modify the default password after login.
                                 
                                 
                                 
+                                <a href="https://kubesphere.io" target="_blank" rel="noopener noreferrer">Global Site</a>
+                                
+                                
+                                
                                 <a href="https://kubesphere.com.cn/" target="_blank" rel="noopener noreferrer">China Site</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.eu" target="_blank" rel="noopener noreferrer">Europe Site</a>
+                                
+                                
+                                
+                                <a href="https://kubesphereturkey.com" target="_blank" rel="noopener noreferrer">Turkey Site</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.es" target="_blank" rel="noopener noreferrer">Spain Site</a>
                                 
                                 
                             </li>
@@ -831,7 +943,15 @@ NOTE：Please modify the default password after login.
     bindSubmit()
     bindHideMessage()
 </script>
-<script src='/js/aside.js'></script>
+
+  <script src='/js/aside.js'></script>
+  <script src='/js/markdown-tab.js'></script>
+
+  <script>
+    var viewer = new Viewer(document.querySelector('.md-body'), {
+        url: 'src'
+    })
+  </script>
 </body>
 
 </html>

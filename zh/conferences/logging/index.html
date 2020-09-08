@@ -1,22 +1,32 @@
+
+
+
 <!DOCTYPE html>
-<html lang="zh-CN"><head>
-    <meta charset="utf-8">
-    <title>云原生可观察性之日志管理</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。">
-    <meta name="keywords" content="KubeSphere, Kubernetes, 容器平台, DevOps, 混合云">
-    
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="云原生可观察性之日志管理"/>
-    <meta property="og:description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。"/>
-    <meta property="og:image" content="https://pek3b.qingstor.com/kubesphere-docs/png/20190930095954.png"/>
-    <meta property="og:url" content="https://kubesphere.eu/zh/conferences/logging/"/><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<title>云原生可观察性之日志管理</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。">
+<meta name="keywords" content="KubeSphere, Kubernetes, 容器平台, DevOps, 混合云">
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="云原生可观察性之日志管理"/>
+<meta property="og:description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。"/>
+<meta property="og:image" content="https://pek3b.qingstor.com/kubesphere-docs/png/20190930095954.png"/>
+<meta property="og:url" content="https://kubesphere.eu/zh/conferences/logging/"/>
+
+<meta name="docsearch:language" content="zh-CN" /><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
 <link rel="stylesheet" href="/fonts/ProximaNova/stylesheet.css">
 <link rel="stylesheet" href="/css/jquery.modal.min.css">
+<link rel="stylesheet" href="/css/viewer.min.css">
 
 
-<link rel="stylesheet" href="/scss/common.min.231017c86cd515edabfb120a6dea96794866be35d0acc497324cf11af412465d.css">
+<link rel="stylesheet" href="/scss/common.min.2609da8369d542ae986bff4177fbfc203af18dbe4861bfc3c504a9ce09f23046.css">
+
+
+
 
 
 
@@ -26,20 +36,27 @@
 
 
 <script src='/js/jquery-3.5.0.min.js'></script>
-    <script src='/js/jquery.modal.min.js'></script>
+<script src='/js/viewer.min.js'></script>
+<script src='/js/jquery.modal.min.js'></script>
+
+
+
+
+    <link rel="stylesheet" href="/scss/content.min.6449d9b70a690e2af632efccd8330582e94e8cdb9f50e3685549ec99aebf21f6.css">
+    
+    
+    <link rel="stylesheet" href="/scss/markdown.min.c7ae5c06f4ee53016ce7cbe563306f09e8380cc2829cb558aca9567a32952dee.css">
 </head>
-<link rel="stylesheet" href="/scss/content.min.093bd10744e47f38d16a8a6578205f56e541320624d4a1824e4f644cda282153.css">
 
-
-<link rel="stylesheet" href="/scss/markdown.min.336f9da22c47298f01a8686a9c0f193a9970a9bee602bf4cf57254e5b6da1f95.css">
 
 <body>
+  
 <header class="navigation">
     
     <div class="join-div">
         <div class="content">
-            👏 KubeSphere v3.0 即将正式 GA！<a href="https://www.qingcloud.com/kubesphere2020#tz2" target="_blank" rel="noopener noreferrer">免费回看 v3.0 发布会视频 📺</a>
-            <a href="https://kubesphere.com.cn/forum/d/1625-kubesphere-3-0" target="_blank" rel="noopener noreferrer">或参与社区帮助测试 v3.0 →</a>
+            🚀 KubeSphere v3.0.0 正式 GA！<a href="https://www.qingcloud.com/kubesphere2020#tz2" target="_blank" rel="noopener noreferrer">免费回看 v3.0 发布会视频 📺</a>
+            <a href="https://kubesphere.com.cn/forum/d/2062-awesome-kubesphere-kubesphere-3-0" target="_blank" rel="noopener noreferrer">了解一键快速安装入门的最佳方式📚 →</a>
             <img id="close-join" src="/images/header/close.svg" alt="close">
         </div>
     </div>
@@ -138,10 +155,47 @@
 
                 
                 
-                <li >
+
+                
+                
                     
-                    <a href="https://kubesphere.com.cn/docs/zh-CN/" target="_blank" rel="noopener noreferrer">文档中心</a>
+                
                     
+                
+                    
+                
+                    
+                
+
+                <li  class="menu-li" >
+                    <span class='menu-span'>文档中心</span>
+                    <ul class="dropdown-menu menu-4">
+                        
+                        <li >
+                            
+                            <a href="/zh/docs/">v3.0.0</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-1.docs.kubesphere.io/docs/zh-CN/" target="_blank" rel="noopener noreferrer">v2.1.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-0.docs.kubesphere.io/docs/zh-CN/" target="_blank" rel="noopener noreferrer">v2.0.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v1-0.docs.kubesphere.io/docs/zh-CN/" target="_blank" rel="noopener noreferrer">v1.0.0</a>
+                            
+                        </li>
+                        
+                    </ul>
                 </li>
                 
 
@@ -211,7 +265,7 @@
                 
                 <li >
                     
-                    <a href="https://kubesphere.com.cn/forum" target="_blank" rel="noopener noreferrer">用户论坛</a>
+                    <a data-docs="用户论坛" href="https://kubesphere.com.cn/forum" target="_blank" rel="noopener noreferrer">用户论坛</a>
                     
                 </li>
                 
@@ -334,7 +388,40 @@
 
             
             
-            <li ><a href="https://kubesphere.com.cn/docs/zh-CN/">文档中心</a></li>
+
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+
+            <li data-check="0"  class="menu-li" >
+                <span class='menu-span'>文档中心</span>
+                <ul class="dropdown-menu">
+                    
+                    <li >
+                        <a href="/zh/docs/">v3.0.0</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-1.docs.kubesphere.io/docs/zh-CN/">v2.1.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-0.docs.kubesphere.io/docs/zh-CN/">v2.0.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v1-0.docs.kubesphere.io/docs/zh-CN/">v1.0.0</a>
+                    </li>
+                    
+                </ul>
+            </li>
             
 
             
@@ -389,7 +476,7 @@
 
             
             
-            <li ><a href="https://kubesphere.com.cn/forum">用户论坛</a></li>
+            <li ><a data-docs="用户论坛" href="https://kubesphere.com.cn/forum">用户论坛</a></li>
             
 
             
@@ -470,6 +557,8 @@ var bindClickClose = function() {
     })
 }
 
+var language = 'zh'
+
 bindClickClose()
 
 bindScrollChangeHeader()
@@ -483,36 +572,40 @@ bindClickModalLi()
 
 
 </script>
-<section class="main-section  padding">
-    <div class="common-layout">
-        <div class='breadcrumb'>
-            <span><a href='/zh/conferences'>KubeCon &amp; QCon</a> > </span>
-            <span>云原生可观察性之日志管理</span>
-        </div>
-        <div class='main-div'>
-            <div class='author'>霍秉杰，马丹</div>
-            <div class='date'>发布于：2019-06-25</div>
-            <h1>云原生可观察性之日志管理</h1>
-            <div class="share-1"><div class="share">
-  <a href="http://twitter.com/share?url=https%3a%2f%2fkubesphere.eu%2fzh%2fconferences%2flogging%2f&text=%e4%ba%91%e5%8e%9f%e7%94%9f%e5%8f%af%e8%a7%82%e5%af%9f%e6%80%a7%e4%b9%8b%e6%97%a5%e5%bf%97%e7%ae%a1%e7%90%86" target="_blank" rel="noopener noreferrer">
+
+  <section class="main-section  padding">
+      <div class="common-layout">
+          <div class='breadcrumb'>
+              
+              <span><a href='/zh/conferences'>KubeCon &amp; QCon</a> > </span>
+              <span>云原生可观察性之日志管理</span>
+          </div>
+          <div class='main-div'>
+              <div class='author'>霍秉杰，马丹</div>
+              <div class='date'>发布于：2019-06-25</div>
+              <h1>云原生可观察性之日志管理</h1>
+              <div class="share-1">
+                  <div class="share">
+  <a data-type="twitter" href="http://twitter.com/share?url=&text=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Twitter.svg" alt="twitter icon">
   </a>
-  <a href="http://reddit.com/submit?url=https%3a%2f%2fkubesphere.eu%2fzh%2fconferences%2flogging%2f&title=%e4%ba%91%e5%8e%9f%e7%94%9f%e5%8f%af%e8%a7%82%e5%af%9f%e6%80%a7%e4%b9%8b%e6%97%a5%e5%bf%97%e7%ae%a1%e7%90%86" target="_blank" rel="noopener noreferrer">
+  <a data-type="reddit" href="http://reddit.com/submit?url=&title=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Reddit.svg" alt="reddit icon">
   </a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fkubesphere.eu%2fzh%2fconferences%2flogging%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="facebook" href="http://www.facebook.com/sharer.php?u=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Facebook.svg" alt="facebook icon">
   </a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fkubesphere.eu%2fzh%2fconferences%2flogging%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Linkedin.svg" alt="linkedin icon">
   </a>
-  <a href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkubesphere.eu%2fzh%2fconferences%2flogging%2f&t=%e4%ba%91%e5%8e%9f%e7%94%9f%e5%8f%af%e8%a7%82%e5%af%9f%e6%80%a7%e4%b9%8b%e6%97%a5%e5%bf%97%e7%ae%a1%e7%90%86" target="_blank" rel="noopener noreferrer">
+  <a data-type="hackernews" href="https://news.ycombinator.com/submitlink?u=&t=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/HackerNews.svg" alt="hackernews icon">
   </a>
-</div></div>
-            <div class='content'>
-                <div class='md-body'>
-                    <p>日志通常含有非常有价值的信息，日志管理是云原生可观察性的重要组成部分。不同于物理机或虚拟机，在容器与 Kubernetes 环境中，日志有标准的输出方式(stdout)，这使得进行平台级统一的日志收集、分析与管理水到渠成，并体现出日志数据独特的价值。本文将介绍云原生领域比较主流的日志管理方案 EFK 、 KubeSphere 团队开发的 FluentBit Operator 以及 KubeSphere 在多租户日志管理方面的实践。此外还将介绍受 Prometheus 启发专为 Kubenetes 日志管理开发，具有低成本可扩展等特性的开源软件 Loki。</p>
+</div>
+              </div>
+              <div class='content'>
+                  <div class='md-body'>
+                      <p>日志通常含有非常有价值的信息，日志管理是云原生可观察性的重要组成部分。不同于物理机或虚拟机，在容器与 Kubernetes 环境中，日志有标准的输出方式(stdout)，这使得进行平台级统一的日志收集、分析与管理水到渠成，并体现出日志数据独特的价值。本文将介绍云原生领域比较主流的日志管理方案 EFK 、 KubeSphere 团队开发的 FluentBit Operator 以及 KubeSphere 在多租户日志管理方面的实践。此外还将介绍受 Prometheus 启发专为 Kubernetes 日志管理开发，具有低成本可扩展等特性的开源软件 Loki。</p>
 <h2 id="什么是可观察性">什么是可观察性</h2>
 <p>近年来随着以 Kubernetes 为代表的云原生技术的崛起，可观察性 ( Observability ) 作为一种新的理念逐渐走入人们的视野。云原生基金会 ( CNCF ) 在其 Landscape 里已经将可观察性单独列为一个分类，狭义上主要包含监控、日志和追踪等，广义上还包括告警、事件、审计等。在此领域陆续涌现出了众多新兴开源软件如 Prometheus, Grafana, Fluentd, Loki, Jaeger 等。</p>
 <p><img src="https://pek3b.qingstor.com/kubesphere-docs/png/20191001085607.png" alt=""></p>
@@ -573,29 +666,31 @@ Loki 架构(来源于 Grafana Labs 官方博客)</p>
 <h2 id="相关资料">相关资料</h2>
 <p>KubeSphere 多租户日志管理在 2019 年 6 月份上海的 KubeCon 上以 “<a href="https://static.sched.com/hosted_files/kccncosschn19eng/39/Effective%20Logging%20in%20Multi-Tenant%20Kubernetes%20Environment.pdf">Effective Logging In Multi Tenant Kubernetes Environment</a>” 的主题进行过分享，相关的 PPT 资料大家可以在 <a href="https://kccncosschn19eng.sched.com/event/NroE/effective-logging-in-multi-tenant-kubernetes-environment-benjamin-huo-dan-ma-beijing-yunify-technology-co-ltd">CNCF 官网</a> 找到。</p>
 
-                </div>
-            </div>
-            <div class="share-2"><div class="share">
-  <a href="http://twitter.com/share?url=https%3a%2f%2fkubesphere.eu%2fzh%2fconferences%2flogging%2f&text=%e4%ba%91%e5%8e%9f%e7%94%9f%e5%8f%af%e8%a7%82%e5%af%9f%e6%80%a7%e4%b9%8b%e6%97%a5%e5%bf%97%e7%ae%a1%e7%90%86" target="_blank" rel="noopener noreferrer">
+                  </div>
+              </div>
+              <div class="share-2">
+                  <div class="share">
+  <a data-type="twitter" href="http://twitter.com/share?url=&text=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Twitter.svg" alt="twitter icon">
   </a>
-  <a href="http://reddit.com/submit?url=https%3a%2f%2fkubesphere.eu%2fzh%2fconferences%2flogging%2f&title=%e4%ba%91%e5%8e%9f%e7%94%9f%e5%8f%af%e8%a7%82%e5%af%9f%e6%80%a7%e4%b9%8b%e6%97%a5%e5%bf%97%e7%ae%a1%e7%90%86" target="_blank" rel="noopener noreferrer">
+  <a data-type="reddit" href="http://reddit.com/submit?url=&title=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Reddit.svg" alt="reddit icon">
   </a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fkubesphere.eu%2fzh%2fconferences%2flogging%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="facebook" href="http://www.facebook.com/sharer.php?u=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Facebook.svg" alt="facebook icon">
   </a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fkubesphere.eu%2fzh%2fconferences%2flogging%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Linkedin.svg" alt="linkedin icon">
   </a>
-  <a href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkubesphere.eu%2fzh%2fconferences%2flogging%2f&t=%e4%ba%91%e5%8e%9f%e7%94%9f%e5%8f%af%e8%a7%82%e5%af%9f%e6%80%a7%e4%b9%8b%e6%97%a5%e5%bf%97%e7%ae%a1%e7%90%86" target="_blank" rel="noopener noreferrer">
+  <a data-type="hackernews" href="https://news.ycombinator.com/submitlink?u=&t=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/HackerNews.svg" alt="hackernews icon">
   </a>
-</div></div>
-        </div>
-        <div class='aside aside-fixed'>
-            <div class='title'>目录</div>
-            <div class='tabs'><nav id="TableOfContents">
+</div>
+              </div>
+          </div>
+          <div class='aside aside-fixed'>
+              <div class='title'>目录</div>
+              <div class='tabs'><nav id="TableOfContents">
   <ul>
     <li><a href="#什么是可观察性">什么是可观察性</a></li>
     <li><a href="#新旧势力的联姻从-elk-到-efk从-fluentd-到-fluent-bit">新旧势力的联姻：从 ELK 到 EFK，从 Fluentd 到 Fluent Bit</a></li>
@@ -610,9 +705,10 @@ Loki 架构(来源于 Grafana Labs 官方博客)</p>
     <li><a href="#相关资料">相关资料</a></li>
   </ul>
 </nav></div>
-        </div>
-    </div>
-</section><footer>
+          </div>
+      </div>
+  </section>
+  <footer>
     
     <div class="footer">
         <div class="footer-main common-layout">
@@ -739,6 +835,22 @@ Loki 架构(来源于 Grafana Labs 官方博客)</p>
                                 <a href="https://kubesphere.com.cn/forum" target="_blank" rel="noopener noreferrer">中文论坛</a>
                                 
                                 
+                                
+                                <a href="https://kubesphere.io" target="_blank" rel="noopener noreferrer">全球站</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.eu" target="_blank" rel="noopener noreferrer">欧洲站</a>
+                                
+                                
+                                
+                                <a href="https://kubesphereturkey.com" target="_blank" rel="noopener noreferrer">土耳其站</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.es" target="_blank" rel="noopener noreferrer">西班牙站</a>
+                                
+                                
                             </li>
                         
                         
@@ -847,7 +959,15 @@ Loki 架构(来源于 Grafana Labs 官方博客)</p>
     bindSubmit()
     bindHideMessage()
 </script>
-<script src='/js/aside.js'></script>
+
+  <script src='/js/aside.js'></script>
+  <script src='/js/markdown-tab.js'></script>
+
+  <script>
+    var viewer = new Viewer(document.querySelector('.md-body'), {
+        url: 'src'
+    })
+  </script>
 </body>
 
 </html>

@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="tr-TR"><head>
-    <meta charset="utf-8">
-    <title>Open Source Community - Open Source Community - KubeSphere | Enterprise container platform, built on Kubernetes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="KubeSphere is an open source container platform based on Kubernetes for enterprise app development and deployment, suppors installing anywhere from on-premise datacenter to any cloud to edge.">
-    <meta name="keywords" content="KubeSphere,DevOps,Istio,Service Mesh,Jenkins,">
-    
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="Open Source Community - Open Source Community - KubeSphere | Enterprise container platform, built on Kubernetes"/>
-    <meta property="og:description" content="KubeSphere is an open source container platform based on Kubernetes for enterprise app development and deployment, suppors installing anywhere from on-premise datacenter to any cloud to edge."/>
-    <meta property="og:image" content=""/>
-    <meta property="og:url" content="https://kubesphere.eu/tr/videos/"/><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
+<html lang="tr-TR">
+<head>
+<meta charset="utf-8">
+<title>Open Source Community - Open Source Community - KubeSphere | Enterprise container platform, built on Kubernetes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="KubeSphere is an open source container platform based on Kubernetes for enterprise app development and deployment, suppors installing anywhere from on-premise datacenter to any cloud to edge.">
+<meta name="keywords" content="KubeSphere,DevOps,Istio,Service Mesh,Jenkins,">
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Open Source Community - Open Source Community - KubeSphere | Enterprise container platform, built on Kubernetes"/>
+<meta property="og:description" content="KubeSphere is an open source container platform based on Kubernetes for enterprise app development and deployment, suppors installing anywhere from on-premise datacenter to any cloud to edge."/>
+<meta property="og:image" content=""/>
+<meta property="og:url" content="https://kubesphere.eu/tr/videos/"/>
+
+<meta name="docsearch:language" content="tr-TR" /><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
 <link rel="stylesheet" href="/fonts/ProximaNova/stylesheet.css">
 <link rel="stylesheet" href="/css/jquery.modal.min.css">
+<link rel="stylesheet" href="/css/viewer.min.css">
 
 
-<link rel="stylesheet" href="/scss/common.min.231017c86cd515edabfb120a6dea96794866be35d0acc497324cf11af412465d.css">
+<link rel="stylesheet" href="/scss/common.min.2609da8369d542ae986bff4177fbfc203af18dbe4861bfc3c504a9ce09f23046.css">
 
 
 
@@ -32,9 +36,18 @@
 
 
 
+
+
+
 <script src='/js/jquery-3.5.0.min.js'></script>
-    <script src='/js/jquery.modal.min.js'></script>
-</head><body>
+<script src='/js/viewer.min.js'></script>
+<script src='/js/jquery.modal.min.js'></script>
+
+
+
+</head>
+
+<body>
 <header class="navigation">
     
     <div class="common-layout">
@@ -175,7 +188,7 @@
                 
                 <li >
                     
-                    <a href="/tr/docs">Dokümantasyon</a>
+                    <a data-docs="Dokümantasyon" href="/tr/docs">Dokümantasyon</a>
                     
                 </li>
                 
@@ -370,7 +383,7 @@
 
             
             
-            <li ><a href="/tr/docs">Dokümantasyon</a></li>
+            <li ><a data-docs="Dokümantasyon" href="/tr/docs">Dokümantasyon</a></li>
             
 
             
@@ -482,6 +495,8 @@ var bindClickClose = function() {
         $('.main-section').removeClass('padding')
     })
 }
+
+var language = 'tr'
 
 bindClickClose()
 

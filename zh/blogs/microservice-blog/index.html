@@ -1,22 +1,32 @@
+
+
+
 <!DOCTYPE html>
-<html lang="zh-CN"><head>
-    <meta charset="utf-8">
-    <title>微服务进阶之路 容器落地避坑指南</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。">
-    <meta name="keywords" content="KubeSphere, Kubernetes, 容器平台, DevOps, 混合云">
-    
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="微服务进阶之路 容器落地避坑指南"/>
-    <meta property="og:description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。"/>
-    <meta property="og:image" content="https://pek3b.qingstor.com/kubesphere-docs/png/20190930131109.png"/>
-    <meta property="og:url" content="https://kubesphere.eu/zh/blogs/microservice-blog/"/><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<title>微服务进阶之路 容器落地避坑指南</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。">
+<meta name="keywords" content="KubeSphere, Kubernetes, 容器平台, DevOps, 混合云">
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="微服务进阶之路 容器落地避坑指南"/>
+<meta property="og:description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。"/>
+<meta property="og:image" content="https://pek3b.qingstor.com/kubesphere-docs/png/20190930131109.png"/>
+<meta property="og:url" content="https://kubesphere.eu/zh/blogs/microservice-blog/"/>
+
+<meta name="docsearch:language" content="zh-CN" /><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
 <link rel="stylesheet" href="/fonts/ProximaNova/stylesheet.css">
 <link rel="stylesheet" href="/css/jquery.modal.min.css">
+<link rel="stylesheet" href="/css/viewer.min.css">
 
 
-<link rel="stylesheet" href="/scss/common.min.231017c86cd515edabfb120a6dea96794866be35d0acc497324cf11af412465d.css">
+<link rel="stylesheet" href="/scss/common.min.2609da8369d542ae986bff4177fbfc203af18dbe4861bfc3c504a9ce09f23046.css">
+
+
+
 
 
 
@@ -26,20 +36,27 @@
 
 
 <script src='/js/jquery-3.5.0.min.js'></script>
-    <script src='/js/jquery.modal.min.js'></script>
+<script src='/js/viewer.min.js'></script>
+<script src='/js/jquery.modal.min.js'></script>
+
+
+
+
+    <link rel="stylesheet" href="/scss/content.min.6449d9b70a690e2af632efccd8330582e94e8cdb9f50e3685549ec99aebf21f6.css">
+    
+    
+    <link rel="stylesheet" href="/scss/markdown.min.c7ae5c06f4ee53016ce7cbe563306f09e8380cc2829cb558aca9567a32952dee.css">
 </head>
-<link rel="stylesheet" href="/scss/content.min.093bd10744e47f38d16a8a6578205f56e541320624d4a1824e4f644cda282153.css">
 
-
-<link rel="stylesheet" href="/scss/markdown.min.336f9da22c47298f01a8686a9c0f193a9970a9bee602bf4cf57254e5b6da1f95.css">
 
 <body>
+  
 <header class="navigation">
     
     <div class="join-div">
         <div class="content">
-            👏 KubeSphere v3.0 即将正式 GA！<a href="https://www.qingcloud.com/kubesphere2020#tz2" target="_blank" rel="noopener noreferrer">免费回看 v3.0 发布会视频 📺</a>
-            <a href="https://kubesphere.com.cn/forum/d/1625-kubesphere-3-0" target="_blank" rel="noopener noreferrer">或参与社区帮助测试 v3.0 →</a>
+            🚀 KubeSphere v3.0.0 正式 GA！<a href="https://www.qingcloud.com/kubesphere2020#tz2" target="_blank" rel="noopener noreferrer">免费回看 v3.0 发布会视频 📺</a>
+            <a href="https://kubesphere.com.cn/forum/d/2062-awesome-kubesphere-kubesphere-3-0" target="_blank" rel="noopener noreferrer">了解一键快速安装入门的最佳方式📚 →</a>
             <img id="close-join" src="/images/header/close.svg" alt="close">
         </div>
     </div>
@@ -138,10 +155,47 @@
 
                 
                 
-                <li >
+
+                
+                
                     
-                    <a href="https://kubesphere.com.cn/docs/zh-CN/" target="_blank" rel="noopener noreferrer">文档中心</a>
+                
                     
+                
+                    
+                
+                    
+                
+
+                <li  class="menu-li" >
+                    <span class='menu-span'>文档中心</span>
+                    <ul class="dropdown-menu menu-4">
+                        
+                        <li >
+                            
+                            <a href="/zh/docs/">v3.0.0</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-1.docs.kubesphere.io/docs/zh-CN/" target="_blank" rel="noopener noreferrer">v2.1.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-0.docs.kubesphere.io/docs/zh-CN/" target="_blank" rel="noopener noreferrer">v2.0.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v1-0.docs.kubesphere.io/docs/zh-CN/" target="_blank" rel="noopener noreferrer">v1.0.0</a>
+                            
+                        </li>
+                        
+                    </ul>
                 </li>
                 
 
@@ -211,7 +265,7 @@
                 
                 <li >
                     
-                    <a href="https://kubesphere.com.cn/forum" target="_blank" rel="noopener noreferrer">用户论坛</a>
+                    <a data-docs="用户论坛" href="https://kubesphere.com.cn/forum" target="_blank" rel="noopener noreferrer">用户论坛</a>
                     
                 </li>
                 
@@ -332,7 +386,40 @@
 
             
             
-            <li ><a href="https://kubesphere.com.cn/docs/zh-CN/">文档中心</a></li>
+
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+
+            <li data-check="0"  class="menu-li" >
+                <span class='menu-span'>文档中心</span>
+                <ul class="dropdown-menu">
+                    
+                    <li >
+                        <a href="/zh/docs/">v3.0.0</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-1.docs.kubesphere.io/docs/zh-CN/">v2.1.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-0.docs.kubesphere.io/docs/zh-CN/">v2.0.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v1-0.docs.kubesphere.io/docs/zh-CN/">v1.0.0</a>
+                    </li>
+                    
+                </ul>
+            </li>
             
 
             
@@ -387,7 +474,7 @@
 
             
             
-            <li ><a href="https://kubesphere.com.cn/forum">用户论坛</a></li>
+            <li ><a data-docs="用户论坛" href="https://kubesphere.com.cn/forum">用户论坛</a></li>
             
 
             
@@ -468,6 +555,8 @@ var bindClickClose = function() {
     })
 }
 
+var language = 'zh'
+
 bindClickClose()
 
 bindScrollChangeHeader()
@@ -481,36 +570,40 @@ bindClickModalLi()
 
 
 </script>
-<section class="main-section  padding">
-    <div class="common-layout">
-        <div class='breadcrumb'>
-            <span><a href='/zh/blogs'>技术博客</a> > </span>
-            <span>微服务进阶之路 容器落地避坑指南</span>
-        </div>
-        <div class='main-div'>
-            <div class='author'>Ray Zhou, Calvin</div>
-            <div class='date'>发布于：2018-04-16</div>
-            <h1>微服务进阶之路 容器落地避坑指南</h1>
-            <div class="share-1"><div class="share">
-  <a href="http://twitter.com/share?url=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fmicroservice-blog%2f&text=%e5%be%ae%e6%9c%8d%e5%8a%a1%e8%bf%9b%e9%98%b6%e4%b9%8b%e8%b7%af%20%e5%ae%b9%e5%99%a8%e8%90%bd%e5%9c%b0%e9%81%bf%e5%9d%91%e6%8c%87%e5%8d%97" target="_blank" rel="noopener noreferrer">
+
+  <section class="main-section  padding">
+      <div class="common-layout">
+          <div class='breadcrumb'>
+              
+              <span><a href='/zh/blogs'>技术博客</a> > </span>
+              <span>微服务进阶之路 容器落地避坑指南</span>
+          </div>
+          <div class='main-div'>
+              <div class='author'>Ray Zhou, Calvin</div>
+              <div class='date'>发布于：2018-04-16</div>
+              <h1>微服务进阶之路 容器落地避坑指南</h1>
+              <div class="share-1">
+                  <div class="share">
+  <a data-type="twitter" href="http://twitter.com/share?url=&text=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Twitter.svg" alt="twitter icon">
   </a>
-  <a href="http://reddit.com/submit?url=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fmicroservice-blog%2f&title=%e5%be%ae%e6%9c%8d%e5%8a%a1%e8%bf%9b%e9%98%b6%e4%b9%8b%e8%b7%af%20%e5%ae%b9%e5%99%a8%e8%90%bd%e5%9c%b0%e9%81%bf%e5%9d%91%e6%8c%87%e5%8d%97" target="_blank" rel="noopener noreferrer">
+  <a data-type="reddit" href="http://reddit.com/submit?url=&title=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Reddit.svg" alt="reddit icon">
   </a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fmicroservice-blog%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="facebook" href="http://www.facebook.com/sharer.php?u=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Facebook.svg" alt="facebook icon">
   </a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fmicroservice-blog%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Linkedin.svg" alt="linkedin icon">
   </a>
-  <a href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fmicroservice-blog%2f&t=%e5%be%ae%e6%9c%8d%e5%8a%a1%e8%bf%9b%e9%98%b6%e4%b9%8b%e8%b7%af%20%e5%ae%b9%e5%99%a8%e8%90%bd%e5%9c%b0%e9%81%bf%e5%9d%91%e6%8c%87%e5%8d%97" target="_blank" rel="noopener noreferrer">
+  <a data-type="hackernews" href="https://news.ycombinator.com/submitlink?u=&t=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/HackerNews.svg" alt="hackernews icon">
   </a>
-</div></div>
-            <div class='content'>
-                <div class='md-body'>
-                    <p>微服务架构相对于单体架构有很大的变化，也产生了一些新的设计模式，比如 sidecar，如何开发一个微服务应用是一件有很大挑战性的事情，我们经常会听到有人讨论如何划分微服务，多细的颗粒度才是微服务等问题。初学者经常会处于一个“忐忑不安”的状态，所以我们急需要知道如何才能走上正确的微服务道路，或者需要一些最佳实践指导我们如何设计、开发一个微服务应用。</p>
+</div>
+              </div>
+              <div class='content'>
+                  <div class='md-body'>
+                      <p>微服务架构相对于单体架构有很大的变化，也产生了一些新的设计模式，比如 sidecar，如何开发一个微服务应用是一件有很大挑战性的事情，我们经常会听到有人讨论如何划分微服务，多细的颗粒度才是微服务等问题。初学者经常会处于一个“忐忑不安”的状态，所以我们急需要知道如何才能走上正确的微服务道路，或者需要一些最佳实践指导我们如何设计、开发一个微服务应用。</p>
 <h2 id="不骄不躁不跟风-知己知彼方可百战不殆">不骄不躁不跟风 知己知彼方可百战不殆</h2>
 <p>虽然现在已经进入到一个不谈微服务就落伍的时代，但作为 IT 从业者，我们一定要站在切身利益出发，多思考几个“为什么”，不要急于跟风。原因很简单，不管外面如何风吹雨打，只要你的房子足够结实、安全、舒服，那一般情况下就不需要拆除重建，所以在决定继续沿用单体架构还是转向微服务架构之前，我们一定要做两件事情：</p>
 <h3 id="第一件事从外部了解两种架构各自的优劣">第一件事，从外部了解两种架构各自的优劣：</h3>
@@ -573,29 +666,31 @@ bindClickModalLi()
 <p>综上所述，通过 Istio 构建微服务治理屏幕，学习曲线起点比较高，运维也非常麻烦，运维人员关注的是功能的输出，比如熔断、限流、灰度发布等，但 Istio 要求他们先要部署组件，编辑 yaml，了解各种抽象的参数，这就好比在看 3D 电影前，让观众自己先要组装 3D 眼镜一样。</p>
 <p>因此，微服务进阶之路道阻且长，企业需要一个平台级的容器产品，可以从业务视角来管理微服务的可视化工具或者平台，降低用户的学习和运维成本，提高用户的业务价值输出能力，帮助用户重塑数字化时代核心竞争力。</p>
 
-                </div>
-            </div>
-            <div class="share-2"><div class="share">
-  <a href="http://twitter.com/share?url=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fmicroservice-blog%2f&text=%e5%be%ae%e6%9c%8d%e5%8a%a1%e8%bf%9b%e9%98%b6%e4%b9%8b%e8%b7%af%20%e5%ae%b9%e5%99%a8%e8%90%bd%e5%9c%b0%e9%81%bf%e5%9d%91%e6%8c%87%e5%8d%97" target="_blank" rel="noopener noreferrer">
+                  </div>
+              </div>
+              <div class="share-2">
+                  <div class="share">
+  <a data-type="twitter" href="http://twitter.com/share?url=&text=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Twitter.svg" alt="twitter icon">
   </a>
-  <a href="http://reddit.com/submit?url=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fmicroservice-blog%2f&title=%e5%be%ae%e6%9c%8d%e5%8a%a1%e8%bf%9b%e9%98%b6%e4%b9%8b%e8%b7%af%20%e5%ae%b9%e5%99%a8%e8%90%bd%e5%9c%b0%e9%81%bf%e5%9d%91%e6%8c%87%e5%8d%97" target="_blank" rel="noopener noreferrer">
+  <a data-type="reddit" href="http://reddit.com/submit?url=&title=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Reddit.svg" alt="reddit icon">
   </a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fmicroservice-blog%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="facebook" href="http://www.facebook.com/sharer.php?u=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Facebook.svg" alt="facebook icon">
   </a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fmicroservice-blog%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Linkedin.svg" alt="linkedin icon">
   </a>
-  <a href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fmicroservice-blog%2f&t=%e5%be%ae%e6%9c%8d%e5%8a%a1%e8%bf%9b%e9%98%b6%e4%b9%8b%e8%b7%af%20%e5%ae%b9%e5%99%a8%e8%90%bd%e5%9c%b0%e9%81%bf%e5%9d%91%e6%8c%87%e5%8d%97" target="_blank" rel="noopener noreferrer">
+  <a data-type="hackernews" href="https://news.ycombinator.com/submitlink?u=&t=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/HackerNews.svg" alt="hackernews icon">
   </a>
-</div></div>
-        </div>
-        <div class='aside aside-fixed'>
-            <div class='title'>目录</div>
-            <div class='tabs'><nav id="TableOfContents">
+</div>
+              </div>
+          </div>
+          <div class='aside aside-fixed'>
+              <div class='title'>目录</div>
+              <div class='tabs'><nav id="TableOfContents">
   <ul>
     <li><a href="#不骄不躁不跟风-知己知彼方可百战不殆">不骄不躁不跟风 知己知彼方可百战不殆</a>
       <ul>
@@ -616,9 +711,10 @@ bindClickModalLi()
     </li>
   </ul>
 </nav></div>
-        </div>
-    </div>
-</section><footer>
+          </div>
+      </div>
+  </section>
+  <footer>
     
     <div class="footer">
         <div class="footer-main common-layout">
@@ -745,6 +841,22 @@ bindClickModalLi()
                                 <a href="https://kubesphere.com.cn/forum" target="_blank" rel="noopener noreferrer">中文论坛</a>
                                 
                                 
+                                
+                                <a href="https://kubesphere.io" target="_blank" rel="noopener noreferrer">全球站</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.eu" target="_blank" rel="noopener noreferrer">欧洲站</a>
+                                
+                                
+                                
+                                <a href="https://kubesphereturkey.com" target="_blank" rel="noopener noreferrer">土耳其站</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.es" target="_blank" rel="noopener noreferrer">西班牙站</a>
+                                
+                                
                             </li>
                         
                         
@@ -853,7 +965,15 @@ bindClickModalLi()
     bindSubmit()
     bindHideMessage()
 </script>
-<script src='/js/aside.js'></script>
+
+  <script src='/js/aside.js'></script>
+  <script src='/js/markdown-tab.js'></script>
+
+  <script>
+    var viewer = new Viewer(document.querySelector('.md-body'), {
+        url: 'src'
+    })
+  </script>
 </body>
 
 </html>

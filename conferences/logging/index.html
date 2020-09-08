@@ -1,22 +1,32 @@
+
+
+
 <!DOCTYPE html>
-<html lang="en-US"><head>
-    <meta charset="utf-8">
-    <title>Cloud Native Observability: Log Management</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="KubeSphere is a distributed operating system managing cloud native applications with Kubernetes as its kernel, and provides plug-and-play architecture for the seamless integration of third-party applications to boost its ecosystem.">
-    <meta name="keywords" content="KubeSphere, Kubernetes, container platform, DevOps, hybrid cloud, cloud native">
-    
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="Cloud Native Observability: Log Management"/>
-    <meta property="og:description" content="KubeSphere is a distributed operating system managing cloud native applications with Kubernetes as its kernel, and provides plug-and-play architecture for the seamless integration of third-party applications to boost its ecosystem."/>
-    <meta property="og:image" content="https://kubesphere.eu/images/common/snapshot-en.png"/>
-    <meta property="og:url" content="https://kubesphere.eu/conferences/logging/"/><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<title>Cloud Native Observability: Log Management</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="KubeSphere is a distributed operating system managing cloud native applications with Kubernetes as its kernel, and provides plug-and-play architecture for the seamless integration of third-party applications to boost its ecosystem.">
+<meta name="keywords" content="KubeSphere, Kubernetes, container platform, DevOps, hybrid cloud, cloud native">
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Cloud Native Observability: Log Management"/>
+<meta property="og:description" content="KubeSphere is a distributed operating system managing cloud native applications with Kubernetes as its kernel, and provides plug-and-play architecture for the seamless integration of third-party applications to boost its ecosystem."/>
+<meta property="og:image" content="https://kubesphere.eu/images/common/snapshot-en.png"/>
+<meta property="og:url" content="https://kubesphere.eu/conferences/logging/"/>
+
+<meta name="docsearch:language" content="en-US" /><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
 <link rel="stylesheet" href="/fonts/ProximaNova/stylesheet.css">
 <link rel="stylesheet" href="/css/jquery.modal.min.css">
+<link rel="stylesheet" href="/css/viewer.min.css">
 
 
-<link rel="stylesheet" href="/scss/common.min.231017c86cd515edabfb120a6dea96794866be35d0acc497324cf11af412465d.css">
+<link rel="stylesheet" href="/scss/common.min.2609da8369d542ae986bff4177fbfc203af18dbe4861bfc3c504a9ce09f23046.css">
+
+
+
 
 
 
@@ -26,14 +36,21 @@
 
 
 <script src='/js/jquery-3.5.0.min.js'></script>
-    <script src='/js/jquery.modal.min.js'></script>
+<script src='/js/viewer.min.js'></script>
+<script src='/js/jquery.modal.min.js'></script>
+
+
+
+
+    <link rel="stylesheet" href="/scss/content.min.6449d9b70a690e2af632efccd8330582e94e8cdb9f50e3685549ec99aebf21f6.css">
+    
+    
+    <link rel="stylesheet" href="/scss/markdown.min.c7ae5c06f4ee53016ce7cbe563306f09e8380cc2829cb558aca9567a32952dee.css">
 </head>
-<link rel="stylesheet" href="/scss/content.min.093bd10744e47f38d16a8a6578205f56e541320624d4a1824e4f644cda282153.css">
 
-
-<link rel="stylesheet" href="/scss/markdown.min.336f9da22c47298f01a8686a9c0f193a9970a9bee602bf4cf57254e5b6da1f95.css">
 
 <body>
+  
 <header class="navigation">
     
     <div class="common-layout">
@@ -130,10 +147,47 @@
 
                 
                 
-                <li >
+
+                
+                
                     
-                    <a href="https://kubesphere.io/docs/" target="_blank" rel="noopener noreferrer">Documentation</a>
+                
                     
+                
+                    
+                
+                    
+                
+
+                <li  class="menu-li" >
+                    <span class='menu-span'>Documentation</span>
+                    <ul class="dropdown-menu menu-4">
+                        
+                        <li >
+                            
+                            <a href="/docs/">v3.0.0</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-1.docs.kubesphere.io/docs" target="_blank" rel="noopener noreferrer">v2.1.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-0.docs.kubesphere.io/docs/" target="_blank" rel="noopener noreferrer">v2.0.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v1-0.docs.kubesphere.io/docs/" target="_blank" rel="noopener noreferrer">v1.0.0</a>
+                            
+                        </li>
+                        
+                    </ul>
                 </li>
                 
 
@@ -309,7 +363,40 @@
 
             
             
-            <li ><a href="https://kubesphere.io/docs/">Documentation</a></li>
+
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+
+            <li data-check="0"  class="menu-li" >
+                <span class='menu-span'>Documentation</span>
+                <ul class="dropdown-menu">
+                    
+                    <li >
+                        <a href="/docs/">v3.0.0</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-1.docs.kubesphere.io/docs">v2.1.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-0.docs.kubesphere.io/docs/">v2.0.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v1-0.docs.kubesphere.io/docs/">v1.0.0</a>
+                    </li>
+                    
+                </ul>
+            </li>
             
 
             
@@ -434,6 +521,8 @@ var bindClickClose = function() {
     })
 }
 
+var language = 'en'
+
 bindClickClose()
 
 bindScrollChangeHeader()
@@ -447,36 +536,40 @@ bindClickModalLi()
 
 
 </script>
-<section class="main-section ">
-    <div class="common-layout">
-        <div class='breadcrumb'>
-            <span><a href='/conferences'>KubeCon &amp; QCon</a> > </span>
-            <span>Cloud Native Observability: Log Management</span>
-        </div>
-        <div class='main-div'>
-            <div class='author'>Benjamin Huo, Dan Ma</div>
-            <div class='date'>Published on：2019-06-25</div>
-            <h1>Cloud Native Observability: Log Management</h1>
-            <div class="share-1"><div class="share">
-  <a href="http://twitter.com/share?url=https%3a%2f%2fkubesphere.eu%2fconferences%2flogging%2f&text=Cloud%20Native%20Observability%3a%20Log%20Management" target="_blank" rel="noopener noreferrer">
+
+  <section class="main-section ">
+      <div class="common-layout">
+          <div class='breadcrumb'>
+              
+              <span><a href='/conferences'>KubeCon &amp; QCon</a> > </span>
+              <span>Cloud Native Observability: Log Management</span>
+          </div>
+          <div class='main-div'>
+              <div class='author'>Benjamin Huo, Dan Ma</div>
+              <div class='date'>Published on：2019-06-25</div>
+              <h1>Cloud Native Observability: Log Management</h1>
+              <div class="share-1">
+                  <div class="share">
+  <a data-type="twitter" href="http://twitter.com/share?url=&text=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Twitter.svg" alt="twitter icon">
   </a>
-  <a href="http://reddit.com/submit?url=https%3a%2f%2fkubesphere.eu%2fconferences%2flogging%2f&title=Cloud%20Native%20Observability%3a%20Log%20Management" target="_blank" rel="noopener noreferrer">
+  <a data-type="reddit" href="http://reddit.com/submit?url=&title=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Reddit.svg" alt="reddit icon">
   </a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fkubesphere.eu%2fconferences%2flogging%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="facebook" href="http://www.facebook.com/sharer.php?u=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Facebook.svg" alt="facebook icon">
   </a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fkubesphere.eu%2fconferences%2flogging%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Linkedin.svg" alt="linkedin icon">
   </a>
-  <a href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkubesphere.eu%2fconferences%2flogging%2f&t=Cloud%20Native%20Observability%3a%20Log%20Management" target="_blank" rel="noopener noreferrer">
+  <a data-type="hackernews" href="https://news.ycombinator.com/submitlink?u=&t=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/HackerNews.svg" alt="hackernews icon">
   </a>
-</div></div>
-            <div class='content'>
-                <div class='md-body'>
-                    <p>As logs often contain very valuable information, log management represents an important part of cloud native observability. Logs feature a standard output (stdout) in containers and Kubernetes, which is different from physical machines or virtual machines. This means the collection, analysis and management of logs at the platform level can be carried out in a unified fashion, which demonstrates the unique value of logs. This article introduces a major solution to log management (EFK) in the cloud native area, FluentBit Operator developed by the KubeSphere team and some practices of KubeSphere in multi-tenant log management. Besides, the article also elaborates on an open source tool Loki, a low-cost and extensible application inspired by Prometheus and developed specifically for the log management of Kubernetes.</p>
+</div>
+              </div>
+              <div class='content'>
+                  <div class='md-body'>
+                      <p>As logs often contain very valuable information, log management represents an important part of cloud native observability. Logs feature a standard output (stdout) in containers and Kubernetes, which is different from physical machines or virtual machines. This means the collection, analysis and management of logs at the platform level can be carried out in a unified fashion, which demonstrates the unique value of logs. This article introduces a major solution to log management (EFK) in the cloud native area, FluentBit Operator developed by the KubeSphere team and some practices of KubeSphere in multi-tenant log management. Besides, the article also elaborates on an open source tool Loki, a low-cost and extensible application inspired by Prometheus and developed specifically for the log management of Kubernetes.</p>
 <h2 id="what-is-observability">What is Observability</h2>
 <p>Cloud native technologies have emerged in recent years with Kubernetes as a standout among them. Against this background, observability has come to people’s awareness as a new concept. The Cloud Native Computing Foundation (CNCF) has put observability as a separate category in its Landscape. In a narrow sense, observability mainly entails monitoring, logging and tracking. Broadly speaking, it covers alert, event and audit. Emerging open source software has sprung out in flocks in the area, such as Prometheus, Grafana, Fluentd, Loki and Jaeger.</p>
 <p><img src="https://pek3b.qingstor.com/kubesphere-docs/png/20191001085607.png" alt=""></p>
@@ -537,29 +630,31 @@ Loki Architecture (Source: official blog of Grafana Labs)</p>
 <h2 id="relevant-information">Relevant Information</h2>
 <p>In KubeCon held in Shanghai, June 2019, a keynote speech <a href="https://static.sched.com/hosted_files/kccncosschn19eng/39/Effective%20Logging%20in%20Multi-Tenant%20Kubernetes%20Environment.pdf">Effective Logging In Multi Tenant Kubernetes Environment</a> was shared on multi-tenant log management. Please see relevant PPT in the <a href="https://kccncosschn19eng.sched.com/event/NroE/effective-logging-in-multi-tenant-kubernetes-environment-benjamin-huo-dan-ma-beijing-yunify-technology-co-ltd">official website of CNCF</a>.</p>
 
-                </div>
-            </div>
-            <div class="share-2"><div class="share">
-  <a href="http://twitter.com/share?url=https%3a%2f%2fkubesphere.eu%2fconferences%2flogging%2f&text=Cloud%20Native%20Observability%3a%20Log%20Management" target="_blank" rel="noopener noreferrer">
+                  </div>
+              </div>
+              <div class="share-2">
+                  <div class="share">
+  <a data-type="twitter" href="http://twitter.com/share?url=&text=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Twitter.svg" alt="twitter icon">
   </a>
-  <a href="http://reddit.com/submit?url=https%3a%2f%2fkubesphere.eu%2fconferences%2flogging%2f&title=Cloud%20Native%20Observability%3a%20Log%20Management" target="_blank" rel="noopener noreferrer">
+  <a data-type="reddit" href="http://reddit.com/submit?url=&title=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Reddit.svg" alt="reddit icon">
   </a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fkubesphere.eu%2fconferences%2flogging%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="facebook" href="http://www.facebook.com/sharer.php?u=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Facebook.svg" alt="facebook icon">
   </a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fkubesphere.eu%2fconferences%2flogging%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Linkedin.svg" alt="linkedin icon">
   </a>
-  <a href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkubesphere.eu%2fconferences%2flogging%2f&t=Cloud%20Native%20Observability%3a%20Log%20Management" target="_blank" rel="noopener noreferrer">
+  <a data-type="hackernews" href="https://news.ycombinator.com/submitlink?u=&t=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/HackerNews.svg" alt="hackernews icon">
   </a>
-</div></div>
-        </div>
-        <div class='aside aside-fixed'>
-            <div class='title'>Table of Contents</div>
-            <div class='tabs'><nav id="TableOfContents">
+</div>
+              </div>
+          </div>
+          <div class='aside aside-fixed'>
+              <div class='title'>Table of Contents</div>
+              <div class='tabs'><nav id="TableOfContents">
   <ul>
     <li><a href="#what-is-observability">What is Observability</a></li>
     <li><a href="#meet-the-new-member-elk-to-efk-fluentd-to-fluent-bit">Meet the New Member: ELK to EFK, Fluentd to Fluent Bit</a></li>
@@ -574,9 +669,10 @@ Loki Architecture (Source: official blog of Grafana Labs)</p>
     <li><a href="#relevant-information">Relevant Information</a></li>
   </ul>
 </nav></div>
-        </div>
-    </div>
-</section><footer>
+          </div>
+      </div>
+  </section>
+  <footer>
     
     <div class="footer">
         <div class="footer-main common-layout">
@@ -692,7 +788,23 @@ Loki Architecture (Source: official blog of Grafana Labs)</p>
                                 
                                 
                                 
+                                <a href="https://kubesphere.io" target="_blank" rel="noopener noreferrer">Global Site</a>
+                                
+                                
+                                
                                 <a href="https://kubesphere.com.cn/" target="_blank" rel="noopener noreferrer">China Site</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.eu" target="_blank" rel="noopener noreferrer">Europe Site</a>
+                                
+                                
+                                
+                                <a href="https://kubesphereturkey.com" target="_blank" rel="noopener noreferrer">Turkey Site</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.es" target="_blank" rel="noopener noreferrer">Spain Site</a>
                                 
                                 
                             </li>
@@ -803,7 +915,15 @@ Loki Architecture (Source: official blog of Grafana Labs)</p>
     bindSubmit()
     bindHideMessage()
 </script>
-<script src='/js/aside.js'></script>
+
+  <script src='/js/aside.js'></script>
+  <script src='/js/markdown-tab.js'></script>
+
+  <script>
+    var viewer = new Viewer(document.querySelector('.md-body'), {
+        url: 'src'
+    })
+  </script>
 </body>
 
 </html>

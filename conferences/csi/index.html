@@ -1,22 +1,32 @@
+
+
+
 <!DOCTYPE html>
-<html lang="en-US"><head>
-    <meta charset="utf-8">
-    <title>Development Practices of CSI Storage Plugins - Part Ⅰ</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="KubeSphere is a distributed operating system managing cloud native applications with Kubernetes as its kernel, and provides plug-and-play architecture for the seamless integration of third-party applications to boost its ecosystem.">
-    <meta name="keywords" content="KubeSphere, Kubernetes, container platform, DevOps, hybrid cloud, cloud native">
-    
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="Development Practices of CSI Storage Plugins - Part Ⅰ"/>
-    <meta property="og:description" content="KubeSphere is a distributed operating system managing cloud native applications with Kubernetes as its kernel, and provides plug-and-play architecture for the seamless integration of third-party applications to boost its ecosystem."/>
-    <meta property="og:image" content="https://kubesphere.eu/images/common/snapshot-en.png"/>
-    <meta property="og:url" content="https://kubesphere.eu/conferences/csi/"/><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<title>Development Practices of CSI Storage Plugins - Part Ⅰ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="KubeSphere is a distributed operating system managing cloud native applications with Kubernetes as its kernel, and provides plug-and-play architecture for the seamless integration of third-party applications to boost its ecosystem.">
+<meta name="keywords" content="KubeSphere, Kubernetes, container platform, DevOps, hybrid cloud, cloud native">
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Development Practices of CSI Storage Plugins - Part Ⅰ"/>
+<meta property="og:description" content="KubeSphere is a distributed operating system managing cloud native applications with Kubernetes as its kernel, and provides plug-and-play architecture for the seamless integration of third-party applications to boost its ecosystem."/>
+<meta property="og:image" content="https://kubesphere.eu/images/common/snapshot-en.png"/>
+<meta property="og:url" content="https://kubesphere.eu/conferences/csi/"/>
+
+<meta name="docsearch:language" content="en-US" /><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
 <link rel="stylesheet" href="/fonts/ProximaNova/stylesheet.css">
 <link rel="stylesheet" href="/css/jquery.modal.min.css">
+<link rel="stylesheet" href="/css/viewer.min.css">
 
 
-<link rel="stylesheet" href="/scss/common.min.231017c86cd515edabfb120a6dea96794866be35d0acc497324cf11af412465d.css">
+<link rel="stylesheet" href="/scss/common.min.2609da8369d542ae986bff4177fbfc203af18dbe4861bfc3c504a9ce09f23046.css">
+
+
+
 
 
 
@@ -26,14 +36,21 @@
 
 
 <script src='/js/jquery-3.5.0.min.js'></script>
-    <script src='/js/jquery.modal.min.js'></script>
+<script src='/js/viewer.min.js'></script>
+<script src='/js/jquery.modal.min.js'></script>
+
+
+
+
+    <link rel="stylesheet" href="/scss/content.min.6449d9b70a690e2af632efccd8330582e94e8cdb9f50e3685549ec99aebf21f6.css">
+    
+    
+    <link rel="stylesheet" href="/scss/markdown.min.c7ae5c06f4ee53016ce7cbe563306f09e8380cc2829cb558aca9567a32952dee.css">
 </head>
-<link rel="stylesheet" href="/scss/content.min.093bd10744e47f38d16a8a6578205f56e541320624d4a1824e4f644cda282153.css">
 
-
-<link rel="stylesheet" href="/scss/markdown.min.336f9da22c47298f01a8686a9c0f193a9970a9bee602bf4cf57254e5b6da1f95.css">
 
 <body>
+  
 <header class="navigation">
     
     <div class="common-layout">
@@ -130,10 +147,47 @@
 
                 
                 
-                <li >
+
+                
+                
                     
-                    <a href="https://kubesphere.io/docs/" target="_blank" rel="noopener noreferrer">Documentation</a>
+                
                     
+                
+                    
+                
+                    
+                
+
+                <li  class="menu-li" >
+                    <span class='menu-span'>Documentation</span>
+                    <ul class="dropdown-menu menu-4">
+                        
+                        <li >
+                            
+                            <a href="/docs/">v3.0.0</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-1.docs.kubesphere.io/docs" target="_blank" rel="noopener noreferrer">v2.1.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-0.docs.kubesphere.io/docs/" target="_blank" rel="noopener noreferrer">v2.0.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v1-0.docs.kubesphere.io/docs/" target="_blank" rel="noopener noreferrer">v1.0.0</a>
+                            
+                        </li>
+                        
+                    </ul>
                 </li>
                 
 
@@ -309,7 +363,40 @@
 
             
             
-            <li ><a href="https://kubesphere.io/docs/">Documentation</a></li>
+
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+
+            <li data-check="0"  class="menu-li" >
+                <span class='menu-span'>Documentation</span>
+                <ul class="dropdown-menu">
+                    
+                    <li >
+                        <a href="/docs/">v3.0.0</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-1.docs.kubesphere.io/docs">v2.1.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-0.docs.kubesphere.io/docs/">v2.0.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v1-0.docs.kubesphere.io/docs/">v1.0.0</a>
+                    </li>
+                    
+                </ul>
+            </li>
             
 
             
@@ -434,6 +521,8 @@ var bindClickClose = function() {
     })
 }
 
+var language = 'en'
+
 bindClickClose()
 
 bindScrollChangeHeader()
@@ -447,36 +536,40 @@ bindClickModalLi()
 
 
 </script>
-<section class="main-section ">
-    <div class="common-layout">
-        <div class='breadcrumb'>
-            <span><a href='/conferences'>KubeCon &amp; QCon</a> > </span>
-            <span>Development Practices of CSI Storage Plugins - Part Ⅰ</span>
-        </div>
-        <div class='main-div'>
-            <div class='author'>Xin Wang</div>
-            <div class='date'>Published on：2019-06-25</div>
-            <h1>Development Practices of CSI Storage Plugins - Part Ⅰ</h1>
-            <div class="share-1"><div class="share">
-  <a href="http://twitter.com/share?url=https%3a%2f%2fkubesphere.eu%2fconferences%2fcsi%2f&text=Development%20Practices%20of%20CSI%20Storage%20Plugins%20-%20Part%20%e2%85%a0" target="_blank" rel="noopener noreferrer">
+
+  <section class="main-section ">
+      <div class="common-layout">
+          <div class='breadcrumb'>
+              
+              <span><a href='/conferences'>KubeCon &amp; QCon</a> > </span>
+              <span>Development Practices of CSI Storage Plugins - Part Ⅰ</span>
+          </div>
+          <div class='main-div'>
+              <div class='author'>Xin Wang</div>
+              <div class='date'>Published on：2019-06-25</div>
+              <h1>Development Practices of CSI Storage Plugins - Part Ⅰ</h1>
+              <div class="share-1">
+                  <div class="share">
+  <a data-type="twitter" href="http://twitter.com/share?url=&text=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Twitter.svg" alt="twitter icon">
   </a>
-  <a href="http://reddit.com/submit?url=https%3a%2f%2fkubesphere.eu%2fconferences%2fcsi%2f&title=Development%20Practices%20of%20CSI%20Storage%20Plugins%20-%20Part%20%e2%85%a0" target="_blank" rel="noopener noreferrer">
+  <a data-type="reddit" href="http://reddit.com/submit?url=&title=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Reddit.svg" alt="reddit icon">
   </a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fkubesphere.eu%2fconferences%2fcsi%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="facebook" href="http://www.facebook.com/sharer.php?u=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Facebook.svg" alt="facebook icon">
   </a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fkubesphere.eu%2fconferences%2fcsi%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Linkedin.svg" alt="linkedin icon">
   </a>
-  <a href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkubesphere.eu%2fconferences%2fcsi%2f&t=Development%20Practices%20of%20CSI%20Storage%20Plugins%20-%20Part%20%e2%85%a0" target="_blank" rel="noopener noreferrer">
+  <a data-type="hackernews" href="https://news.ycombinator.com/submitlink?u=&t=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/HackerNews.svg" alt="hackernews icon">
   </a>
-</div></div>
-            <div class='content'>
-                <div class='md-body'>
-                    <p>Many users will transfer their apps to Kubernetes, where storage underlies applications. As users deploy their apps on the Kubernetes, some existing storage plugins are unable to satisfy the growing needs in terms of both diversity and functionality. This is why we need to accelerate the development of new storage plugins, and integrate QingCloud storage services with Kubernetes and KubeSphere.</p>
+</div>
+              </div>
+              <div class='content'>
+                  <div class='md-body'>
+                      <p>Many users will transfer their apps to Kubernetes, where storage underlies applications. As users deploy their apps on the Kubernetes, some existing storage plugins are unable to satisfy the growing needs in terms of both diversity and functionality. This is why we need to accelerate the development of new storage plugins, and integrate QingCloud storage services with Kubernetes and KubeSphere.</p>
 <h2 id="kubernetes-storage-plugin-classification">Kubernetes Storage Plugin Classification</h2>
 <p>In this article, we will focus on the development practices of Kubernetes storage plugins based on CSI. The introduction will be divided into different sections, including the feature, deployment and practice of CSI plugins. We will look at how storage plugins can be classified in this section.</p>
 <p>Kubernetes can schedule a certain type of storage plugins for backend storage services, such as the scheduling of GCE storage plugins for the backend GCE storage service. Storage plugins in Kubernetes can be classified into two types: in-tree and out-of-tree.</p>
@@ -493,37 +586,40 @@ bindClickModalLi()
 <p>The deployment of CSI plugins is relatively simple as they support containerized deployment. In Kubernetes, we can deploy CSI plugins directly through Kubernetes resource objects. CSI provides a powerful plugin solution as it features both storage volume management and snapshot management. As the standard storage solution of CSI sees a rapid development, relevant features will continue to expand. Going forward, we will work to develop and use more storage plugin solutions based on CSI.</p>
 <p>In the next blog, we will elaborate on how to develop a CSI plugin, the CSI standard, CSI deployment, and quality management.</p>
 
-                </div>
-            </div>
-            <div class="share-2"><div class="share">
-  <a href="http://twitter.com/share?url=https%3a%2f%2fkubesphere.eu%2fconferences%2fcsi%2f&text=Development%20Practices%20of%20CSI%20Storage%20Plugins%20-%20Part%20%e2%85%a0" target="_blank" rel="noopener noreferrer">
+                  </div>
+              </div>
+              <div class="share-2">
+                  <div class="share">
+  <a data-type="twitter" href="http://twitter.com/share?url=&text=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Twitter.svg" alt="twitter icon">
   </a>
-  <a href="http://reddit.com/submit?url=https%3a%2f%2fkubesphere.eu%2fconferences%2fcsi%2f&title=Development%20Practices%20of%20CSI%20Storage%20Plugins%20-%20Part%20%e2%85%a0" target="_blank" rel="noopener noreferrer">
+  <a data-type="reddit" href="http://reddit.com/submit?url=&title=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Reddit.svg" alt="reddit icon">
   </a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fkubesphere.eu%2fconferences%2fcsi%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="facebook" href="http://www.facebook.com/sharer.php?u=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Facebook.svg" alt="facebook icon">
   </a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fkubesphere.eu%2fconferences%2fcsi%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Linkedin.svg" alt="linkedin icon">
   </a>
-  <a href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkubesphere.eu%2fconferences%2fcsi%2f&t=Development%20Practices%20of%20CSI%20Storage%20Plugins%20-%20Part%20%e2%85%a0" target="_blank" rel="noopener noreferrer">
+  <a data-type="hackernews" href="https://news.ycombinator.com/submitlink?u=&t=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/HackerNews.svg" alt="hackernews icon">
   </a>
-</div></div>
-        </div>
-        <div class='aside aside-fixed'>
-            <div class='title'>Table of Contents</div>
-            <div class='tabs'><nav id="TableOfContents">
+</div>
+              </div>
+          </div>
+          <div class='aside aside-fixed'>
+              <div class='title'>Table of Contents</div>
+              <div class='tabs'><nav id="TableOfContents">
   <ul>
     <li><a href="#kubernetes-storage-plugin-classification">Kubernetes Storage Plugin Classification</a></li>
     <li><a href="#in-tree-and-out-of-tree-storage-plugins">In-tree and Out-of-tree Storage Plugins</a></li>
   </ul>
 </nav></div>
-        </div>
-    </div>
-</section><footer>
+          </div>
+      </div>
+  </section>
+  <footer>
     
     <div class="footer">
         <div class="footer-main common-layout">
@@ -639,7 +735,23 @@ bindClickModalLi()
                                 
                                 
                                 
+                                <a href="https://kubesphere.io" target="_blank" rel="noopener noreferrer">Global Site</a>
+                                
+                                
+                                
                                 <a href="https://kubesphere.com.cn/" target="_blank" rel="noopener noreferrer">China Site</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.eu" target="_blank" rel="noopener noreferrer">Europe Site</a>
+                                
+                                
+                                
+                                <a href="https://kubesphereturkey.com" target="_blank" rel="noopener noreferrer">Turkey Site</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.es" target="_blank" rel="noopener noreferrer">Spain Site</a>
                                 
                                 
                             </li>
@@ -750,7 +862,15 @@ bindClickModalLi()
     bindSubmit()
     bindHideMessage()
 </script>
-<script src='/js/aside.js'></script>
+
+  <script src='/js/aside.js'></script>
+  <script src='/js/markdown-tab.js'></script>
+
+  <script>
+    var viewer = new Viewer(document.querySelector('.md-body'), {
+        url: 'src'
+    })
+  </script>
 </body>
 
 </html>

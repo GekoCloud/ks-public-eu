@@ -1,22 +1,32 @@
+
+
+
 <!DOCTYPE html>
-<html lang="zh-CN"><head>
-    <meta charset="utf-8">
-    <title>本来生活的 DevOps 升级之路</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。">
-    <meta name="keywords" content="KubeSphere, Kubernetes, 容器平台, DevOps, 混合云">
-    
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="本来生活的 DevOps 升级之路"/>
-    <meta property="og:description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。"/>
-    <meta property="og:image" content="https://pek3b.qingstor.com/kubesphere-docs/png/20200327132943.png"/>
-    <meta property="og:url" content="https://kubesphere.eu/zh/blogs/benlai-devops/"/><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<title>本来生活的 DevOps 升级之路</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。">
+<meta name="keywords" content="KubeSphere, Kubernetes, 容器平台, DevOps, 混合云">
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="本来生活的 DevOps 升级之路"/>
+<meta property="og:description" content="KubeSphere 是在 Kubernetes 之上构建的以应用为中心的多租户容器平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。KubeSphere 提供了运维友好的向导式操作界面，帮助企业快速构建一个强大和功能丰富的容器云平台。"/>
+<meta property="og:image" content="https://pek3b.qingstor.com/kubesphere-docs/png/20200327132943.png"/>
+<meta property="og:url" content="https://kubesphere.eu/zh/blogs/benlai-devops/"/>
+
+<meta name="docsearch:language" content="zh-CN" /><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
 <link rel="stylesheet" href="/fonts/ProximaNova/stylesheet.css">
 <link rel="stylesheet" href="/css/jquery.modal.min.css">
+<link rel="stylesheet" href="/css/viewer.min.css">
 
 
-<link rel="stylesheet" href="/scss/common.min.231017c86cd515edabfb120a6dea96794866be35d0acc497324cf11af412465d.css">
+<link rel="stylesheet" href="/scss/common.min.2609da8369d542ae986bff4177fbfc203af18dbe4861bfc3c504a9ce09f23046.css">
+
+
+
 
 
 
@@ -26,20 +36,27 @@
 
 
 <script src='/js/jquery-3.5.0.min.js'></script>
-    <script src='/js/jquery.modal.min.js'></script>
+<script src='/js/viewer.min.js'></script>
+<script src='/js/jquery.modal.min.js'></script>
+
+
+
+
+    <link rel="stylesheet" href="/scss/content.min.6449d9b70a690e2af632efccd8330582e94e8cdb9f50e3685549ec99aebf21f6.css">
+    
+    
+    <link rel="stylesheet" href="/scss/markdown.min.c7ae5c06f4ee53016ce7cbe563306f09e8380cc2829cb558aca9567a32952dee.css">
 </head>
-<link rel="stylesheet" href="/scss/content.min.093bd10744e47f38d16a8a6578205f56e541320624d4a1824e4f644cda282153.css">
 
-
-<link rel="stylesheet" href="/scss/markdown.min.336f9da22c47298f01a8686a9c0f193a9970a9bee602bf4cf57254e5b6da1f95.css">
 
 <body>
+  
 <header class="navigation">
     
     <div class="join-div">
         <div class="content">
-            👏 KubeSphere v3.0 即将正式 GA！<a href="https://www.qingcloud.com/kubesphere2020#tz2" target="_blank" rel="noopener noreferrer">免费回看 v3.0 发布会视频 📺</a>
-            <a href="https://kubesphere.com.cn/forum/d/1625-kubesphere-3-0" target="_blank" rel="noopener noreferrer">或参与社区帮助测试 v3.0 →</a>
+            🚀 KubeSphere v3.0.0 正式 GA！<a href="https://www.qingcloud.com/kubesphere2020#tz2" target="_blank" rel="noopener noreferrer">免费回看 v3.0 发布会视频 📺</a>
+            <a href="https://kubesphere.com.cn/forum/d/2062-awesome-kubesphere-kubesphere-3-0" target="_blank" rel="noopener noreferrer">了解一键快速安装入门的最佳方式📚 →</a>
             <img id="close-join" src="/images/header/close.svg" alt="close">
         </div>
     </div>
@@ -138,10 +155,47 @@
 
                 
                 
-                <li >
+
+                
+                
                     
-                    <a href="https://kubesphere.com.cn/docs/zh-CN/" target="_blank" rel="noopener noreferrer">文档中心</a>
+                
                     
+                
+                    
+                
+                    
+                
+
+                <li  class="menu-li" >
+                    <span class='menu-span'>文档中心</span>
+                    <ul class="dropdown-menu menu-4">
+                        
+                        <li >
+                            
+                            <a href="/zh/docs/">v3.0.0</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-1.docs.kubesphere.io/docs/zh-CN/" target="_blank" rel="noopener noreferrer">v2.1.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-0.docs.kubesphere.io/docs/zh-CN/" target="_blank" rel="noopener noreferrer">v2.0.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v1-0.docs.kubesphere.io/docs/zh-CN/" target="_blank" rel="noopener noreferrer">v1.0.0</a>
+                            
+                        </li>
+                        
+                    </ul>
                 </li>
                 
 
@@ -211,7 +265,7 @@
                 
                 <li >
                     
-                    <a href="https://kubesphere.com.cn/forum" target="_blank" rel="noopener noreferrer">用户论坛</a>
+                    <a data-docs="用户论坛" href="https://kubesphere.com.cn/forum" target="_blank" rel="noopener noreferrer">用户论坛</a>
                     
                 </li>
                 
@@ -332,7 +386,40 @@
 
             
             
-            <li ><a href="https://kubesphere.com.cn/docs/zh-CN/">文档中心</a></li>
+
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+
+            <li data-check="0"  class="menu-li" >
+                <span class='menu-span'>文档中心</span>
+                <ul class="dropdown-menu">
+                    
+                    <li >
+                        <a href="/zh/docs/">v3.0.0</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-1.docs.kubesphere.io/docs/zh-CN/">v2.1.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-0.docs.kubesphere.io/docs/zh-CN/">v2.0.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v1-0.docs.kubesphere.io/docs/zh-CN/">v1.0.0</a>
+                    </li>
+                    
+                </ul>
+            </li>
             
 
             
@@ -387,7 +474,7 @@
 
             
             
-            <li ><a href="https://kubesphere.com.cn/forum">用户论坛</a></li>
+            <li ><a data-docs="用户论坛" href="https://kubesphere.com.cn/forum">用户论坛</a></li>
             
 
             
@@ -468,6 +555,8 @@ var bindClickClose = function() {
     })
 }
 
+var language = 'zh'
+
 bindClickClose()
 
 bindScrollChangeHeader()
@@ -481,36 +570,40 @@ bindClickModalLi()
 
 
 </script>
-<section class="main-section  padding">
-    <div class="common-layout">
-        <div class='breadcrumb'>
-            <span><a href='/zh/blogs'>技术博客</a> > </span>
-            <span>本来生活的 DevOps 升级之路</span>
-        </div>
-        <div class='main-div'>
-            <div class='author'>YangYang</div>
-            <div class='date'>发布于：2020-03-28</div>
-            <h1>本来生活的 DevOps 升级之路</h1>
-            <div class="share-1"><div class="share">
-  <a href="http://twitter.com/share?url=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fbenlai-devops%2f&text=%e6%9c%ac%e6%9d%a5%e7%94%9f%e6%b4%bb%e7%9a%84%20DevOps%20%e5%8d%87%e7%ba%a7%e4%b9%8b%e8%b7%af" target="_blank" rel="noopener noreferrer">
+
+  <section class="main-section  padding">
+      <div class="common-layout">
+          <div class='breadcrumb'>
+              
+              <span><a href='/zh/blogs'>技术博客</a> > </span>
+              <span>本来生活的 DevOps 升级之路</span>
+          </div>
+          <div class='main-div'>
+              <div class='author'>YangYang</div>
+              <div class='date'>发布于：2020-03-28</div>
+              <h1>本来生活的 DevOps 升级之路</h1>
+              <div class="share-1">
+                  <div class="share">
+  <a data-type="twitter" href="http://twitter.com/share?url=&text=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Twitter.svg" alt="twitter icon">
   </a>
-  <a href="http://reddit.com/submit?url=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fbenlai-devops%2f&title=%e6%9c%ac%e6%9d%a5%e7%94%9f%e6%b4%bb%e7%9a%84%20DevOps%20%e5%8d%87%e7%ba%a7%e4%b9%8b%e8%b7%af" target="_blank" rel="noopener noreferrer">
+  <a data-type="reddit" href="http://reddit.com/submit?url=&title=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Reddit.svg" alt="reddit icon">
   </a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fbenlai-devops%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="facebook" href="http://www.facebook.com/sharer.php?u=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Facebook.svg" alt="facebook icon">
   </a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fbenlai-devops%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Linkedin.svg" alt="linkedin icon">
   </a>
-  <a href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fbenlai-devops%2f&t=%e6%9c%ac%e6%9d%a5%e7%94%9f%e6%b4%bb%e7%9a%84%20DevOps%20%e5%8d%87%e7%ba%a7%e4%b9%8b%e8%b7%af" target="_blank" rel="noopener noreferrer">
+  <a data-type="hackernews" href="https://news.ycombinator.com/submitlink?u=&t=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/HackerNews.svg" alt="hackernews icon">
   </a>
-</div></div>
-            <div class='content'>
-                <div class='md-body'>
-                    <p>我叫杨杨，就职于本来生活网（Benlai.com），负责发布系统架构。我们公司咋说呢，简单说就是卖水果、蔬菜的😄，下面还是来一段官方介绍。</p>
+</div>
+              </div>
+              <div class='content'>
+                  <div class='md-body'>
+                      <p>我叫杨杨，就职于本来生活网（Benlai.com），负责发布系统架构。我们公司咋说呢，简单说就是卖水果、蔬菜的😄，下面还是来一段官方介绍。</p>
 <h2 id="本来生活简介">本来生活简介</h2>
 <p>本来生活网创办于 2012 年，是一个专注于食品、水果、蔬菜的电商网站，从优质食品供应基地、供应商中精挑细选，剔除中间环节，提供冷链配送、食材食品直送到家服务。致力于通过保障食品安全、提供冷链宅配、基地直送来改善中国食品安全现状，成为中国优质食品提供者。</p>
 <p><img src="https://pek3b.qingstor.com/kubesphere-docs/png/20200327131801.png" alt=""></p>
@@ -578,29 +671,31 @@ bindClickModalLi()
 <p><img src="https://pek3b.qingstor.com/kubesphere-docs/png/20200327140205.png" alt=""></p>
 <p>以后发布，只需要在 KubeSphere 平台点击 <strong>运行</strong>，选择 <strong>发布类型</strong> 和 <strong>环境</strong>，然后点击确定，然就可以去喝一杯咖啡 ☕️ 安静地等待服务发布喽！</p>
 
-                </div>
-            </div>
-            <div class="share-2"><div class="share">
-  <a href="http://twitter.com/share?url=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fbenlai-devops%2f&text=%e6%9c%ac%e6%9d%a5%e7%94%9f%e6%b4%bb%e7%9a%84%20DevOps%20%e5%8d%87%e7%ba%a7%e4%b9%8b%e8%b7%af" target="_blank" rel="noopener noreferrer">
+                  </div>
+              </div>
+              <div class="share-2">
+                  <div class="share">
+  <a data-type="twitter" href="http://twitter.com/share?url=&text=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Twitter.svg" alt="twitter icon">
   </a>
-  <a href="http://reddit.com/submit?url=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fbenlai-devops%2f&title=%e6%9c%ac%e6%9d%a5%e7%94%9f%e6%b4%bb%e7%9a%84%20DevOps%20%e5%8d%87%e7%ba%a7%e4%b9%8b%e8%b7%af" target="_blank" rel="noopener noreferrer">
+  <a data-type="reddit" href="http://reddit.com/submit?url=&title=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Reddit.svg" alt="reddit icon">
   </a>
-  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fbenlai-devops%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="facebook" href="http://www.facebook.com/sharer.php?u=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Facebook.svg" alt="facebook icon">
   </a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fbenlai-devops%2f" target="_blank" rel="noopener noreferrer">
+  <a data-type="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/Linkedin.svg" alt="linkedin icon">
   </a>
-  <a href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fkubesphere.eu%2fzh%2fblogs%2fbenlai-devops%2f&t=%e6%9c%ac%e6%9d%a5%e7%94%9f%e6%b4%bb%e7%9a%84%20DevOps%20%e5%8d%87%e7%ba%a7%e4%b9%8b%e8%b7%af" target="_blank" rel="noopener noreferrer">
+  <a data-type="hackernews" href="https://news.ycombinator.com/submitlink?u=&t=" target="_blank" rel="noopener noreferrer">
     <img src="/images/share/HackerNews.svg" alt="hackernews icon">
   </a>
-</div></div>
-        </div>
-        <div class='aside aside-fixed'>
-            <div class='title'>目录</div>
-            <div class='tabs'><nav id="TableOfContents">
+</div>
+              </div>
+          </div>
+          <div class='aside aside-fixed'>
+              <div class='title'>目录</div>
+              <div class='tabs'><nav id="TableOfContents">
   <ul>
     <li><a href="#本来生活简介">本来生活简介</a></li>
     <li><a href="#技术现状">技术现状</a>
@@ -630,9 +725,10 @@ bindClickModalLi()
     <li><a href="#level-9实现一键发布">Level 9：实现一键发布</a></li>
   </ul>
 </nav></div>
-        </div>
-    </div>
-</section><footer>
+          </div>
+      </div>
+  </section>
+  <footer>
     
     <div class="footer">
         <div class="footer-main common-layout">
@@ -759,6 +855,22 @@ bindClickModalLi()
                                 <a href="https://kubesphere.com.cn/forum" target="_blank" rel="noopener noreferrer">中文论坛</a>
                                 
                                 
+                                
+                                <a href="https://kubesphere.io" target="_blank" rel="noopener noreferrer">全球站</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.eu" target="_blank" rel="noopener noreferrer">欧洲站</a>
+                                
+                                
+                                
+                                <a href="https://kubesphereturkey.com" target="_blank" rel="noopener noreferrer">土耳其站</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.es" target="_blank" rel="noopener noreferrer">西班牙站</a>
+                                
+                                
                             </li>
                         
                         
@@ -867,7 +979,15 @@ bindClickModalLi()
     bindSubmit()
     bindHideMessage()
 </script>
-<script src='/js/aside.js'></script>
+
+  <script src='/js/aside.js'></script>
+  <script src='/js/markdown-tab.js'></script>
+
+  <script>
+    var viewer = new Viewer(document.querySelector('.md-body'), {
+        url: 'src'
+    })
+  </script>
 </body>
 
 </html>

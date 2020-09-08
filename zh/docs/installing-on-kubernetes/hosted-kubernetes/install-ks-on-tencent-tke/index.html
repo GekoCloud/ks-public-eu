@@ -1,0 +1,2218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>在腾讯云 TKE 安装 KubeSphere</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="介绍如何在腾讯云 TKE 上部署 KubeSphere 3.0">
+<meta name="keywords" content="kubesphere, kubernetes, docker, tencent, tke">
+
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="在腾讯云 TKE 安装 KubeSphere"/>
+<meta property="og:description" content="介绍如何在腾讯云 TKE 上部署 KubeSphere 3.0"/>
+<meta property="og:image" content="https://kubesphere.eu/images/common/snapshot-zh.png"/>
+<meta property="og:url" content="https://kubesphere.eu/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-ks-on-tencent-tke/"/>
+
+<meta name="docsearch:language" content="zh-CN" /><link rel="stylesheet" href="/fonts/Roboto/stylesheet.css">
+<link rel="stylesheet" href="/fonts/ProximaNova/stylesheet.css">
+<link rel="stylesheet" href="/css/jquery.modal.min.css">
+<link rel="stylesheet" href="/css/viewer.min.css">
+
+
+<link rel="stylesheet" href="/scss/common.min.2609da8369d542ae986bff4177fbfc203af18dbe4861bfc3c504a9ce09f23046.css">
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+
+
+<link rel="stylesheet" href="/scss/doc.min.83c18ea93564042dff0516413603c658d72c43c26202240bcad1b8a7c7dd7b72.css">
+
+
+
+
+<script src='/js/jquery-3.5.0.min.js'></script>
+<script src='/js/viewer.min.js'></script>
+<script src='/js/jquery.modal.min.js'></script>
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+
+
+</head>
+
+<body>
+<header class="navigation">
+    
+    <div class="join-div">
+        <div class="content">
+            🚀 KubeSphere v3.0.0 正式 GA！<a href="https://www.qingcloud.com/kubesphere2020#tz2" target="_blank" rel="noopener noreferrer">免费回看 v3.0 发布会视频 📺</a>
+            <a href="https://kubesphere.com.cn/forum/d/2062-awesome-kubesphere-kubesphere-3-0" target="_blank" rel="noopener noreferrer">了解一键快速安装入门的最佳方式📚 →</a>
+            <img id="close-join" src="/images/header/close.svg" alt="close">
+        </div>
+    </div>
+    
+    <div class="common-layout">
+        <div class="header-container">
+            <a href="/zh/">
+                <img src="/images/header/logo.svg" alt="" class="logo">
+            </a>
+
+            <ul class="nav">
+                
+                
+                
+
+                
+                
+                    
+                
+                    
+                
+                    
+                
+
+                <li  class="menu-li" >
+                    <span class='menu-span'>应用场景</span>
+                    <ul class="dropdown-menu menu-2">
+                        
+                        <li >
+                            
+                            <a href="/zh/devops/">拥抱一站式 DevOps 工作流</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="/zh/service-mesh/">在 Kubernetes 运行微服务</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="/zh/observability/">构建丰富的云原生可观察性</a>
+                            
+                        </li>
+                        
+                    </ul>
+                </li>
+                
+
+                
+                
+
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+
+                <li  class="menu-li" >
+                    <span class='menu-span'>资源</span>
+                    <ul class="dropdown-menu menu-3">
+                        
+                        <li >
+                            
+                            <a href="/zh/projects/">开源项目</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="/zh/conferences/">开源峰会</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="/zh/blogs/">技术博客</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="/zh/videos/">视频资源</a>
+                            
+                        </li>
+                        
+                    </ul>
+                </li>
+                
+
+                
+                
+
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+
+                <li  class="menu-li" >
+                    <span class='menu-span'>文档中心</span>
+                    <ul class="dropdown-menu menu-4">
+                        
+                        <li >
+                            
+                            <a href="/zh/docs/">v3.0.0</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-1.docs.kubesphere.io/docs/zh-CN/" target="_blank" rel="noopener noreferrer">v2.1.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v2-0.docs.kubesphere.io/docs/zh-CN/" target="_blank" rel="noopener noreferrer">v2.0.x</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://v1-0.docs.kubesphere.io/docs/zh-CN/" target="_blank" rel="noopener noreferrer">v1.0.0</a>
+                            
+                        </li>
+                        
+                    </ul>
+                </li>
+                
+
+                
+                
+
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+
+                <li  class="menu-li" >
+                    <span class='menu-span'>开源社区</span>
+                    <ul class="dropdown-menu menu-5">
+                        
+                        <li >
+                            
+                            <a href="/zh/contribution/">参与贡献</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="/zh/case/">案例学习</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="/zh/partner/">合作伙伴</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="/zh/news/">动态</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://github.com/kubesphere/kubesphere/blob/master/docs/roadmap.md" target="_blank" rel="noopener noreferrer">版本计划</a>
+                            
+                        </li>
+                        
+                        <li >
+                            
+                            <a href="https://kubesphere.com.cn/" target="_blank" rel="noopener noreferrer">中国站</a>
+                            
+                        </li>
+                        
+                    </ul>
+                </li>
+                
+
+                
+                
+                <li >
+                    
+                    <a data-docs="用户论坛" href="https://kubesphere.com.cn/forum" target="_blank" rel="noopener noreferrer">用户论坛</a>
+                    
+                </li>
+                
+
+                
+
+            </ul>
+            <div class="right-menu">
+                <ul>
+                    <li class="language-menu">
+                        <div>
+                            <img src="/images/header/black.svg" alt="">
+                            <span>简体中文</span>
+                        </div>
+                        
+                        <ul class="dropdown-menu">
+                            
+                            <li onclick="location = '\/zh\/docs\/installing-on-kubernetes\/hosted-kubernetes\/install-ks-on-tencent-tke\/'">简体中文</li>
+                            
+                        </ul>
+                        
+                    </li>
+                    <li class='btn-li'>
+                        <a href="https://demo.kubesphere.io/login" target="_blank" rel="noopener noreferrer">
+                            <button class="demo-btn">Demo →</button>
+                        </a>
+                        <ol class="dropdown-menu">
+                            <li>1.体验账号： demo1 / Demo123</li>
+                            <li>2.该账号仅开放了部分 UI 界面查看权限</li>
+                            <li>3.建议自行安装体验完整的管理功能</li>
+                        </ol>
+                    </li>
+                    <li class='link-li'>
+                        <a class='link-1' href="https://join.slack.com/t/kubesphere/shared_invite/enQtNTE3MDIxNzUxNzQ0LTZkNTdkYWNiYTVkMTM5ZThhODY1MjAyZmVlYWEwZmQ3ODQ1NmM1MGVkNWEzZTRhNzk0MzM5MmY4NDc3ZWVhMjE" target="_blank" rel="noopener noreferrer"></a>
+                        <a class='link-2' href="https://twitter.com/KubeSphere" target="_blank" rel="noopener noreferrer"></a>
+                        <a class='link-3' href="https://github.com/kubesphere/kubesphere" target="_blank" rel="noopener noreferrer"></a>
+                    </li>
+                    <li class="menu-icon">
+                        <img src="/images/header/menu.svg" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-for-menu" class="modal">
+        <ul class="nav">
+            
+            
+            
+
+            
+            
+                
+            
+                
+            
+                
+            
+
+            <li data-check="0"  class="menu-li" >
+                <span class='menu-span'>应用场景</span>
+                <ul class="dropdown-menu">
+                    
+                    <li >
+                        <a href="/zh/devops/">拥抱一站式 DevOps 工作流</a>
+                    </li>
+                    
+                    <li >
+                        <a href="/zh/service-mesh/">在 Kubernetes 运行微服务</a>
+                    </li>
+                    
+                    <li >
+                        <a href="/zh/observability/">构建丰富的云原生可观察性</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            
+
+            
+            
+
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+
+            <li data-check="0"  class="menu-li" >
+                <span class='menu-span'>资源</span>
+                <ul class="dropdown-menu">
+                    
+                    <li >
+                        <a href="/zh/projects/">开源项目</a>
+                    </li>
+                    
+                    <li >
+                        <a href="/zh/conferences/">开源峰会</a>
+                    </li>
+                    
+                    <li >
+                        <a href="/zh/blogs/">技术博客</a>
+                    </li>
+                    
+                    <li >
+                        <a href="/zh/videos/">视频资源</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            
+
+            
+            
+
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+
+            <li data-check="0"  class="menu-li" >
+                <span class='menu-span'>文档中心</span>
+                <ul class="dropdown-menu">
+                    
+                    <li >
+                        <a href="/zh/docs/">v3.0.0</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-1.docs.kubesphere.io/docs/zh-CN/">v2.1.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v2-0.docs.kubesphere.io/docs/zh-CN/">v2.0.x</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://v1-0.docs.kubesphere.io/docs/zh-CN/">v1.0.0</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            
+
+            
+            
+
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+
+            <li data-check="0"  class="menu-li" >
+                <span class='menu-span'>开源社区</span>
+                <ul class="dropdown-menu">
+                    
+                    <li >
+                        <a href="/zh/contribution/">参与贡献</a>
+                    </li>
+                    
+                    <li >
+                        <a href="/zh/case/">案例学习</a>
+                    </li>
+                    
+                    <li >
+                        <a href="/zh/partner/">合作伙伴</a>
+                    </li>
+                    
+                    <li >
+                        <a href="/zh/news/">动态</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://github.com/kubesphere/kubesphere/blob/master/docs/roadmap.md">版本计划</a>
+                    </li>
+                    
+                    <li >
+                        <a href="https://kubesphere.com.cn/">中国站</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            
+
+            
+            
+            <li ><a data-docs="用户论坛" href="https://kubesphere.com.cn/forum">用户论坛</a></li>
+            
+
+            
+
+        </ul>
+        <div class="btn-div">
+            <a href="https://demo.kubesphere.io/login" target="_blank" rel="noopener noreferrer">
+                <button class="demo-btn">Demo →</button>
+            </a>
+        </div>
+        <div class="link-div">
+            <a href="https://join.slack.com/t/kubesphere/shared_invite/enQtNTE3MDIxNzUxNzQ0LTZkNTdkYWNiYTVkMTM5ZThhODY1MjAyZmVlYWEwZmQ3ODQ1NmM1MGVkNWEzZTRhNzk0MzM5MmY4NDc3ZWVhMjE" target="_blank" rel="noopener noreferrer">
+                <img src="/images/header/slack-hover.svg" alt="">
+            </a>
+            <a href="https://twitter.com/KubeSphere" target="_blank" rel="noopener noreferrer">
+                <img src="/images/header/twitter-hover.svg" alt="">
+            </a>
+            <a href="https://github.com/kubesphere/kubesphere" target="_blank" rel="noopener noreferrer">
+                <img src="/images/header/github-hover.svg" alt="">
+            </a>
+        </div>
+    </div>
+</header>
+<script>
+var bindNavMouseEvent = function(selector) {
+    var flag = false
+    $(selector).mouseenter(function() {
+        if (flag) {
+            return false
+        }
+        flag = true
+        $(this).find('.dropdown-menu').fadeIn(200, function() {
+            flag = false
+        })
+    });
+    $(selector).mouseleave(function() {
+        $(this).find('.dropdown-menu').fadeOut(200)
+    });
+}
+
+var bindScrollChangeHeader = function() {
+    var check = 100
+    var header = $('header')
+    window.addEventListener('scroll', function() {
+        var scrollY = window.scrollY;
+        if (scrollY > 100) {
+            header.addClass('navigationScroll')
+        } else {
+            header.removeClass('navigationScroll')
+        }
+    })
+}
+
+var bindClickShowMenu = function() {
+    $('.menu-icon').click(function() {
+        $('#modal-for-menu').modal()
+    })
+}
+
+var bindClickModalLi = function() {
+    $('.modal .menu-li').click(function() {
+        var check = $(this).data('check')
+        if (check === 0) {
+            $(this).data('check', 1)
+            $(this).find('.dropdown-menu').slideDown(200)
+        } else {
+            $(this).data('check', 0)
+            $(this).find('.dropdown-menu').slideUp(200)
+        }
+        $(this).find('.menu-span').toggleClass('up')
+    })
+}
+
+var bindClickClose = function() {
+    $('#close-join').click(function() {
+        $('.navigation .join-div').hide()
+        $('.main-section').removeClass('padding')
+    })
+}
+
+var language = 'zh'
+
+bindClickClose()
+
+bindScrollChangeHeader()
+
+bindNavMouseEvent('.header-container .menu-li')
+bindNavMouseEvent('.header-container .language-menu')
+bindNavMouseEvent('.header-container .btn-li')
+
+bindClickShowMenu()
+bindClickModalLi()
+
+
+</script>
+<main class='main-section  padding'>
+
+<section class='section-1 bg-cover'>
+    <div class="common-layout">
+        <ol  class="breadcrumbnav">
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+<li>
+  <a href="/zh/docs/">Documentation&nbsp;/&nbsp;</a>
+</li>
+
+
+
+  
+
+
+<li>
+  <a href="/zh/docs/installing-on-kubernetes/">Installing on Kubernetes&nbsp;/&nbsp;</a>
+</li>
+
+
+
+  
+
+
+<li>
+  <a href="">Installing on Hosted Kubernetes&nbsp;/&nbsp;</a>
+</li>
+
+
+
+  
+
+
+<li class="active">
+  <a href="/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-ks-on-tencent-tke/">在腾讯云 TKE 安装 KubeSphere</a>
+</li>
+
+
+
+</ol>
+
+
+
+        <div class="title-div">
+            
+            
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            <h1>Installing on Kubernetes</h1>
+            <div class="menu section-control">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="search-div">
+            <div class="search-input-div">
+  <input id="search" type="text">
+  <svg width="1em" height="1em" viewBox="0 0 18 18">
+    <g fill="none" fill-rule="evenodd">
+      <path d="M12.606 11.192l5.24 5.24-1.415 1.414-5.239-5.24a7.041 7.041 0 0 0 1.414-1.414z" fill="#324558"></path>
+      <path d="M7 14A7 7 0 1 1 7 0a7 7 0 0 1 0 14zm0-2A5 5 0 1 0 7 2a5 5 0 0 0 0 10z" fill="#B6C2CD"></path>
+    </g>
+  </svg>
+</div>
+<script>
+docsearch({
+  apiKey: '221332a85783d16a5b930969fe4a934a',
+  indexName: 'kubesphere',
+  inputSelector: '#search',
+  algoliaOptions: {
+      facetFilters: [`lang:${language}`],
+  },
+  transformData: function(hits) {
+    hits.forEach(hit => {
+      if (typeof window !== undefined) {
+        hit.url = hit.url.replace('kubesphere.io', window.location.host)
+      }
+    })
+    return hits
+  },
+  debug: false,
+})
+</script>
+        </div>
+    </div>
+</section>
+
+<section class="section-menu">
+
+    <div class="common-layout">
+        
+<ul class="common-flex-layout">
+    
+    <li>
+        <h2>
+            <span><img src="/images/docs/docs.svg" alt="Release Notes"></span>
+            <a href="/zh/docs/release/">Release Notes</a>
+        </h2>
+        
+        
+        <ul>
+            
+            <li>
+                
+                <a href="/zh/docs/release/release-v300/" title="Release Notes - 3.0.0">Release Notes - 3.0.0</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/release/release-v211/" title="Release Notes - 2.1.1">Release Notes - 2.1.1</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/release/release-v210/" title="Release Notes - 2.1.0">Release Notes - 2.1.0</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/release/release-v202/" title="Release Notes - 2.0.2">Release Notes - 2.0.2</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/release/release-v201/" title="Release Notes - 2.0.1">Release Notes - 2.0.1</a>
+                
+            </li>
+            
+            
+            <li><a href="/zh/docs/release/">查看更多...</a></li>
+            
+        </ul>
+    </li>
+    
+    <li>
+        <h2>
+            <span><img src="/images/docs/docs.svg" alt="Introduction"></span>
+            <a href="/zh/docs/introduction/">Introduction</a>
+        </h2>
+        
+        
+        <ul>
+            
+            <li>
+                
+                <a href="/zh/docs/introduction/what-is-kubesphere/" title="What is KubeSphere">What is KubeSphere</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/introduction/features/" title="Features">Features</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/introduction/architecture/" title="Architecture">Architecture</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/introduction/advantages/" title="Advantages">Advantages</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/introduction/scenarios/" title="Use Cases">Use Cases</a>
+                
+            </li>
+            
+            
+            <li><a href="/zh/docs/introduction/">查看更多...</a></li>
+            
+        </ul>
+    </li>
+    
+    <li>
+        <h2>
+            <span><img src="/images/docs/docs.svg" alt="Quickstarts"></span>
+            <a href="/zh/docs/quick-start/">Quickstarts</a>
+        </h2>
+        
+        
+        <ul>
+            
+            <li>
+                
+                <a href="/zh/docs/quick-start/all-in-one-on-linux/" title="All-in-one Installation on Linux">All-in-one Installation on Linux</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/quick-start/minimal-kubesphere-on-k8s/" title="Minimal KubeSphere on Kubernetes">Minimal KubeSphere on Kubernetes</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/quick-start/create-workspace-and-project/" title="Create Workspace, Project, Account and Role">Create Workspace, Project, Account and Role</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/quick-start/deploy-bookinfo-to-k8s/" title="Deploy a Bookinfo App">Deploy a Bookinfo App</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/quick-start/wordpress-deployment/" title="Compose and Deploy Wordpress">Compose and Deploy Wordpress</a>
+                
+            </li>
+            
+            
+            <li><a href="/zh/docs/quick-start/">查看更多...</a></li>
+            
+        </ul>
+    </li>
+    
+    <li>
+        <h2>
+            <span><img src="/images/docs/docs.svg" alt="Installing on Linux"></span>
+            <a href="/zh/docs/installing-on-linux/">Installing on Linux</a>
+        </h2>
+        
+        
+        <ul>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/installing-on-linux/introduction/intro/">Introduction</a>
+
+                
+            </li>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/installing-on-linux/on-premises/install-kubesphere-on-vmware-vsphere/">Installing in On-premises Environments</a>
+
+                
+            </li>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/installing-on-linux/public-cloud/install-ks-on-azure-vms/">Installing on Public Cloud</a>
+
+                
+            </li>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/installing-on-linux/cluster-operation/add-new-nodes/">Cluster Operation</a>
+
+                
+            </li>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/installing-on-linux/uninstalling/uninstalling-kubesphere-and-kubernetes/">Uninstalling</a>
+
+                
+            </li>
+            
+            
+            <li><a href="/zh/docs/installing-on-linux/">查看更多...</a></li>
+            
+        </ul>
+    </li>
+    
+    <li>
+        <h2>
+            <span><img src="/images/docs/docs.svg" alt="Installing on Kubernetes"></span>
+            <a href="/zh/docs/installing-on-kubernetes/">Installing on Kubernetes</a>
+        </h2>
+        
+        
+        <ul>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/installing-on-kubernetes/introduction/overview/">Introduction</a>
+
+                
+            </li>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-oke/">Installing on Hosted Kubernetes</a>
+
+                
+            </li>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/installing-on-kubernetes/on-prem-kubernetes/install-ks-on-linux-airgapped/">Installing on On-premises Kubernetes</a>
+
+                
+            </li>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/installing-on-kubernetes/uninstalling/uninstalling-kubesphere-from-k8s/">Uninstalling</a>
+
+                
+            </li>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/installing-on-kubernetes/faq/faq1/">FAQ</a>
+
+                
+            </li>
+            
+            
+        </ul>
+    </li>
+    
+    <li>
+        <h2>
+            <span><img src="/images/docs/docs.svg" alt="Multi-cluster Management"></span>
+            <a href="/zh/docs/multicluster-management/">Multi-cluster Management</a>
+        </h2>
+        
+        
+        <ul>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/multicluster-management/introduction/overview/">Introduction</a>
+
+                
+            </li>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/multicluster-management/enable-multicluster/direct-connection/">Enable Multi-cluster in KubeSphere</a>
+
+                
+            </li>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/multicluster-management/import-cloud-hosted-k8s/import-aliyun-ack/">Import Cloud-hosted Kubernetes Cluster</a>
+
+                
+            </li>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/multicluster-management/import-on-prem-k8s/import-kubeadm-k8s/">Import On-prem Kubernetes Cluster</a>
+
+                
+            </li>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/multicluster-management/remove-cluster/kubefed-in-kubesphere/">Remove Cluster</a>
+
+                
+            </li>
+            
+            
+        </ul>
+    </li>
+    
+    <li>
+        <h2>
+            <span><img src="/images/docs/docs.svg" alt="Enable Pluggable Components"></span>
+            <a href="/zh/docs/pluggable-components/">Enable Pluggable Components</a>
+        </h2>
+        
+        
+        <ul>
+            
+            <li>
+                
+                <a href="/zh/docs/pluggable-components/overview/" title="Overview">Overview</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/pluggable-components/app-store/" title="KubeSphere App Store">KubeSphere App Store</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/pluggable-components/devops/" title="KubeSphere DevOps System">KubeSphere DevOps System</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/pluggable-components/auditing-logs/" title="KubeSphere Auditing Logs">KubeSphere Auditing Logs</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/pluggable-components/events/" title="KubeSphere Events">KubeSphere Events</a>
+                
+            </li>
+            
+            
+            <li><a href="/zh/docs/pluggable-components/">查看更多...</a></li>
+            
+        </ul>
+    </li>
+    
+    <li>
+        <h2>
+            <span><img src="/images/docs/docs.svg" alt="Upgrade"></span>
+            <a href="/zh/docs/upgrade/">Upgrade</a>
+        </h2>
+        
+        
+        <ul>
+            
+            <li>
+                
+                <a href="/zh/docs/upgrade/upgrade-overview/" title="Overview">Overview</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/upgrade/upgrade-with-kubekey/" title="Upgrade with KubeKey">Upgrade with KubeKey</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/upgrade/upgrade-with-ks-installer/" title="Upgrade with ks-installer">Upgrade with ks-installer</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/upgrade/what-changed/" title="Changes after Upgrade">Changes after Upgrade</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/upgrade/upgrade-faq/" title="FAQ">FAQ</a>
+                
+            </li>
+            
+            
+        </ul>
+    </li>
+    
+    <li>
+        <h2>
+            <span><img src="/images/docs/docs.svg" alt="Cluster Administration"></span>
+            <a href="/zh/docs/cluster-administration/">Cluster Administration</a>
+        </h2>
+        
+        
+        <ul>
+            
+            <li>
+                
+                <a href="/zh/docs/cluster-administration/storageclass/" title="StorageClass">StorageClass</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/cluster-administration/nodes/" title="Nodes">Nodes</a>
+                
+            </li>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/cluster-administration/platform-settings/role-member-management/">DevOps Administration</a>
+
+                
+            </li>
+            
+            
+        </ul>
+    </li>
+    
+    <li>
+        <h2>
+            <span><img src="/images/docs/docs.svg" alt="Workspace Administration"></span>
+            <a href="/zh/docs/workspaces-administration/">Workspace Administration</a>
+        </h2>
+        
+        
+        <ul>
+            
+            <li>
+                
+                <a href="/zh/docs/workspaces-administration/release-v300/" title="Upload Helm-based Application">Upload Helm-based Application</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/workspaces-administration/release-v211/" title="Import Helm Repository">Import Helm Repository</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/zh/docs/workspaces-administration/release-v210/" title="Role and Member Management">Role and Member Management</a>
+                
+            </li>
+            
+            
+        </ul>
+    </li>
+    
+    <li>
+        <h2>
+            <span><img src="/images/docs/docs.svg" alt="Project User Guide"></span>
+            <a href="/zh/docs/project-user-guide/">Project User Guide</a>
+        </h2>
+        
+        
+        <ul>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/project-user-guide/application-workloads/app-template/">Application Workloads</a>
+
+                
+            </li>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/project-user-guide/configuration/configmaps/">ConfigMap and Secrets</a>
+
+                
+            </li>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/project-user-guide/grayscale-release/overview/">Grayscale Release</a>
+
+                
+            </li>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/project-user-guide/storage/volumes/">Volume Management</a>
+
+                
+            </li>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/project-user-guide/project-administration/project-quota/">Project Settings</a>
+
+                
+            </li>
+            
+            
+        </ul>
+    </li>
+    
+    <li>
+        <h2>
+            <span><img src="/images/docs/docs.svg" alt="DevOps User Guide"></span>
+            <a href="/zh/docs/devops-user-guide/">DevOps User Guide</a>
+        </h2>
+        
+        
+        <ul>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/devops-user-guide/introduction/credential/">DevOps Project Introduction</a>
+
+                
+            </li>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/devops-user-guide/devops-administration/role-and-member-management/">DevOps Administration</a>
+
+                
+            </li>
+            
+            
+        </ul>
+    </li>
+    
+    <li>
+        <h2>
+            <span><img src="/images/docs/docs.svg" alt="Application Store"></span>
+            <a href="/zh/docs/application-store/">Application Store</a>
+        </h2>
+        
+        
+        <ul>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/application-store/app-developer-guide/helm-developer-guide/">Application Developer Guide</a>
+
+                
+            </li>
+            
+            <li>
+                
+                
+
+
+
+
+    <a href="/zh/docs/application-store/built-in-apps/gitlab-app/">Built-in Applications</a>
+
+                
+            </li>
+            
+            
+        </ul>
+    </li>
+    
+    
+    <li style="height: 0; margin: 0; padding: 0;"></li>
+    
+    <li style="height: 0; margin: 0; padding: 0;"></li>
+    
+    <li style="height: 0; margin: 0; padding: 0;"></li>
+    
+    <li style="height: 0; margin: 0; padding: 0;"></li>
+    
+    <li style="height: 0; margin: 0; padding: 0;"></li>
+    
+    <li style="height: 0; margin: 0; padding: 0;"></li>
+    
+    <li style="height: 0; margin: 0; padding: 0;"></li>
+    
+    <li style="height: 0; margin: 0; padding: 0;"></li>
+    
+    <li style="height: 0; margin: 0; padding: 0;"></li>
+    
+    <li style="height: 0; margin: 0; padding: 0;"></li>
+    
+    <li style="height: 0; margin: 0; padding: 0;"></li>
+    
+    <li style="height: 0; margin: 0; padding: 0;"></li>
+    
+    <li style="height: 0; margin: 0; padding: 0;"></li>
+    
+</ul>
+    </div>
+
+</section>
+
+<section class="section-2">
+    <div class="common-layout">
+        <div class="left-div">
+            <div>
+  <nav class='nav-menu'>
+		
+		
+		
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+				
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+    
+
+
+
+
+
+
+<ul class="ul-active">
+	
+	
+	
+	<li class="list">
+		
+		
+
+
+
+
+<p class="list-title">
+	<span class="arrow "></span>
+	<span>Introduction</span>
+</p>
+
+
+<ul class="">
+	
+	
+	
+	<li class="list">
+		
+		<a href="/zh/docs/installing-on-kubernetes/introduction/overview/">Overview</a>
+		
+	</li>
+	
+	
+	<li class="list">
+		
+		<a href="/zh/docs/installing-on-kubernetes/introduction/prerequisites/">Prerequisites</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	
+	<li class="list">
+		
+		
+
+
+
+
+<p class="list-title">
+	<span class="arrow arrow-open"></span>
+	<span>Installing on Hosted Kubernetes</span>
+</p>
+
+
+<ul class="ul-active">
+	
+	
+	
+	<li class="list">
+		
+		<a href="/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-oke/">Deploy KubeSphere on Oracle OKE</a>
+		
+	</li>
+	
+	
+	<li class="list active">
+		
+		<a href="/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-ks-on-tencent-tke/">在腾讯云 TKE 安装 KubeSphere</a>
+		
+	</li>
+	
+	
+	<li class="list">
+		
+		<a href="/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-huaweicloud-cce/">在华为云 CCE 安装 KubeSphere</a>
+		
+	</li>
+	
+	
+	<li class="list">
+		
+		<a href="/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-eks/">Deploy KubeSphere on AWS EKS</a>
+		
+	</li>
+	
+	
+	<li class="list">
+		
+		<a href="/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-do/">Deploy KubeSphere on DigitalOcean</a>
+		
+	</li>
+	
+	
+	<li class="list">
+		
+		<a href="/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-gke/">Deploy KubeSphere on GKE</a>
+		
+	</li>
+	
+	
+	<li class="list">
+		
+		<a href="/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-aks/">Deploy KubeSphere on AKS</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	
+	<li class="list">
+		
+		
+
+
+
+
+<p class="list-title">
+	<span class="arrow "></span>
+	<span>Installing on On-premises Kubernetes</span>
+</p>
+
+
+<ul class="">
+	
+	
+	
+	<li class="list">
+		
+		<a href="/zh/docs/installing-on-kubernetes/on-prem-kubernetes/install-ks-on-linux-airgapped/">Air-Gapped Installation</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	
+	<li class="list">
+		
+		
+
+
+
+
+<p class="list-title">
+	<span class="arrow "></span>
+	<span>Uninstalling</span>
+</p>
+
+
+<ul class="">
+	
+	
+	
+	<li class="list">
+		
+		<a href="/zh/docs/installing-on-kubernetes/uninstalling/uninstalling-kubesphere-from-k8s/">Uninstalling KubeSphere from Kubernetes</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	
+	<li class="list">
+		
+		
+
+
+
+
+<p class="list-title">
+	<span class="arrow "></span>
+	<span>FAQ</span>
+</p>
+
+
+<ul class="">
+	
+	
+	
+	<li class="list">
+		
+		<a href="/zh/docs/installing-on-kubernetes/faq/faq1/">FAQ</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+  </nav>
+</div>
+
+
+<script>
+	$('.nav-menu .list-title').click(function() {
+		$(this).find('.arrow').toggleClass('arrow-open')
+		$(this).next().toggleClass('ul-active')
+	})
+</script>
+
+            
+        </div>
+        <div class="second-section-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="middle-div">
+            <div class="top-div common-flex-layout">
+                <div class="contributor-div">
+                    <span>最新更新:</span>
+                    <span class="update-time"></span>
+                    <a href="https://github.com/kubesphere/website/blob/master/content/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-ks-on-tencent-tke.md" target="_blank" rel="noopener noreferrer">
+                        <ul class="contributor-avatar"></ul>
+                    </a>
+                    <span class="more-contributor"></span>
+                </div>
+                <div class="mutual-div common-flex-layout">
+                    <div class="edit-div">
+                        <a href="https://github.com/kubesphere/website/edit/master/content/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-ks-on-tencent-tke.md" target="_blank" rel="noopener noreferrer">
+                            <span class="icon-span"></span>
+                            <span>编辑</span>
+                        </a>
+                    </div>
+                    <div class="feedback-div">
+                        <a href="https://github.com/kubesphere/website/issues/new" target="_blank" rel="noopener noreferrer">
+                        <span class="icon-span"></span>
+                        <span>反馈</span>
+                        </a>
+                    </div>
+                    <div class="share-div">
+                        <div>
+                            <span class="icon-span"></span>
+                            <span>分享</span>
+                        </div>
+                        <ul>
+                            <li>
+                                <img src="/images/docs/twitter.svg" alt="twitter">
+                                <a data-type="twitter" href="http://twitter.com/share?url=https%3a%2f%2fkubesphere.eu%2fzh%2fdocs%2finstalling-on-kubernetes%2fhosted-kubernetes%2finstall-ks-on-tencent-tke%2f&text=%e5%9c%a8%e8%85%be%e8%ae%af%e4%ba%91%20TKE%20%e5%ae%89%e8%a3%85%20KubeSphere" target="_blank" rel="noopener noreferrer">twitter</a>
+                            </li>
+                            <li>
+                                <img src="/images/docs/linkedIn.svg" alt="linkedIn">
+                                <a data-type="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fkubesphere.eu%2fzh%2fdocs%2finstalling-on-kubernetes%2fhosted-kubernetes%2finstall-ks-on-tencent-tke%2f" target="_blank" rel="noopener noreferrer">linkedIn</a>
+                            </li>
+                            <li>
+                                <img src="/images/docs/facebook.svg" alt="facebook">
+                                <a data-type="facebook" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fkubesphere.eu%2fzh%2fdocs%2finstalling-on-kubernetes%2fhosted-kubernetes%2finstall-ks-on-tencent-tke%2f" target="_blank" rel="noopener noreferrer">facebook</a>
+                            </li>
+                            <li>
+                                <img src="/images/docs/email.svg" alt="email" >
+                                <a href="mailto:kubesphere@gmail.com" target="_blank" rel="noopener noreferrer">email</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-div main-div">
+                <div class="md-body">
+                    <h1>在腾讯云 TKE 安装 KubeSphere</h1>
+                    <p>本指南将介绍如何在<a href="https://cloud.tencent.com/document/product/457/6759">腾讯云 TKE</a> 上部署并使用 KubeSphere 3.0.0 平台。</p>
+<h2 id="腾讯云-tke-环境准备">腾讯云 TKE 环境准备</h2>
+<h3 id="创建-kubernetes-集群">创建 Kubernetes 集群</h3>
+<p>首先按使用环境的资源需求<a href="https://cloud.tencent.com/document/product/457/32189">创建 Kubernetes 集群</a>，满足以下一些条件即可（如已有环境并满足条件可跳过本节内容）：</p>
+<ul>
+<li>KubeSphere 3.0.0 默认支持的 Kubernetes 版本为 <code>1.15.x</code>, <code>1.16.x</code>, <code>1.17.x</code>, <code>1.18.x</code>，需要选择其中支持的版本进行集群创建（如 <code>1.16.3</code>, <code>1.18.4</code>）；</li>
+<li>工作节点机型配置规格方面选择 <code>SA2.LARGE8</code> 的 <code>4核｜8GB</code> 配置即可，并按需扩展工作节点数量（通常生产环境需要 3 个及以上工作节点）。</li>
+</ul>
+<h3 id="创建公网-kubectl-证书">创建公网 kubectl 证书</h3>
+<ul>
+<li>创建完集群后，进入 <code>容器服务</code> &gt; <code>集群</code> 界面，选择刚创建的集群，在 <code>基本信息</code>  面板中， <code>集群APIServer信息</code> 中开启 <code>外网访问</code> 。</li>
+<li>然后在下方 <code>kubeconfig</code> 列表项中点击 <code>下载</code>，即可获取公用可用的 kubectl 证书。</li>
+</ul>
+<p><img src="/images/docs/tencent-tke/generate-kubeconfig.png" alt="generate-kubeconfig.png"></p>
+<ul>
+<li>获取 kubectl 配置文件后，可通过 kubectl 命令行工具来验证集群连接：</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ kubectl version
+Client Version: version.Info<span style="color:#f92672">{</span>Major:<span style="color:#e6db74">&#34;1&#34;</span>, Minor:<span style="color:#e6db74">&#34;18&#34;</span>, GitVersion:<span style="color:#e6db74">&#34;v1.18.4&#34;</span>, GitCommit:<span style="color:#e6db74">&#34;c96aede7b5205121079932896c4ad89bb93260af&#34;</span>, GitTreeState:<span style="color:#e6db74">&#34;clean&#34;</span>, BuildDate:<span style="color:#e6db74">&#34;2020-06-17T11:41:22Z&#34;</span>, GoVersion:<span style="color:#e6db74">&#34;go1.13.9&#34;</span>, Compiler:<span style="color:#e6db74">&#34;gc&#34;</span>, Platform:<span style="color:#e6db74">&#34;linux/amd64&#34;</span><span style="color:#f92672">}</span>
+Server Version: version.Info<span style="color:#f92672">{</span>Major:<span style="color:#e6db74">&#34;1&#34;</span>, Minor:<span style="color:#e6db74">&#34;18+&#34;</span>, GitVersion:<span style="color:#e6db74">&#34;v1.18.4-tke.2&#34;</span>, GitCommit:<span style="color:#e6db74">&#34;f6b0517bc6bc426715a9ff86bd6aef39c81fd64a&#34;</span>, GitTreeState:<span style="color:#e6db74">&#34;clean&#34;</span>, BuildDate:<span style="color:#e6db74">&#34;2020-08-12T02:18:32Z&#34;</span>, GoVersion:<span style="color:#e6db74">&#34;go1.13.15&#34;</span>, Compiler:<span style="color:#e6db74">&#34;gc&#34;</span>, Platform:<span style="color:#e6db74">&#34;linux/amd64&#34;</span><span style="color:#f92672">}</span>
+</code></pre></div><h2 id="kubesphere-平台部署">KubeSphere 平台部署</h2>
+<h3 id="通过-ks-installer-执行最小化部署">通过 ks-installer 执行最小化部署</h3>
+<p>接下来就可以使用 <a href="https://github.com/kubesphere/ks-installer">ks-installer</a> 在已有的 Kubernetes 集群上来执行 KubeSphere 部署，建议首先还是以最小功能集进行安装。</p>
+<ul>
+<li>使用 kubectl 执行以下命令安装 KubeSphere：</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl apply -f https://raw.githubusercontent.com/kubesphere/ks-installer/master/deploy/kubesphere-installer.yaml
+</code></pre></div><ul>
+<li>本地创建名为 <code>cluster-configuration.yaml</code> 的文件：</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vim cluster-configuration.yaml
+</code></pre></div><ul>
+<li>复制此<a href="https://raw.githubusercontent.com/kubesphere/ks-installer/master/deploy/cluster-configuration.yaml">文件</a>中的内容到 <code>cluster-configuration.yaml</code> 中，默认最小化安装未开启可插拔组件，然后执行以下命令：</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl apply -f cluster-configuration.yaml
+</code></pre></div><ul>
+<li>执行以下命令查看部署日志，当日志输出如以下图片内容时则表示部署完成：</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl logs -n kubesphere-system <span style="color:#66d9ef">$(</span>kubectl get pod -n kubesphere-system -l app<span style="color:#f92672">=</span>ks-install -o jsonpath<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{.items[0].metadata.name}&#39;</span><span style="color:#66d9ef">)</span> -f
+</code></pre></div><p><img src="/images/docs/tencent-tke/ks-install-log.png" alt="ks-install-log.png"></p>
+<h3 id="访问-kubesphere-控制台">访问 KubeSphere 控制台</h3>
+<p>部署完成后，您可以通过以下步骤访问 KubeSphere 控制台。</p>
+<h4 id="nodeport-方式访问">NodePort 方式访问</h4>
+<ul>
+<li>在 <code>容器服务</code> &gt; <code>集群</code> 界面中，选择创建好的集群，在 <code>节点管理</code> &gt; <code>节点</code> 面板中，查看任意一个节点的 <code>公网 IP</code>（集群安装时默认会免费为每个节点绑定公网 IP）。</li>
+</ul>
+<p><img src="/images/docs/tencent-tke/nodeport.png" alt="nodeport.png"></p>
+<ul>
+<li>由于服务安装时默认开启 NodePort 且端口为 30880，浏览器输入 <code>&lt;公网 IP&gt;:30880</code> ，并以默认账号（用户名 <code>admin</code>，密码 <code>P@88w0rd</code>）即可登录控制台。</li>
+</ul>
+<p><img src="/images/docs/tencent-tke/console.png" alt="console.png"></p>
+<h4 id="loadbalancer-方式访问">LoadBalancer 方式访问</h4>
+<ul>
+<li>在 <code>容器服务</code> &gt; <code>集群</code> 界面中，选择创建好的集群，在 <code>服务与路由</code> &gt; <code>service</code> 面板中，点击 <code>ks-console</code> 一行中 <code>更新访问方式</code>。</li>
+</ul>
+<p><img src="/images/docs/tencent-tke/loadbalancer1.png" alt="loadbalancer1.png"></p>
+<ul>
+<li><code>服务访问方式</code> 选择 <code>提供公网访问</code>，<code>端口映射</code> 中 <code>服务端口</code> 填写您希望的端口号，点击 <code>更新访问方式</code>。</li>
+</ul>
+<p><img src="/images/docs/tencent-tke/loadbalancer2.png" alt="loadbalancer2.png"></p>
+<ul>
+<li>此时界面您将会看到 LoadBalancer 公网 IP：</li>
+</ul>
+<p><img src="/images/docs/tencent-tke/loadbalancer3.png" alt="loadbalancer3.png"></p>
+<ul>
+<li>浏览器输入 <code>&lt;LoadBalancer 公网 IP&gt;:&lt;映射端口&gt;</code>，并以默认账号（用户名 <code>admin</code>，密码 <code>P@88w0rd</code>）即可登录控制台。</li>
+</ul>
+<p><img src="/images/docs/tencent-tke/console.png" alt="console.png"></p>
+<h3 id="通过-kubesphere-开启附加组件">通过 KubeSphere 开启附加组件</h3>
+<p>KubeSphere 平台外网可访问后，接下来的操作即可都在平台内完成。开启附加组件的操作可以参考社区文档 - <code>KubeSphere 3.0 界面开启可插拔组件安装</code>。
+全部附加组件开启并安装成功后，进入集群管理界面，可以得到如下界面呈现效果，特别是在 <code>服务组件</code> 部分可以看到已经开启的各个基础和附加组件：
+<img src="/images/docs/tencent-tke/console-full.png" alt="console-full.png"></p>
+
+                </div>
+            </div>
+            
+            
+            <div class="page-div common-flex-layout">
+                
+                
+                    <a class="last" href="/zh/docs/project-user-guide/application-workloads/daemonsets/">
+                        <img src="/images/docs/last.svg" alt="上一篇">
+                        上一篇
+                        <span>: DaemonSets</span>
+                    </a>
+                
+                
+                
+                
+                    <a class="next" href="/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-huaweicloud-cce/">
+                        下一篇
+                        <span>: 在华为云 CCE 安装 KubeSphere</span>
+                        <img src="/images/docs/next.svg" alt="下一篇">
+                    </a>            
+                
+                
+            </div>
+            
+            <div></div>
+        </div>
+        
+        <div class="aside aside-fixed">
+            <div class='title'>
+                页面内容
+            </div>
+            <div class='tabs'>
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#腾讯云-tke-环境准备">腾讯云 TKE 环境准备</a>
+      <ul>
+        <li><a href="#创建-kubernetes-集群">创建 Kubernetes 集群</a></li>
+        <li><a href="#创建公网-kubectl-证书">创建公网 kubectl 证书</a></li>
+      </ul>
+    </li>
+    <li><a href="#kubesphere-平台部署">KubeSphere 平台部署</a>
+      <ul>
+        <li><a href="#通过-ks-installer-执行最小化部署">通过 ks-installer 执行最小化部署</a></li>
+        <li><a href="#访问-kubesphere-控制台">访问 KubeSphere 控制台</a>
+          <ul>
+            <li><a href="#nodeport-方式访问">NodePort 方式访问</a></li>
+            <li><a href="#loadbalancer-方式访问">LoadBalancer 方式访问</a></li>
+          </ul>
+        </li>
+        <li><a href="#通过-kubesphere-开启附加组件">通过 KubeSphere 开启附加组件</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<script src='/js/aside.js'></script>
+
+<script src='/js/markdown-tab.js'></script>
+<script>
+    var languageCode = 'zh'
+    var filePath = 'docs\/installing-on-kubernetes\/hosted-kubernetes\/install-ks-on-tencent-tke.md'
+    var githubUrl = 'https:\/\/github.com\/kubesphere\/website'
+    
+
+    var getLatestTime = function(data) {
+        var commit = data[0].commit
+        return commit.author.date.replace("T", " ").replace("Z", "")
+    }
+
+    var filterData = function(data) {
+        var arr = []
+        var length = data.length
+        for (var i = 0; i < length; i++) {
+            var author = data[i].author
+            if (author) {
+                var avatar_url = author.avatar_url
+                if (avatar_url && !arr.includes(avatar_url)) {
+                    arr.push(avatar_url)
+                }
+            }
+
+        }
+        return arr
+    }
+    var getFileContributors = function() {
+        var url = 'https://api.github.com/repos/kubesphere/website/commits?path=content/' + languageCode + '/' + filePath
+        $.getJSON(url, function(data) {
+            if (!data || data.length === 0) {
+                $('.contributor-div').hide()
+                return
+            }
+            var newData = filterData(data)
+            var time = getLatestTime(data)
+            renderLatestTime(time)
+            renderContributors(newData)
+        })
+    }
+    var renderContributors = function(data) {
+        var contributor = $('.contributor-avatar')
+        var length = data.length
+        var len = 5
+        $.each(data.slice(0, len), function(index, item) {
+            var img = $("<img />", {
+                "src": item
+            })
+            $("<li />", {
+                "html": img
+            }).appendTo(contributor);
+        });
+        var t = length - len
+        if (t > 0) {
+            $('.more-contributor').html('+' + t)
+        }
+    }
+
+    var renderLatestTime = function(time) {
+        $('.update-time').html(time)
+    }
+
+    var bindClickMenu = function() {
+        var sectionMenu = $(".section-menu")
+        $('.section-control').on('click', function(e){
+            if (sectionMenu.is(":hidden")) {
+                sectionMenu.show();
+            } else {
+                sectionMenu.hide()
+            }
+
+            $(document).one("click", function(){
+                sectionMenu.hide()
+            });
+
+            e.stopPropagation()
+        })
+
+        sectionMenu.on("click", function(e){
+            e.stopPropagation();
+        })
+    }
+
+    var bindClickSecondMenu = function() {
+        var sectionMenu = $(".section-2 .left-div")
+        $('.second-section-menu').on('click', function(e){
+            sectionMenu.css("left", "0")
+
+            $(document).one("click", function(){
+                sectionMenu.css("left", "-274px")
+            });
+
+            e.stopPropagation()
+        })
+
+        sectionMenu.on("click", function(e){
+            e.stopPropagation();
+        })
+    }
+
+    var useViewer = function() {
+        var viewer = new Viewer(document.querySelector('.md-body'), {
+            url: 'src'
+        })
+    }
+
+    var __main = function() {
+        getFileContributors()
+        bindClickMenu()
+        bindClickSecondMenu()
+        useViewer()
+    }
+
+    __main()
+
+</script>
+
+</main><footer>
+    
+    <div class="footer">
+        <div class="footer-main common-layout">
+            <div class="up-main">
+                <div class="left-div">
+                    <img src="/images/logo.svg" alt="" class="foot-logo">
+                    <p>通过邮件接收 KubeSphere 最新的技术博客与产品更新的通知</p>
+                    <div>
+                        <form
+                            action="https://kubesphere.us10.list-manage.com/subscribe/post?u=c85ea2b944b08b951f607bdd4&amp;id=83f673a2d9"
+                            method="post"
+                            target="_blank"
+                            novalidate
+                        >
+                            <input name="EMAIL" id="email-input" type="text" placeholder='请输入你的邮箱地址'>
+                            <button type="submit" id="email-submit">订阅</button>
+                        </form>
+                    </div>
+                    <span id="message" data-message1='请提供您的邮箱' data-message2='请输入有效的邮箱地址!'></span>
+                </div>
+                <div class="right-div">
+                    <ul class="common-flex-layout">
+                        
+                        
+                            <li>
+                                <div class="h3">应用场景</div>
+                                
+                                
+                                <a href="/zh/devops/">拥抱一站式 DevOps</a>
+                                
+                                
+                                
+                                <a href="/zh/service-mesh/">在 K8s 运行微服务</a>
+                                
+                                
+                                
+                                <a href="/zh/observability/">构建云原生可观察性</a>
+                                
+                                
+                                
+                                <a href="https://porterlb.io" target="_blank" rel="noopener noreferrer">物理机 K8s 暴露服务</a>
+                                
+                                
+                                
+                                <a href="https://github.com/kubesphere/kubekey" target="_blank" rel="noopener noreferrer">K8s 一键部署与运维</a>
+                                
+                                
+                                
+                                <a href="https://openpitrix.io/" target="_blank" rel="noopener noreferrer">多云应用管理平台</a>
+                                
+                                
+                                
+                                <a href="https://github.com/kubesphere/fluentbit-operator" target="_blank" rel="noopener noreferrer">Fluent-Bit 管理日志</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                <div class="h3">资源</div>
+                                
+                                
+                                <a href="/zh/projects/">开源项目</a>
+                                
+                                
+                                
+                                <a href="/zh/blogs/">技术博客</a>
+                                
+                                
+                                
+                                <a href="/zh/conferences/">开源峰会</a>
+                                
+                                
+                                
+                                <a href="/zh/videos/">视频资源</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                <div class="h3">文档中心</div>
+                                
+                                
+                                <a href="https://kubesphere.io/docs/" target="_blank" rel="noopener noreferrer">产品介绍</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.io/docs/installation/intro/" target="_blank" rel="noopener noreferrer">如何安装</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.io/docs/quick-start/admin-quick-start/" target="_blank" rel="noopener noreferrer">快速入门</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.io/docs/api-reference/api-docs/" target="_blank" rel="noopener noreferrer">API 文档</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                <div class="h3">开源社区</div>
+                                
+                                
+                                <a href="/zh/contribution">参与贡献</a>
+                                
+                                
+                                
+                                <a href="/zh/case/">案例学习</a>
+                                
+                                
+                                
+                                <a href="/zh/partner/">合作伙伴</a>
+                                
+                                
+                                
+                                <a href="https://github.com/kubesphere/kubesphere/blob/master/docs/roadmap.md" target="_blank" rel="noopener noreferrer">版本计划</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.com.cn/" target="_blank" rel="noopener noreferrer">中国站</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.com.cn/forum" target="_blank" rel="noopener noreferrer">中文论坛</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.io" target="_blank" rel="noopener noreferrer">全球站</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.eu" target="_blank" rel="noopener noreferrer">欧洲站</a>
+                                
+                                
+                                
+                                <a href="https://kubesphereturkey.com" target="_blank" rel="noopener noreferrer">土耳其站</a>
+                                
+                                
+                                
+                                <a href="https://kubesphere.es" target="_blank" rel="noopener noreferrer">西班牙站</a>
+                                
+                                
+                            </li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="down-main">
+                <div class='img-div'>
+                    <a class='wechat' href="javascript:void(0);">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+    <defs>
+        <path id="a" d="M0 0h15.673v12.156H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+        <circle cx="13" cy="13" r="13" stroke="#B6C2CD"/>
+        <g transform="translate(5 7)">
+            <mask id="b" fill="#fff">
+                <use xlink:href="#a"/>
+            </mask>
+            <path fill="currentColor" d="M15.673 7.898c0-2.061-2.173-3.74-4.619-3.74-2.59 0-4.625 1.679-4.625 3.74 0 2.066 2.035 3.738 4.625 3.738.542 0 1.09-.13 1.632-.256l1.493.776-.408-1.29c1.09-.776 1.902-1.81 1.902-2.968zm-6.119-.645c-.27 0-.541-.257-.541-.514 0-.256.27-.514.541-.514.41 0 .681.258.681.514 0 .257-.271.514-.681.514zm2.994 0c-.27 0-.541-.257-.541-.514 0-.256.27-.514.54-.514.41 0 .681.258.681.514 0 .257-.277.514-.68.514z" mask="url(#b)"/>
+            <path fill="currentColor" d="M10.602 3.674c.177 0 .356.011.533.029C10.657 1.576 8.27 0 5.543 0 2.498 0 0 1.974 0 4.485c0 1.45.829 2.64 2.216 3.564l-.552 1.588 1.94-.929c.693.129 1.251.263 1.94.263.17 0 .343-.005.515-.022a3.68 3.68 0 0 1-.172-1.104c0-2.302 2.081-4.171 4.715-4.171zM7.618 2.243c.417 0 .693.263.693.66s-.276.66-.693.66c-.418 0-.835-.263-.835-.66.006-.398.423-.66.835-.66zm-3.88 1.319c-.417 0-.834-.263-.834-.66s.417-.66.834-.66c.418 0 .695.263.695.66 0 .392-.277.66-.695.66z" mask="url(#b)"/>
+        </g>
+    </g>
+</svg>
+
+                        <div class="hide-div">
+                            <p>Follow the official account</p>
+                            <img src="/images/footer/wechat_code.svg" alt="">
+                        </div>
+                    </a>
+                    <a class='facebook-a' href="https://www.facebook.com/kubesphere" target="_blank"></a>
+                    <a class='twitter-a' href="https://twitter.com/KubeSphere" target="_blank" rel="noopener noreferrer"></a>
+                    <a class='linkedin-a' href="https://www.linkedin.com/company/kubesphere/" target="_blank" rel="noopener noreferrer"></a>
+                    
+                    <a class='youtube-a' href="https://www.youtube.com/channel/UCyTdUQUYjf7XLjxECx63Hpw" target="_blank" rel="noopener noreferrer"></a>
+                    <a class='slack-a' href="https://join.slack.com/t/kubesphere/shared_invite/enQtNTE3MDIxNzUxNzQ0LTZkNTdkYWNiYTVkMTM5ZThhODY1MjAyZmVlYWEwZmQ3ODQ1NmM1MGVkNWEzZTRhNzk0MzM5MmY4NDc3ZWVhMjE" target="_blank" rel="noopener noreferrer"></a>
+                    <a class='github-a' href="https://github.com/kubesphere/kubesphere" target="_blank" rel="noopener noreferrer"></a>
+                    <a class='medium-a' href="https://itnext.io/@kubesphere" target="_blank" rel="noopener noreferrer"></a>
+                </div>
+                <p class='p1'>KubeSphere®️ 2020 All Rights Reserved.</p>
+                
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<script>
+    var bindSubmit = function() {
+        var input = $('#email-input')
+        $('#email-submit').click(function(event) {
+            event.stopPropagation()
+            var email = input.val()
+            var message1 = $('#message').data('message1')
+            var message2 = $('#message').data('message2')
+            if (!email) {
+                event.preventDefault()
+                showMessage(message1)
+            } else if (!validateEmail(email)) {
+                event.preventDefault()
+                showMessage(message2)
+            }
+        })
+    }
+
+    var bindHideMessage = function() {
+        $(window).click(function() {
+            $('#message').hide()
+        })
+    }
+
+    var showMessage = function(message) {
+        $('#message').html(message).show()
+    }
+
+    var validateEmail = function(email) {
+        var reg = /^[A-Za-z0-9]+([_\.][A-Za-z0-9]+)*@([A-Za-z0-9\-]+\.)+[A-Za-z]{2,6}$/
+        return reg.test(email)
+    }
+
+    var lazyLoad = function(allImg, imgNum) {
+        for (var i = 0; i < imgNum; i++) {
+            var img = allImg.eq(i)
+            var loaded = img.attr("data-loaded");
+            if (loaded) {
+                continue
+            }
+            if (img.offset().top < parseInt($(window).height()) + parseInt($(window).scrollTop())) {
+                var src = img.attr("src")
+                img.attr("src", src)
+                img.attr("data-loaded", true)
+            }
+        }
+    }
+
+    var bindLayLoad = function() {
+        var allImg = $('img')
+        var imgNum = allImg.length
+        lazyLoad(allImg, imgNum)
+        $(window).scroll(function() {
+            lazyLoad(allImg, imgNum)
+        });
+    }
+
+    
+    bindSubmit()
+    bindHideMessage()
+</script>
+</body>
+
+</html>

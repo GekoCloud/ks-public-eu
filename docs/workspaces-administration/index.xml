@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Workspace Administration on </title>
+    <link>https://kubesphere.eu/docs/workspaces-administration/</link>
+    <description>Recent content in Workspace Administration on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="https://kubesphere.eu/docs/workspaces-administration/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Upload Helm-based Application</title>
+      <link>https://kubesphere.eu/docs/workspaces-administration/release-v300/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/docs/workspaces-administration/release-v300/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Import Helm Repository</title>
+      <link>https://kubesphere.eu/docs/workspaces-administration/release-v211/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/docs/workspaces-administration/release-v211/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Role and Member Management</title>
+      <link>https://kubesphere.eu/docs/workspaces-administration/release-v210/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/docs/workspaces-administration/release-v210/</guid>
+      <description>TBD</description>
+    </item>
+    
+  </channel>
+</rss>

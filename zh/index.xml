@@ -11,48 +11,1009 @@
     
     
     <item>
-      <title>aaaaaa</title>
-      <link>https://kubesphere.eu/zh/docs/quick-start/second/third/aaa/</link>
+      <title>Release Notes For 3.0.0</title>
+      <link>https://kubesphere.eu/zh/docs/release/release-v300/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kubesphere.eu/zh/docs/quick-start/second/third/aaa/</guid>
-      <description>test test</description>
+      <guid>https://kubesphere.eu/zh/docs/release/release-v300/</guid>
+      <description>How to get v3.0.0  Install KubeSphere v3.0.0 on Linux Install KubeSphere v3.0.0 on existing Kubernetes  Release Notes Installer FEATURES  A brand-new installer: KubeKey, v1.0.0, which is a turnkey solution to installing Kubernetes with KubeSphere on different platforms. It is more easy to use and reduces the dependency on OS environment  UPGRADES &amp;amp; ENHANCEMENTS  Be compatible with Kubernetes 1.15.x, 1.16.x, 1.17.x and 1.18.x for ks-installer, v3.0.0 KubeKey officially supports Kubernetes 1.</description>
     </item>
     
     <item>
-      <title>quick-start-guide</title>
-      <link>https://kubesphere.eu/zh/docs/quick-start/quick-start-guide/</link>
+      <title>Upload Helm-based Application</title>
+      <link>https://kubesphere.eu/zh/docs/workspaces-administration/release-v300/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kubesphere.eu/zh/docs/quick-start/quick-start-guide/</guid>
-      <description>test test</description>
+      <guid>https://kubesphere.eu/zh/docs/workspaces-administration/release-v300/</guid>
+      <description>TBD</description>
     </item>
     
     <item>
-      <title>what-is-kubesphere</title>
-      <link>https://kubesphere.eu/zh/docs/introductions/what-is-kubesphere/</link>
+      <title>Import Helm Repository</title>
+      <link>https://kubesphere.eu/zh/docs/workspaces-administration/release-v211/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kubesphere.eu/zh/docs/introductions/what-is-kubesphere/</guid>
-      <description>test test</description>
+      <guid>https://kubesphere.eu/zh/docs/workspaces-administration/release-v211/</guid>
+      <description>TBD</description>
     </item>
     
     <item>
-      <title>all-in-one</title>
-      <link>https://kubesphere.eu/zh/docs/introductions/all-in-one/</link>
+      <title>Release Notes For 2.1.1</title>
+      <link>https://kubesphere.eu/zh/docs/release/release-v211/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kubesphere.eu/zh/docs/introductions/all-in-one/</guid>
-      <description>test test</description>
+      <guid>https://kubesphere.eu/zh/docs/release/release-v211/</guid>
+      <description>KubeSphere 2.1.1 was released on Feb 23rd, 2020, which has fixed known bugs and brought some enhancements. For the users who have installed versions of 2.0.x or 2.1.0, make sure to read the user manual carefully about how to upgrade before doing that, and feel free to raise any questions on GitHub.
+What&amp;rsquo;s New in 2.1.1 Installer UPGRADE &amp;amp; ENHANCEMENT  Support Kubernetes v1.14.x、v1.15.x、v1.16.x、v1.17.x，also solve the issue of Kubernetes API Compatibility#1829 Simplify the steps of installation on existing Kubernetes, and remove the step of specifying cluster&amp;rsquo;s CA certification, also specifying Etcd certification is no longer mandatory step if users don&amp;rsquo;t need Etcd monitoring metrics Backup the configuration of CoreDNS before upgrading  BUG FIXES  Fix the issue of importing apps to App Store  App Store UPGRADE &amp;amp; ENHANCEMENT  Upgrade OpenPitrix to v0.</description>
     </item>
     
     <item>
-      <title>second-a</title>
-      <link>https://kubesphere.eu/zh/docs/quick-start/second/a/</link>
+      <title>StorageClass</title>
+      <link>https://kubesphere.eu/zh/docs/cluster-administration/storageclass/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kubesphere.eu/zh/docs/quick-start/second/a/</guid>
-      <description>test test</description>
+      <guid>https://kubesphere.eu/zh/docs/cluster-administration/storageclass/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nodes</title>
+      <link>https://kubesphere.eu/zh/docs/cluster-administration/nodes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/cluster-administration/nodes/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Release Notes For 2.1.0</title>
+      <link>https://kubesphere.eu/zh/docs/release/release-v210/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/release/release-v210/</guid>
+      <description>KubeSphere 2.1.0 was released on Nov 11th, 2019, which fixes known bugs, adds some new features and brings some enhancement. If you have installed versions of 2.0.x, please upgrade it and enjoy the better user experience of v2.1.0.
+Installer Enhancement  Decouple some components and make components including DevOps, service mesh, app store, logging, alerting and notification optional and pluggable Add Grafana (v5.2.4) as the optional component Upgrade Kubernetes to 1.</description>
+    </item>
+    
+    <item>
+      <title>Role and Member Management</title>
+      <link>https://kubesphere.eu/zh/docs/workspaces-administration/release-v210/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/workspaces-administration/release-v210/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Release Notes For 2.0.2</title>
+      <link>https://kubesphere.eu/zh/docs/release/release-v202/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/release/release-v202/</guid>
+      <description>KubeSphere 2.0.2 was released on July 9, 2019, which fixes known bugs and enhances existing feature. If you have installed versions of 1.0.x, 2.0.0 or 2.0.1, please download KubeSphere installer v2.0.2 to upgrade.
+What&amp;rsquo;s New in 2.0.2 Enhanced Features  API docs are available on the official website. Block brute-force attacks. Standardize the maximum length of resource names. Upgrade the gateway of project (Ingress Controller) to the version of 0.24.1. Support Ingress grayscale release.</description>
+    </item>
+    
+    <item>
+      <title>Release Notes For 2.0.1</title>
+      <link>https://kubesphere.eu/zh/docs/release/release-v201/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/release/release-v201/</guid>
+      <description>KubeSphere 2.0.1 was released on June 9th, 2019.
+Bug Fix  Fix the issue that CI/CD pipeline cannot recognize correct special characters in the code branch. Fix CI/CD pipeline&amp;rsquo;s issue of being unable to check logs. Fix no-log data output problem caused by index document fragmentation abnormity during the log query. Fix prompt exceptions when searching for logs that do not exist. Fix the line-overlap problem on traffic governance topology and fixed invalid image strategy application.</description>
+    </item>
+    
+    <item>
+      <title>Release Notes For 2.0.0</title>
+      <link>https://kubesphere.eu/zh/docs/release/release-v200/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/release/release-v200/</guid>
+      <description>KubeSphere 2.0.0 was released on May 18th, 2019.
+What&amp;rsquo;s New in 2.0.0 Component Upgrades  Support Kubernetes Kubernetes 1.13.5 Integrate QingCloud Cloud Controller. After installing load balancer, QingCloud load balancer can be created through KubeSphere console and the backend workload is bound automatically.  Integrate QingStor CSI v0.3.0 storage plugin and support physical NeonSAN storage system. Support SAN storage service with high availability and high performance. Integrate QingCloud CSI v0.2.1 storage plugin and support many types of volume to create QingCloud block services.</description>
+    </item>
+    
+    <item>
+      <title>What is KubeSphere</title>
+      <link>https://kubesphere.eu/zh/docs/introduction/what-is-kubesphere/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/introduction/what-is-kubesphere/</guid>
+      <description>Overview KubeSphere is a distributed operating system managing cloud-native applications with Kubernetes as its kernel, providing a plug-and-play architecture for the seamless integration of third-party applications to boost its ecosystem.
+KubeSphere also represents a multi-tenant enterprise-grade container platform with full-stack automated IT operation and streamlined DevOps workflows. It provides developer-friendly wizard web UI, helping enterprises to build out a more robust and feature-rich platform. It boasts the most common functionalities needed for enterprise Kubernetes strategies, such as Kubernetes resource management, DevOps (CI/CD), application lifecycle management, monitoring, logging, service mesh, multi-tenancy, alerting and notification, auditing, storage and networking, autoscaling, access control, GPU support, multi-cluster deployment and management, network policy, registry management, and security management.</description>
+    </item>
+    
+    <item>
+      <title>Features</title>
+      <link>https://kubesphere.eu/zh/docs/introduction/features/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/introduction/features/</guid>
+      <description>Overview As an open source container platform, KubeSphere provides enterprises with a robust, secure and feature-rich platform, boasting the most common functionalities needed for enterprises adopting Kubernetes, such as multi-cluster deployment and management, network policy configuration, Service Mesh (Istio-based), DevOps projects (CI/CD), security management, Source-to-Image and Binary-to-Image, multi-tenant management, multi-dimensional monitoring, log query and collection, alerting and notification, auditing, application management, and image registry management.
+It also supports various open source storage and network solutions, as well as cloud storage services.</description>
+    </item>
+    
+    <item>
+      <title>Architecture</title>
+      <link>https://kubesphere.eu/zh/docs/introduction/architecture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/introduction/architecture/</guid>
+      <description>Separation of frontend and backend KubeSphere separates frontend from backend, and it itself is a cloud native application and provides open standard REST APIs for external systems to use. Please see API documentation for details. The following figure is the system architecture. KubeSphere can run anywhere from on-premise datacenter to any cloud to edge. In addition, it can be deployed on any Kubernetes distribution.
+Components List    Back-end component Function description     ks-account Account service provides APIs for account and role management   ks-apiserver The KubeSphere API server validates and configures data for the API objects which include Kubernetes objects.</description>
+    </item>
+    
+    <item>
+      <title>Advantages</title>
+      <link>https://kubesphere.eu/zh/docs/introduction/advantages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/introduction/advantages/</guid>
+      <description>Vision Kubernetes has become the de facto standard for deploying containerized applications at scale in private, public and hybrid cloud environments. However, many people can easily get confused when they start to use Kubernetes as it is complicated and has many additional components to manage. Some components need to be installed and deployed by users themselves, such as storage and network services. At present, Kubernetes only provides open-source solutions or projects, which can be difficult to install, maintain and operate to some extent.</description>
+    </item>
+    
+    <item>
+      <title>Use Cases</title>
+      <link>https://kubesphere.eu/zh/docs/introduction/scenarios/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/introduction/scenarios/</guid>
+      <description>KubeSphere is applicable in a variety of scenarios. For enterprises that deploy their business system on bare metal, their business modules are tightly coupled with each other. That means it is extremely difficult for resources to be horizontally scaled. In this connection, KubeSphere provides enterprises with containerized environments with a complete set of features for management and operation. It empowers enterprises to rise to the challenges in the middle of their digital transformation, including agile software development, automated operation and maintenance, microservices governance, traffic management, autoscaling, high availability, as well as DevOps and CI/CD.</description>
+    </item>
+    
+    <item>
+      <title>Glossary</title>
+      <link>https://kubesphere.eu/zh/docs/introduction/glossary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/introduction/glossary/</guid>
+      <description>This document describes some frequently used glossaries in KubeSphere as shown below:
+   Object Concepts     Project It is Kubernetes Namespace which provides virtual isolation for the resources in KubeSphere, see Namespace.   Pod A Pod is the smallest deployable computing unit that can be created and managed in KubeSphere, see Pods.   Deployment Deployment is used to describe a desired state in a deployment object, and the deployment controller changes the actual state to the desired state at a controlled rate, see Deployment.</description>
+    </item>
+    
+    <item>
+      <title>Overview</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-kubernetes/introduction/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-kubernetes/introduction/overview/</guid>
+      <description>As part of KubeSphere&amp;rsquo;s commitment to provide a plug-and-play architecture for users, it can be easily installed on existing Kubernetes clusters. More specifically, KubeSphere can be deployed on Kubernetes either hosted on clouds (e.g. AWS EKS, QingCloud QKE and Google GKE) or on-premises. This is because KubeSphere does not hack Kubernetes itself. It only interacts with the Kubernetes API to manage Kubernetes cluster resources. In other words, KubeSphere can be installed on any native Kubernetes cluster and Kubernetes distribution.</description>
+    </item>
+    
+    <item>
+      <title>ConfigMaps</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/configuration/configmaps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/configuration/configmaps/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://kubesphere.eu/zh/docs/devops-user-guide/introduction/credential/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/devops-user-guide/introduction/credential/</guid>
+      <description>KubeSphere is an enterprise-grade multi-tenant container platform built on Kubernetes. It provides an easy-to-use UI for users to manage application workloads and computing resources with a few clicks, which greatly reduces the learning curve and the complexity of daily work such as development, testing, operation and maintenance. KubeSphere aims to alleviate the pain points of Kubernetes including storage, network, security and ease of use, etc.
+KubeSphere supports installing on cloud-hosted and on-premises Kubernetes cluster, e.</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://kubesphere.eu/zh/docs/devops-user-guide/introduction/pipeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/devops-user-guide/introduction/pipeline/</guid>
+      <description>KubeSphere is an enterprise-grade multi-tenant container platform built on Kubernetes. It provides an easy-to-use UI for users to manage application workloads and computing resources with a few clicks, which greatly reduces the learning curve and the complexity of daily work such as development, testing, operation and maintenance. KubeSphere aims to alleviate the pain points of Kubernetes including storage, network, security and ease of use, etc.
+KubeSphere supports installing on cloud-hosted and on-premises Kubernetes cluster, e.</description>
+    </item>
+    
+    <item>
+      <title>Overview</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-linux/introduction/intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-linux/introduction/intro/</guid>
+      <description>For the installation on Linux, KubeSphere can be installed both in clouds and in on-premises environments, such as AWS EC2, Azure VM and bare metal. Users can install KubeSphere on Linux hosts as they provision fresh Kubernetes clusters. The installation process is easy and friendly. Meanwhile, KubeSphere offers not only the online installer, or KubeKey, but also an air-gapped installation solution for the environment with no Internet access.
+As an open-source project on GitHub, KubeSphere is home to a community with thousands of users.</description>
+    </item>
+    
+    <item>
+      <title>Overview</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/grayscale-release/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/grayscale-release/overview/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Project Quotas</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/project-administration/project-quota/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/project-administration/project-quota/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Volumes</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/storage/volumes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/storage/volumes/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Multi-node Installation</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-linux/introduction/multioverview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-linux/introduction/multioverview/</guid>
+      <description>In a production environment, a single-node cluster cannot satisfy most of the needs as the cluster has limited resources with insufficient compute capabilities. Thus, single-node clusters are not recommended for large-scale data processing. Besides, a cluster of this kind is not available with high availability as it only has one node. On the other hand, a multi-node architecture is the most common and preferred choice in terms of application deployment and distribution.</description>
+    </item>
+    
+    <item>
+      <title>Port Requirements</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-linux/introduction/port-firewall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-linux/introduction/port-firewall/</guid>
+      <description>KubeSphere requires certain ports for the communications among services. If your network is configured with firewall rules, you need to ensure infrastructure components can communicate with each other through specific ports that act as communication endpoints for certain processes or services.
+   Service Protocol Action Start Port End Port Notes     ssh TCP allow 22     etcd TCP allow 2379 2380    apiserver TCP allow 6443     calico TCP allow 9099 9100    bgp TCP allow 179     nodeport TCP allow 30000 32767    master TCP allow 10250 10258    dns TCP allow 53     dns UDP allow 53     local-registry TCP allow 5000  For offline environment   local-apt TCP allow 5080  For offline environment   rpcbind TCP allow 111  Required if NFS is used   ipip IPENCAP / IPIP allow   Calico needs to allow the ipip protocol    注解</description>
+    </item>
+    
+    <item>
+      <title>Prerequisites</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-kubernetes/introduction/prerequisites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-kubernetes/introduction/prerequisites/</guid>
+      <description>Not only can KubeSphere be installed on virtual machines and bare metal with provisioned Kubernetes, but also supports installing on cloud-hosted and on-premises existing Kubernetes clusters as long as your Kubernetes cluster meets the prerequisites below.
+ Kubernetes version: 1.15.x, 1.16.x, 1.17.x, 1.18.x; CPU &amp;gt; 1 Core; Memory &amp;gt; 2 G; A default Storage Class in your Kubernetes cluster is configured; use kubectl get sc to verify it. The CSR signing feature is activated in kube-apiserver when it is started with the --cluster-signing-cert-file and --cluster-signing-key-file parameters.</description>
+    </item>
+    
+    <item>
+      <title>Blue-green Deployment</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/grayscale-release/blue-green-deployment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/grayscale-release/blue-green-deployment/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Canary Release</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/grayscale-release/canary-release/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/grayscale-release/canary-release/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Image Registry</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/configuration/image-registry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/configuration/image-registry/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes Cluster Configuration</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-linux/introduction/vars/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-linux/introduction/vars/</guid>
+      <description>This tutorial explains how to customize the Kubernetes cluster configurations in config-example.yaml when you start to use KubeKey to provision a cluster. You can reference the following section to understand each parameter.
+######################### Kubernetes ######################### kubernetes: version: v1.17.9 # The default k8s version is v1.17.9, you can specify 1.15.2, v1.16.13, v1.18.6 as you want imageRepo: kubesphere # DockerHub Repo clusterName: cluster.local # Kubernetes Cluster Name masqueradeAll: false # masqueradeAll tells kube-proxy to SNAT everything if using the pure iptables proxy mode.</description>
+    </item>
+    
+    <item>
+      <title>Project Gateway</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/project-administration/project-gateway/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/project-administration/project-gateway/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Project Members</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/project-administration/project-members/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/project-administration/project-members/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Secrets</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/configuration/secrets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/configuration/secrets/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Traffic Mirroring</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/grayscale-release/traffic-mirroring/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/grayscale-release/traffic-mirroring/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Project Roles</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/project-administration/project-roles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/project-administration/project-roles/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Volume Snapshots</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/storage/volume-snapshots/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/storage/volume-snapshots/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Persistent Storage Configuration</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-linux/introduction/storage-configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-linux/introduction/storage-configuration/</guid>
+      <description>Overview Persistence volume is Must for Kubesphere. So before installation of Kubesphere, one default StorageClass and corresponding storage plugin should be installed on the Kubernetes cluster. As different users may choose different storage plugin, KubeKey supports to install storage plugin by the way of add-on. This passage will introduce add-on configuration for some mainly used storage plugin.
+QingCloud-CSI QingCloud-CSI plugin implements an interface between CSI-enabled Container Orchestrator (CO) and the disk of QingCloud.</description>
+    </item>
+    
+    <item>
+      <title>Application Template</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/app-template/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/app-template/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Deploy KubeSphere on Azure VM Instance</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-linux/public-cloud/install-ks-on-azure-vms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-linux/public-cloud/install-ks-on-azure-vms/</guid>
+      <description>Before You Begin Technically, you can either install and manage Kubernetes yourself or adopt a managed Kubernetes solution. If you are looking for a hands-off approach to taking advantage of Kubernetes, a fully-managed platform solution may suit you best. Please see Deploy KubeSphere on AKS for more details. However, if you want a bit more control over your configuration and set up a highly-available cluster on Azure, this instruction will help you to create a production-ready Kubernetes and KubeSphere cluster.</description>
+    </item>
+    
+    <item>
+      <title>Deploy KubeSphere on QingCloud Instance</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-linux/public-cloud/kubesphere-on-qingcloud-instance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-linux/public-cloud/kubesphere-on-qingcloud-instance/</guid>
+      <description>Introduction For a production environment, we need to consider the high availability of the cluster. If the key components (e.g. kube-apiserver, kube-scheduler, and kube-controller-manager) are all running on the same master node, Kubernetes and KubeSphere will be unavailable once the master node goes down. Therefore, we need to set up a high-availability cluster by provisioning load balancers with multiple master nodes. You can use any cloud load balancer, or any hardware load balancer (e.</description>
+    </item>
+    
+    <item>
+      <title>Deployments</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/deployments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/deployments/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>KubeSphere 在华为云 ECS 高可用实例</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-linux/public-cloud/install-ks-on-huaweicloud-ecs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-linux/public-cloud/install-ks-on-huaweicloud-ecs/</guid>
+      <description>由于对于生产环境，我们需要考虑集群的高可用性。教你部署如何在华为云 ECS 实例服务快速部署一套高可用的生产环境 Kubernetes 服务需要做到高可用，需要保证 kube-apiserver 的 HA ，推荐华为云负载均衡器服务.
+前提条件  请遵循该指南，确保您已经知道如何将 KubeSphere 与多节点集群一起安装。有关用于安装的 config.yaml 文件的详细信息。本教程重点介绍配置华为云负载均衡器服务高可用安装。 考虑到数据的持久性，对于生产环境，我们不建议您使用存储OpenEBS，建议 NFS、GlusterFS、Ceph 等存储(需要提前准备)。文章为了进行开发和测试，集成了 OpenEBS 将 LocalPV 设置为默认的存储服务。 SSH 可以互相访问所有节点。 所有节点的时间同步。  创建主机 本示例创建 6 台 Ubuntu 18.04 server 64bit 的云服务器，每台配置为 4 核 8 GB
+   主机IP 主机名称 角色     192.168.1.10 master1 master1, etcd   192.168.1.11 master2 master2, etcd   192.168.1.12 master3 master3, etcd   192.168.1.13 node1 node   192.</description>
+    </item>
+    
+    <item>
+      <title>KubeSphere 在阿里云 ECS 高可用实例</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-linux/public-cloud/install-kubesphere-on-ali-ecs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-linux/public-cloud/install-kubesphere-on-ali-ecs/</guid>
+      <description>对于生产环境，我们需要考虑集群的高可用性。本文教你部署如何在多台阿里 ECS 实例快速部署一套高可用的生产环境。要满足 Kubernetes 集群服务需要做到高可用，需要保证 kube-apiserver 的 HA ，可使用以下下列两种方式：
+ 阿里云 SLB （推荐） keepalived + haproxy keepalived + haproxy对 kube-apiserver 进行负载均衡，实现高可用 kubernetes 集群。  前提条件  考虑到数据的持久性，对于生产环境，我们建议您准备持久化存储。若搭建开发和测试，您可以直接使用默认集成的 OpenEBS 准备 LocalPV； SSH 可以访问所有节点； 所有节点的时间同步； Red Hat 在其 Linux 发行版本中包括了 SELinux，建议关闭 SELinux 或者将 SELinux 的模式切换为 Permissive [宽容]工作模式。  部署架构 创建主机 本示例创建 SLB + 6 台 CentOS Linux release 7.6.1810 (Core) 的虚拟机，每台配置为 2 Core 4 GB 40 G，仅用于最小化安装，若资源充足建议使用每台配置 4 Core 8 GB 100 G 以上的虚拟机。</description>
+    </item>
+    
+    <item>
+      <title>Air-Gapped Installation</title>
+      <link>https://kubesphere.eu/zh/docs/application-store/app-developer-guide/helm-developer-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/application-store/app-developer-guide/helm-developer-guide/</guid>
+      <description>The air-gapped installation is almost the same as the online installation except it creates a local registry to host the Docker images. We will demonstrate how to install KubeSphere and Kubernetes on air-gapped environment.
+ Note: The dependencies in different operating systems may cause upexpected problems. If you encounter any installation problems on air-gapped environment, please describe your OS information and error logs on GitHub.
+ Prerequisites  If your machine is behind a firewall, you need to open the ports by following the document Ports Requirements for more information.</description>
+    </item>
+    
+    <item>
+      <title>Air-Gapped Installation</title>
+      <link>https://kubesphere.eu/zh/docs/application-store/app-developer-guide/helm-specification/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/application-store/app-developer-guide/helm-specification/</guid>
+      <description>The air-gapped installation is almost the same as the online installation except it creates a local registry to host the Docker images. We will demonstrate how to install KubeSphere and Kubernetes on air-gapped environment.
+ Note: The dependencies in different operating systems may cause upexpected problems. If you encounter any installation problems on air-gapped environment, please describe your OS information and error logs on GitHub.
+ Prerequisites  If your machine is behind a firewall, you need to open the ports by following the document Ports Requirements for more information.</description>
+    </item>
+    
+    <item>
+      <title>Air-Gapped Installation</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-kubernetes/on-prem-kubernetes/install-ks-on-linux-airgapped/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-kubernetes/on-prem-kubernetes/install-ks-on-linux-airgapped/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>GitLab App</title>
+      <link>https://kubesphere.eu/zh/docs/application-store/built-in-apps/gitlab-app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/application-store/built-in-apps/gitlab-app/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Role and Member Management</title>
+      <link>https://kubesphere.eu/zh/docs/cluster-administration/platform-settings/role-member-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/cluster-administration/platform-settings/role-member-management/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Role and Member Management</title>
+      <link>https://kubesphere.eu/zh/docs/devops-user-guide/devops-administration/role-and-member-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/devops-user-guide/devops-administration/role-and-member-management/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>StatefulSets</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/statefulsets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/statefulsets/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Uninstalling KubeSphere from Kubernetes</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-kubernetes/uninstalling/uninstalling-kubesphere-from-k8s/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-kubernetes/uninstalling/uninstalling-kubesphere-from-k8s/</guid>
+      <description>The air-gapped installation is almost the same as the online installation except it creates a local registry to host the Docker images. We will demonstrate how to install KubeSphere and Kubernetes on air-gapped environment.
+ Note: The dependencies in different operating systems may cause upexpected problems. If you encounter any installation problems on air-gapped environment, please describe your OS information and error logs on GitHub.
+ Prerequisites  If your machine is behind a firewall, you need to open the ports by following the document Ports Requirements for more information.</description>
+    </item>
+    
+    <item>
+      <title>Harbor App</title>
+      <link>https://kubesphere.eu/zh/docs/application-store/built-in-apps/harbor-app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/application-store/built-in-apps/harbor-app/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Redis App</title>
+      <link>https://kubesphere.eu/zh/docs/application-store/built-in-apps/redis-app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/application-store/built-in-apps/redis-app/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Deploy KubeSphere on Oracle OKE</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-oke/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-oke/</guid>
+      <description>This guide walks you through the steps of deploying KubeSphere on Oracle Kubernetes Engine.
+Create a Kubernetes Cluster  A standard Kubernetes cluster in OKE is a prerequisite of installing KubeSphere. Go to the navigation menu and refer to the image below to create a cluster.   In the pop-up window, select Quick Create and click Launch Workflow.  注解
+In this example, Quick Create is used for demonstration which will automatically create all the resources necessary for a cluster in Oracle Cloud.</description>
+    </item>
+    
+    <item>
+      <title>DaemonSets</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/daemonsets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/daemonsets/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>在腾讯云 TKE 安装 KubeSphere</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-ks-on-tencent-tke/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-ks-on-tencent-tke/</guid>
+      <description>本指南将介绍如何在腾讯云 TKE 上部署并使用 KubeSphere 3.0.0 平台。
+腾讯云 TKE 环境准备 创建 Kubernetes 集群 首先按使用环境的资源需求创建 Kubernetes 集群，满足以下一些条件即可（如已有环境并满足条件可跳过本节内容）：
+ KubeSphere 3.0.0 默认支持的 Kubernetes 版本为 1.15.x, 1.16.x, 1.17.x, 1.18.x，需要选择其中支持的版本进行集群创建（如 1.16.3, 1.18.4）； 工作节点机型配置规格方面选择 SA2.LARGE8 的 4核｜8GB 配置即可，并按需扩展工作节点数量（通常生产环境需要 3 个及以上工作节点）。  创建公网 kubectl 证书  创建完集群后，进入 容器服务 &amp;gt; 集群 界面，选择刚创建的集群，在 基本信息 面板中， 集群APIServer信息 中开启 外网访问 。 然后在下方 kubeconfig 列表项中点击 下载，即可获取公用可用的 kubectl 证书。   获取 kubectl 配置文件后，可通过 kubectl 命令行工具来验证集群连接：  $ kubectl version Client Version: version.Info{Major:&amp;#34;1&amp;#34;, Minor:&amp;#34;18&amp;#34;, GitVersion:&amp;#34;v1.</description>
+    </item>
+    
+    <item>
+      <title>在华为云 CCE 安装 KubeSphere</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-huaweicloud-cce/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-huaweicloud-cce/</guid>
+      <description>本指南将介绍如果在华为云 CCE 容器引擎上部署并使用 KubeSphere 3.0.0 平台。
+华为云 CCE 环境准备 创建 Kubernetes 集群 首先按使用环境的资源需求创建 Kubernetes 集群，满足以下一些条件即可（如已有环境并满足条件可跳过本节内容）：
+ KubeSphere 3.0.0 默认支持的 Kubernetes 版本为 1.15.x, 1.16.x, 1.17.x, 1.18.x，需要选择其中支持的版本进行集群创建（如 v1.15.11, v1.17.9）； 需要确保 Kubernetes 集群所使用的云主机的网络可以，可以通过在创建集群的同时 “自动创建” 或 “使用已有” 弹性 IP；或者在集群创建后自行配置网络（如配置 NAT 网关）； 工作节点规格方面建议选择 s3.xlarge.2 的 4核｜8GB 配置，并按需扩展工作节点数量（通常生产环境需要 3 个及以上工作节点）。  创建公网 kubectl 证书  创建完集群后，进入 资源管理 &amp;gt; 集群管理 界面，在 基本信息 &amp;gt; 网络 面板中，绑定 公网apiserver地址； 而后在右侧面板中，选择 kubectl 标签页，并在 下载kubectl配置文件 列表项中 点击此处下载，即可获取公用可用的 kubectl 证书。  获取 kubectl 配置文件后，可通过 kubectl 命令行工具来验证集群连接：</description>
+    </item>
+    
+    <item>
+      <title>Composing an App for Microservices</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/composing-app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/composing-app/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>CronJobs</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/cronjob/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/cronjob/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Ingress</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/ingress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/ingress/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Jobs</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/jobs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/jobs/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>s2i-template</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/s2i-template/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/s2i-template/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Services</title>
+      <link>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/project-user-guide/application-workloads/services/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Deploy KubeSphere on AWS EKS</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-eks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-eks/</guid>
+      <description>This guide walks you through the steps of deploying KubeSphere on AWS EKS.
+Install the AWS CLI Tht aws EKS does not have a web terminal like GKE, so we must install aws cli first. Take a example for macOS and other operating system can according Getting Started EKS
+pip3 install awscli --upgrade --user Check it with aws --version Prepare a EKS Cluster  A standard Kubernetes cluster in AWS is a prerequisite of installing KubeSphere.</description>
+    </item>
+    
+    <item>
+      <title>Deploy KubeSphere on DigitalOcean</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-do/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-do/</guid>
+      <description>This guide walks you through the steps of deploying KubeSphere on DigitalOcean Kubernetes.
+Prepare a DOKS Cluster A Kubernetes cluster in DO is a prerequisite for installing KubeSphere. Go to your DO account and, in the navigation menu, refer to the image below to create a cluster.
+You need to select:
+ Kubernetes version (e.g. 1.18.6-do.0) Datacenter region (e.g. Frankfurt) VPC network (e.g. default-fra1) Cluster capacity (e.g. 2 standard nodes with 2 vCPUs and 4GB of RAM each) A name for the cluster (e.</description>
+    </item>
+    
+    <item>
+      <title>Deploy KubeSphere on GKE</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-gke/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-gke/</guid>
+      <description>This guide walks you through the steps of deploying KubeSphere on Google Kubernetes Engine.
+Prepare a GKE Cluster  A standard Kubernetes cluster in GKE is a prerequisite of installing KubeSphere. Go to the navigation menu and refer to the image below to create a cluster.   In Cluster basics, select a Master version. The static version 1.15.12-gke.2 is used here as an example.   In default-pool under Node Pools, define 3 nodes in this cluster.</description>
+    </item>
+    
+    <item>
+      <title>Deploy KubeSphere on AKS</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-aks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-kubernetes/hosted-kubernetes/install-kubesphere-on-aks/</guid>
+      <description>This guide walks you through the steps of deploying KubeSphere on Azure Kubernetes Service.
+Prepare an AKS cluster Azure can help you implement infrastructure as code by providing resource deployment automation options. Commonly adopted tools include ARM templates and Azure CLI. In this guide, we will use Azure CLI to create all the resources that are needed for the installation of KubeSphere.
+Use Azure Cloud Shell You don&amp;rsquo;t have to install Azure CLI on your machine as Azure provides a web-based terminal.</description>
+    </item>
+    
+    <item>
+      <title>Overview</title>
+      <link>https://kubesphere.eu/zh/docs/multicluster-management/introduction/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/multicluster-management/introduction/overview/</guid>
+      <description>Today, it&amp;rsquo;s very common for organizations to run and manage multiple Kubernetes Clusters on different cloud providers or infrastructures. Each Kubernetes cluster is a relatively self-contained unit. And the upstream community is struggling to research and develop the multi-cluster management solution, such as kubefed.
+The most common use cases in multi-cluster management including service traffic load balancing, development and production isolation, decoupling of data processing and data storage, cross-cloud backup and disaster recovery, flexible allocation of computing resources, low latency access with cross-region services, and no vendor lock-in, etc.</description>
+    </item>
+    
+    <item>
+      <title>Add New Nodes</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-linux/cluster-operation/add-new-nodes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-linux/cluster-operation/add-new-nodes/</guid>
+      <description>When you use KubeSphere for a certain time, most likely you need to scale out your cluster with workloads increasing. In this scenario, KubeSphere provides script to add new nodes to the cluster. Fundamentally the operation is based on Kubelet&amp;rsquo;s registration mechanism, i.e., the new nodes will automatically join the existing Kubernetes cluster.
+提示
+From v3.0.0, the brand-new installer KubeKey supports scale master amd worker node from a sing-node (all-in-one) cluster.</description>
+    </item>
+    
+    <item>
+      <title>Direct Connection</title>
+      <link>https://kubesphere.eu/zh/docs/multicluster-management/enable-multicluster/direct-connection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/multicluster-management/enable-multicluster/direct-connection/</guid>
+      <description>Prerequisites You have already installed at least two KubeSphere clusters, please refer to Installing on Linux or Installing on Kubernetes if not yet.
+注解
+Multi-cluster management requires Kubesphere to be installed on the target clusters. If you have an existing cluster, please install a minimal KubeSphere on it as an agent, see Installing Minimal KubeSphere on Kubernetes for details.  Direct Connection If the kube-apiserver address of Member Cluster (hereafter referred to as M Cluster) is accessible on any node of the Host Cluster (hereafter referred to as H Cluster), you can adopt Direction Connection.</description>
+    </item>
+    
+    <item>
+      <title>Import Aliyun ACK</title>
+      <link>https://kubesphere.eu/zh/docs/multicluster-management/import-cloud-hosted-k8s/import-aliyun-ack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/multicluster-management/import-cloud-hosted-k8s/import-aliyun-ack/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Import AWS EKS</title>
+      <link>https://kubesphere.eu/zh/docs/multicluster-management/import-cloud-hosted-k8s/import-aws-eks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/multicluster-management/import-cloud-hosted-k8s/import-aws-eks/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Import Kubeadm Kubernetes</title>
+      <link>https://kubesphere.eu/zh/docs/multicluster-management/import-on-prem-k8s/import-kubeadm-k8s/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/multicluster-management/import-on-prem-k8s/import-kubeadm-k8s/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes Federation in KubeSphere</title>
+      <link>https://kubesphere.eu/zh/docs/multicluster-management/introduction/kubefed-in-kubesphere/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/multicluster-management/introduction/kubefed-in-kubesphere/</guid>
+      <description>The multi-cluster feature relates to the network connection among multiple clusters. Therefore, it is important to understand the topological relations of clusters as the workload can be reduced.
+Before you use the multi-cluster feature, you need to create a Host Cluster (hereafter referred to as H Cluster), which is actually a KubeSphere cluster that has enabled the multi-cluster feature. All the clusters managed by the H Cluster are called Member Cluster (hereafter referred to as M Cluster).</description>
+    </item>
+    
+    <item>
+      <title>Remove a Cluster from KubeSphere</title>
+      <link>https://kubesphere.eu/zh/docs/multicluster-management/remove-cluster/kubefed-in-kubesphere/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/multicluster-management/remove-cluster/kubefed-in-kubesphere/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>Agent Connection</title>
+      <link>https://kubesphere.eu/zh/docs/multicluster-management/enable-multicluster/agent-connection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/multicluster-management/enable-multicluster/agent-connection/</guid>
+      <description>Prerequisites You have already installed at least two KubeSphere clusters, please refer to Installing on Linux or Installing on Kubernetes if not yet.
+注解
+Multi-cluster management requires Kubesphere to be installed on the target clusters. If you have an existing cluster, please install a minimal KubeSphere on it as an agent, see Installing Minimal KubeSphere on Kubernetes for details.  Agent Connection The component Tower of KubeSphere is used for agent connection.</description>
+    </item>
+    
+    <item>
+      <title>Remove Nodes</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-linux/cluster-operation/remove-nodes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-linux/cluster-operation/remove-nodes/</guid>
+      <description>Cordon a Node Marking a node as unschedulable prevents the scheduler from placing new pods onto that Node, but does not affect existing Pods on the Node. This is useful as a preparatory step before a node reboot or other maintenance.
+To mark a Node unschedulable, you can choose Nodes → Cluster Nodes from the menu, then find a node you want to remove from the cluster and click the Cordon button.</description>
+    </item>
+    
+    <item>
+      <title>Retrieve KubeConfig</title>
+      <link>https://kubesphere.eu/zh/docs/multicluster-management/enable-multicluster/retrieve-kubeconfig/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/multicluster-management/enable-multicluster/retrieve-kubeconfig/</guid>
+      <description>Prerequisites You have a KubeSphere cluster.
+Explore KubeConfig File Go to $HOME/.kube, and see what files are there. Typically, there is a file named config. Use the following command to retrieve the KubeConfig file:
+cat $HOME/.kube/config apiVersion: v1 clusters: - cluster: certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJd01EZ3dPREE1hqaVE3NXhwbGFQNUgwSm5ySk5peTBacFh6QWxjYzZlV2JlaXJ1VgpUbmZUVjZRY3pxaVcrS3RBdFZVbkl4MCs2VTgzL3FiKzdINHk2RnA0aVhUaDJxRHJ6Qkd4dG1UeFlGdC9OaFZlCmhqMHhEbHVMOTVUWkRjOUNmSFgzdGZJeVh5WFR3eWpnQ2g1RldxbGwxVS9qVUo2RjBLVVExZ1pRTFp4TVJMV0MKREM2ZFhvUGlnQ3BNaVRPVXl5SVNhWUVjYVNBMEo5VWZmSGd4ditVcXVleTc0cEM2emszS0lOT2tGMkI1MllxeApUa09OT2VkV2hDUExMZkUveVJqeGw1aFhPL1Z4REFaVC9HQ1Y1a0JZN0toNmRhendmUllOa21IQkhDMD0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=hqaVE3NXhwbGFQNUgwSm5ySk5peTBacFh6QWxjYzZlV2JlaXJ1VgpUbmZUVjZRY3pxaVcrS3RBdFZVbkl4MCs2VTgzL3FiKzdINHk2RnA0aVhUaDJxRHJ6Qkd4dG1UeFlGdC9OaFZlCmhqMHhEbHVMOTVUWkRjOUNmSFgzdGZJeVh5WFR3eWpnQ2g1RldxbGwxVS9qVUo2RjBLVVExZ1pRTFp4TVJMV0MKREM2ZFhvUGlnQ3BNaVRPVXl5SVNhWUVjYVNBMEo5VWZmSGd4ditVcXVleTc0cEM2emszS0lOT2tGMkI1MllxeApUa09OT2VkV2hDUExMZkUveVJqeGw1aFhPL1Z4REFaVC9HQ1Y1a0JZN0toNmRhendmUllOa21IQkhDMD0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo= server: https://lb.kubesphere.local:6443 name: cluster.local contexts: - context: cluster: cluster.local user: kubernetes-admin name: kubernetes-admin@cluster.local current-context: kubernetes-admin@cluster.local kind: Config preferences: {} users: - name: kubernetes-admin user: client-certificate-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM4akNDQWRxZ0F3SUJBZ0lJRzd5REpscVdjdTh3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TURBNE1EZ3dPVEkzTXpkYUZ3MHlNVEE0TURnd09USTNNemhhTURReApGekFWQmdOVkJBb1REbk41YzNSbGJUcHRZWE4wWlhKek1Sa3dGd1lEVlFRREV4QnsOTJBUkJDNTRSR3BsZ3VmCmw5a0hPd0lEQVFBQm95Y3dKVEFPQmdOVkhROEJBZjhFQkFNQ0JhQXdFd1lEVlIwbEJBd3dDZ1lJS3dZQkJRVUgKQXdJd0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFEQ2FUTXNBR1Vhdnhrazg0NDZnOGNRQUJpSmk5RTZiREV5TwphRnJubC8reGRzRmgvOTFiMlNpM3ZwaHFkZ2k5bXRYWkhhaWI5dnQ3aXdtSEFwbGQxUkhBU25sMFoxWFh1dkhzCmMzcXVIU0puY3dmc3JKT0I4UG9NRjVnaG10a0dPV3g0M2RHTTNHQnpGTVJ4ZGcrNmttNjRNUGhneXl6NTJjYUoKbzhPajNja1Uzd1NWNkxvempRcFVaUnZHV25qQjEwUXFPWXBtQUk4VCtlZkxKZzhuY0drK3V3UUVTeXBYWExpYwoxWVQ2QkFJeFhEK2tUUU1hOFhjdUhHZzlWRkdsUm9yK1EvY3l0S3RDeHVncFlxQ2xvbHVpckFUUnpsemRXamxYCkVQaHVjRWs2UUdIZEpObjd0M2NwRGkzSUdYYXJFdGxQQmFwck9nSGpkOHZVOStpWXdoQT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=TJBUkJDNTRSR3BsZ3VmCmw5a0hPd0lEQVFBQm95Y3dKVEFPQmdOVkhROEJBZjhFQkFNQ0JhQXdFd1lEVlIwbEJBd3dDZ1lJS3dZQkJRVUgKQXdJd0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFEQ2FUTXNBR1Vhdnhrazg0NDZnOGNRQUJpSmk5RTZiREV5TwphRnJubC8reGRzRmgvOTFiMlNpM3ZwaHFkZ2k5bXRYWkhhaWI5dnQ3aXdtSEFwbGQxUkhBU25sMFoxWFh1dkhzCmMzcXVIU0puY3dmc3JKT0I4UG9NRjVnaG10a0dPV3g0M2RHTTNHQnpGTVJ4ZGcrNmttNjRNUGhneXl6NTJjYUoKbzhPajNja1Uzd1NWNkxvempRcFVaUnZHV25qQjEwUXFPWXBtQUk4VCtlZkxKZzhuY0drK3V3UUVTeXBYWExpYwoxWVQ2QkFJeFhEK2tUUU1hOFhjdUhHZzlWRkdsUm9yK1EvY3l0S3RDeHVncFlxQ2xvbHVpckFUUnpsemRXamxYCkVQaHVjRWs2UUdIZEpObjd0M2NwRGkzSUdYYXJFdGxQQmFwck9nSGpkOHZVOStpWXdoQT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo= client-key-data: LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFcEFJQkFBS0NBUUVBeXBLWkdtdmdiSHdNaU9pVU80UHZKZXB2MTJaaE1yRUIxK2xlVnM0dHIzMFNGQ0p1Ck8wc09jL2lUNmFuWEJzUU1XNDF6V3hwV1B5elkzWXlUWEJMTlIrM01pWTl2SFhUeWJ6eitTWnNlTzVENytHL3MKQnR5NkovNGpJb2pZZlRZNTFzUUxyRVJydStmVnNGeUU0U2dXbE1HYWdqV0RIMFltM0VJsOTJBUkJDNTRSR3BsZ3VmCmw5a0hPd0lEQVFBQm95Y3dKVEFPQmdOVkhROEJBZjhFQkFNQ0JhQXdFd1lEVlIwbEJBd3dDZ1lJS3dZQkJRVUgKQXdJd0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFEQ2FUTXNBR1Vhdnhrazg0NDZnOGNRQUJpSmk5RTZiREV5TwphRnJubC8reGRzRmgvOTFiMlNpM3ZwaHFkZ2k5bXRYWkhhaWI5dnQ3aXdtSEFwbGQxUkhBU25sMFoxWFh1dkhzCmMzcXVIU0puY3dmc3JKT0I4UG9NRjVnaG10a0dPV3g0M2RHTTNHQnpGTVJ4ZGcrNmttNjRNUGhneXl6NTJjYUoKbzhPajNja1Uzd1NWNkxvempRcFVaUnZHV25qQjEwUXFPWXBtQUk4VCtlZkxKZzhuY0drK3V3UUVTeXBYWExpYwoxWVQ2QkFJeFhEK2tUUU1hOFhjdUhHZzlWRkdsUm9yK1EvY3l0S3RDeHVncFlxQ2xvbHVpckFUUnpsemRXamxYCkVQaHVjRWs2UUdIZEpObjd0M2NwRGkzSUdYYXJFdGxQQmFwck9nSGpkOHZVOStpWXdoQT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=Ygo3THE3a2tBMURKNTBld2pMUTNTd1Yxd2p6N2ZjeDYvbzUwRnJnK083dEJMVVdQNTNHaDQ1VjJpUEp2NkdPYk1uCjhIWElmem83cW5XRFQvU20ybW5HbitUdVY4THdLVWFXL2wya3FkRUNnWUVBcS9zRmR1RDk2Z3VoT2ZaRnczcWMKblZGekNGQ3JsMkUvVkdYQy92SmV1WnJLQnFtSUtNZFI3ajdLWS9WRFVlMnJocVd6MFh2Wm9Sa1FoMkdwWkdIawpDd3NzcENKTVl4L0hETTVaWlBvcittb1J6VE5HNHlDNGhTRGJ2VEFaTmV1VTZTK1hzL1JSTDJ6WnUwemNQQXk1CjJJRVgwelFpZ1JzK3VzS3Jkc1FVZXZrQ2dZQUUrQUNWeDJnMC94bmFsMVFJNmJsK3Y2TDJrZVJtVGppcHB4Wm0KS1JEd2xnaXpsWGxsTjhyQmZwSGNiK1ZnZ282anN2eHFrb0pkTEhBLzFDME5IMWVuS1NoUTlpZVFpeWNsZngwdQpKOE1oeW1JM0RBZUg1REJyOG1rZ0pwNnJwUXNBc1paYmVhOHlLTzV5eVdCYTN6VGxOVnQvNDRibGg5alpnTWNMCjNyUXFVUUtCZ1FETVlXdEt2S0hOQllXV0p5enFERnFPbS9qY3Z3andvcURibUZVMlU3UGs2aUdNVldBV3VYZ3cKSm5qQWtES01GN0JXSnJRUjR6RHVoQlhvQVMxWVhiQ2lGd2hTcXVjWGhFSGlwQ3Nib0haVVRtT1pXUUh4Vlp4bQowU1NiRXFZU2MvZHBDZ1BHRk9IaW1FdUVic05kc2JjRmRETDQyODZHb0psQUxCOGc3VWRUZUE9PQotLS0tLUVORCBSU0EgUFJJVkFURSBLRVktLS0tLQo= </description>
+    </item>
+    
+    <item>
+      <title>Uninstalling KubeSphere and Kubernetes</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-linux/uninstalling/uninstalling-kubesphere-and-kubernetes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-linux/uninstalling/uninstalling-kubesphere-and-kubernetes/</guid>
+      <description>You can delete the cluster by the following command.
+提示
+Uninstall will remove KubeSphere and Kubernetes from the machines. This operation is irreversible and does not have any backup. Please be caution with operation.   If you started with the quick start (all-in-one):  ./kk delete cluster  If you started with the advanced mode (created with a configuration file):  ./kk delete cluster [-f config-sample.yaml] </description>
+    </item>
+    
+    <item>
+      <title>Configure Booster for Installation</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-linux/faq/configure-booster/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-linux/faq/configure-booster/</guid>
+      <description>If you have trouble downloading images from dockerhub.io, it is highly recommended that you configure a registry mirror (i.e. booster) beforehand to speed up downloads. You can refer to the official documentation of Docker or follow the steps below.
+Get Booster URL To configure the booster, you need a registry mirror address. See the following example to see how you can get a booster URL from Alibaba Cloud.
+ Log in the console of Alibaba Cloud and enter &amp;ldquo;container registry&amp;rdquo; in the search bar.</description>
+    </item>
+    
+    <item>
+      <title>FAQ</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-kubernetes/faq/faq1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-kubernetes/faq/faq1/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>All-in-one Installation on Linux</title>
+      <link>https://kubesphere.eu/zh/docs/quick-start/all-in-one-on-linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/quick-start/all-in-one-on-linux/</guid>
+      <description>For those who are new to KubeSphere and looking for a quick way to discover the platform, the all-in-one mode is your best choice to get started. It features rapid deployment and hassle-free configuration installation with KubeSphere and Kubernetes all provisioned on your machine.
+Prerequisites If your machine is behind a firewall, you need to open relevant ports by following the document Port Requirements.
+Step 1: Prepare Linux Machine See the requirements for hardware and operating system shown below.</description>
+    </item>
+    
+    <item>
+      <title>Minimal KubeSphere on Kubernetes</title>
+      <link>https://kubesphere.eu/zh/docs/quick-start/minimal-kubesphere-on-k8s/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/quick-start/minimal-kubesphere-on-k8s/</guid>
+      <description>In addition to installing KubeSphere on a Linux machine, you can also deploy it on existing Kubernetes clusters directly. This QuickStart guide walks you through the general steps of completing a minimal KubeSphere installation on Kubernetes. For more information, see Installing on Kubernetes.
+注解
+ To install KubeSphere on Kubernetes, your Kubernetes version must be 1.15.x, 1.16.x, 1.17.x, or 1.18.x; Make sure your machine meets the minimal hardware requirement: CPU &amp;gt; 1 Core, Memory &amp;gt; 2 G; A default Storage Class in your Kubernetes cluster needs to be configured before the installation; The CSR signing feature is activated in kube-apiserver when it is started with the --cluster-signing-cert-file and --cluster-signing-key-file parameters.</description>
+    </item>
+    
+    <item>
+      <title>Create Workspace, Project, Account and Role</title>
+      <link>https://kubesphere.eu/zh/docs/quick-start/create-workspace-and-project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/quick-start/create-workspace-and-project/</guid>
+      <description>Objective This guide demonstrates how to create roles and user accounts which are required for the following tutorials. Meanwhile, you will learn how to create projects and DevOps projects within your workspace where your workloads are running. After this tutorial, you will become familiar with KubeSphere multi-tenant management system.
+Prerequisites KubeSphere needs to be installed in your machine.
+Estimated Time About 15 minutes.
+Architecture The multi-tenant system of KubeSphere features three levels of hierarchical structure which are cluster, workspace and project.</description>
+    </item>
+    
+    <item>
+      <title>Deploy a Bookinfo App</title>
+      <link>https://kubesphere.eu/zh/docs/quick-start/deploy-bookinfo-to-k8s/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/quick-start/deploy-bookinfo-to-k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Compose and Deploy Wordpress</title>
+      <link>https://kubesphere.eu/zh/docs/quick-start/wordpress-deployment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/quick-start/wordpress-deployment/</guid>
+      <description>WordPress Introduction WordPress is a free and open-source content management system written in PHP, allowing users to build their own websites. A complete Wordpress application includes the following Kubernetes objects with MySQL serving as the backend database.
+Objective This tutorial demonstrates how to create an application (WordPress as an example) in KubeSphere and access it outside the cluster.
+Prerequisites An account project-regular is needed with the role operator assigned in one of your projects (the user has been invited to the project).</description>
+    </item>
+    
+    <item>
+      <title>Enable Pluggable Components</title>
+      <link>https://kubesphere.eu/zh/docs/quick-start/enable-pluggable-components/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/quick-start/enable-pluggable-components/</guid>
+      <description>This tutorial demonstrates how to enable pluggable components of KubeSphere both before and after the installation. KubeSphere features ten pluggable components which are listed below.
+   Configuration Item Corresponding Component Description     alerting KubeSphere alerting system Enable users to customize alerting policies to send messages to receivers in time with different time intervals and alerting levels to choose from.   auditing KubeSphere audit log system Provide a security-relevant chronological set of records, recording the sequence of activities that happen in the platform, initiated by different tenants.</description>
+    </item>
+    
+    <item>
+      <title>Overview</title>
+      <link>https://kubesphere.eu/zh/docs/pluggable-components/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/pluggable-components/overview/</guid>
+      <description>TBD</description>
+    </item>
+    
+    <item>
+      <title>KubeSphere App Store</title>
+      <link>https://kubesphere.eu/zh/docs/pluggable-components/app-store/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/pluggable-components/app-store/</guid>
+      <description>What is KubeSphere App Store As an open-source and app-centric container platform, KubeSphere provides users with a Helm-based app store for application lifecycle management on the back of OpenPitrix, an open-source web-based system to package, deploy and manage different types of apps. KubeSphere App Store allows ISVs, developers and users to upload, test, deploy and release apps with just several clicks in a one-stop shop.
+Internally, KubeSphere App Store can serve as a place for different teams to share data, middleware, and office applications.</description>
+    </item>
+    
+    <item>
+      <title>KubeSphere DevOps System</title>
+      <link>https://kubesphere.eu/zh/docs/pluggable-components/devops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/pluggable-components/devops/</guid>
+      <description>What is KubeSphere DevOps System KubeSphere DevOps System is designed for CI/CD workflows in Kubernetes. Based on Jenkins, it provides one-stop solutions to help both development and Ops teams build, test and publish apps to Kubernetes in a straight-forward way. It also features plugin management, Binary-to-Image (B2I), Source-to-Image (S2I), code dependency caching, code quality analysis, pipeline logging, etc.
+The DevOps system offers an enabling environment for users as apps can be automatically released to the same platform.</description>
+    </item>
+    
+    <item>
+      <title>KubeSphere Auditing Logs</title>
+      <link>https://kubesphere.eu/zh/docs/pluggable-components/auditing-logs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/pluggable-components/auditing-logs/</guid>
+      <description>What are KubeSphere Auditing Logs? KubeSphere Auditing Log System provides a security-relevant chronological set of records documenting the sequence of activities related to individual users, managers, or other components of the system. Each request to KubeSphere generates an event that is then written to a webhook and processed according to a certain rule.
+For more information, see Logging, Events, and Auditing.
+Enable Auditing Logs before Installation Installing on Linux When you install KubeSphere on Linux, you need to create a configuration file, which lists all KubeSphere components.</description>
+    </item>
+    
+    <item>
+      <title>KubeSphere Events</title>
+      <link>https://kubesphere.eu/zh/docs/pluggable-components/events/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/pluggable-components/events/</guid>
+      <description>What are KubeSphere Events KubeSphere events allow users to keep track of what is happening inside a cluster, such as node scheduling status and image pulling result. They will be accurately recorded with the specific reason, status and message displayed in the web console. To query events, users can quickly launch the web Toolkit and enter related information in the search bar with different filters (e.g keyword and project) available. Events can also be archived to third-party tools, such as Elasticsearch, Kafka or Fluentd.</description>
+    </item>
+    
+    <item>
+      <title>KubeSphere Logging System</title>
+      <link>https://kubesphere.eu/zh/docs/pluggable-components/logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/pluggable-components/logging/</guid>
+      <description>What is KubeSphere Logging System KubeSphere provides a powerful, holistic and easy-to-use logging system for log collection, query and management. It covers logs at varied levels, including tenants, infrastructure resources, and applications. Users can search logs from different dimensions, such as project, workload, Pod and keyword. Compared with Kibana, the tenant-based logging system of KubeSphere features better isolation and security among tenants as each tenant can only view his or her own logs.</description>
+    </item>
+    
+    <item>
+      <title>KubeSphere Service Mesh</title>
+      <link>https://kubesphere.eu/zh/docs/pluggable-components/service-mesh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/pluggable-components/service-mesh/</guid>
+      <description>What is KubeSphere Service Mesh On the basis of Istio, KubeSphere Service Mesh visualizes microservices governance and traffic management. It features a powerful toolkit including circuit breaking, blue-green deployment, canary release, traffic mirroring, distributed tracing, observability and traffic control. Developers can easily get started with Service Mesh without any code hacking, with the learning curve of Istio greatly reduced. All features of KubeSphere Service Mesh are designed to meet users&amp;rsquo; demand for their business.</description>
+    </item>
+    
+    <item>
+      <title>KubeSphere Alerting and Notification</title>
+      <link>https://kubesphere.eu/zh/docs/pluggable-components/alerting-notification/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/pluggable-components/alerting-notification/</guid>
+      <description>What are KubeSphere Alerting and Notification Alerting and Notification are two important building blocks of observability, closely related monitoring and logging. The alerting system in KubeSphere, coupled with the proactive failure notification system, allows users to know activities of interest based on alert policies. When a predefined threshold of a certain metric is reached, an alert will be sent to preconfigured recipients, the notification method of which can be set by yourself, including Email, WeChat Work and Slack.</description>
+    </item>
+    
+    <item>
+      <title>Network Policy</title>
+      <link>https://kubesphere.eu/zh/docs/pluggable-components/network-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/pluggable-components/network-policy/</guid>
+      <description>What is Network Policy Starting from v3.0.0, users can configure network policies of native Kubernetes in KubeSphere. Network Policies are an application-centric construct, enabling you to specify how a pod is allowed to communicate with various network entities over the network. With network policies, users can achieve network isolation within the same cluster, which means firewalls can be set up between certain instances (pods).
+注解
+ Please make sure that the CNI network plugin used by the cluster supports Network Policies before you enable it.</description>
+    </item>
+    
+    <item>
+      <title>Overview</title>
+      <link>https://kubesphere.eu/zh/docs/upgrade/upgrade-overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/upgrade/upgrade-overview/</guid>
+      <description>Kubernetes KubeSphere v3.0.0 is compatible with Kubernetes 1.15.x, 1.16.x, 1.17.x and 1.18.x:
+  If your KubeSphere v2.1.x is installed on Kubernetes 1.15.x+, you can choose to only upgrade KubeSphere to v3.0.0 or upgrade Kubernetes (to a higher version) and KubeSphere (to v3.0.0) at the same time.
+  If your KubeSphere v2.1.x is installed on Kubernetes 1.14.x, you have to upgrade Kubernetes (to 1.15.x+) and KubeSphere (to v3.0.0 ) at the same time.</description>
+    </item>
+    
+    <item>
+      <title>Upgrade with KubeKey</title>
+      <link>https://kubesphere.eu/zh/docs/upgrade/upgrade-with-kubekey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/upgrade/upgrade-with-kubekey/</guid>
+      <description>KubeKey is recommended for users whose KubeSphere and Kubernetes were both deployed by KubeSphere Installer. If your Kubernetes cluster was provisioned by yourself or cloud providers, please refer to Upgrade with ks-installer.
+Prerequisites  You need to have a KubeSphere cluster running version 2.1.1.  警告
+If your KubeSphere version is v2.1.0 or earlier, please upgrade to v2.1.1 first.   Download KubeKey.   Download KubeKey using the following command:</description>
+    </item>
+    
+    <item>
+      <title>Upgrade with ks-installer</title>
+      <link>https://kubesphere.eu/zh/docs/upgrade/upgrade-with-ks-installer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/upgrade/upgrade-with-ks-installer/</guid>
+      <description>ks-installer is recommended for users whose Kubernetes clusters were not set up via KubeSphere Installer, but hosted by cloud vendors. This tutorial is for upgrading KubeSphere only. Cluster operators are responsible for upgrading Kubernetes themselves beforehand.
+Prerequisites  You need to have a KubeSphere cluster running version 2.1.1.  警告
+If your KubeSphere version is v2.1.0 or earlier, please upgrade to v2.1.1 first.   Make sure you read Release Notes For 3.</description>
+    </item>
+    
+    <item>
+      <title>Changes after Upgrade</title>
+      <link>https://kubesphere.eu/zh/docs/upgrade/what-changed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/upgrade/what-changed/</guid>
+      <description>This section covers the changes after upgrade for existing settings in previous versions. If you want to know all the new features and enhancements in KubeSphere 3.0.0, see Release Notes for 3.0.0 directly.
+Access Control The definition of custom roles has been simplified. Some closely-related permission items have been aggregated into permission groups. Custom roles will not change during the upgrade and can be used directly after the upgrade if they conform to new policy rules for authorization assignment.</description>
+    </item>
+    
+    <item>
+      <title>FAQ</title>
+      <link>https://kubesphere.eu/zh/docs/upgrade/upgrade-faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/upgrade/upgrade-faq/</guid>
+      <description>How to upgrade Qingcloud CSI after upgrading? Currently Qingcloud CSI will not be upgraded by KubeKey. You can run the following command to upgrade CSI manually after finishing KubeSphere upgrade:
+git clone https://github.com/yunify/qingcloud-csi.git cd qingcloud-csi/ git checkout v1.1.1 kubectl delete -f deploy/disk/kubernetes/releases/qingcloud-csi-disk-v1.1.1.yaml kubectl delete sc csi-qingcloud helm repo add test https://charts.kubesphere.io/test helm install test/csi-qingcloud --name-template csi-qingcloud --namespace kube-system \ --set config.qy_access_key_id=KEY,config.qy_secret_access_key=SECRET,config.zone=ZONE,sc.type=2 Wait until csi controller and daemonset are running
+$ kubectl get po -n kube-system | grep csi csi-qingcloud-controller-56979d46cb-qk9ck 5/5 Running 0 24h csi-qingcloud-node-4s8n5 2/2 Running 0 24h csi-qingcloud-node-65dqn 2/2 Running 0 24h csi-qingcloud-node-khk49 2/2 Running 0 24h csi-qingcloud-node-nz9q9 2/2 Running 0 24h csi-qingcloud-node-pxr56 2/2 Running 0 24h csi-qingcloud-node-whqhk 2/2 Running 0 24h Then run the following command to check csi image version is 1.</description>
     </item>
     
     <item>
@@ -248,7 +1209,7 @@ KubeSphere 基于 OpenPitrix 和 Helm 提供了应用商店，对内可作为团
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kubesphere.eu/zh/conferences/logging/</guid>
-      <description>日志通常含有非常有价值的信息，日志管理是云原生可观察性的重要组成部分。不同于物理机或虚拟机，在容器与 Kubernetes 环境中，日志有标准的输出方式(stdout)，这使得进行平台级统一的日志收集、分析与管理水到渠成，并体现出日志数据独特的价值。本文将介绍云原生领域比较主流的日志管理方案 EFK 、 KubeSphere 团队开发的 FluentBit Operator 以及 KubeSphere 在多租户日志管理方面的实践。此外还将介绍受 Prometheus 启发专为 Kubenetes 日志管理开发，具有低成本可扩展等特性的开源软件 Loki。
+      <description>日志通常含有非常有价值的信息，日志管理是云原生可观察性的重要组成部分。不同于物理机或虚拟机，在容器与 Kubernetes 环境中，日志有标准的输出方式(stdout)，这使得进行平台级统一的日志收集、分析与管理水到渠成，并体现出日志数据独特的价值。本文将介绍云原生领域比较主流的日志管理方案 EFK 、 KubeSphere 团队开发的 FluentBit Operator 以及 KubeSphere 在多租户日志管理方面的实践。此外还将介绍受 Prometheus 启发专为 Kubernetes 日志管理开发，具有低成本可扩展等特性的开源软件 Loki。
 什么是可观察性 近年来随着以 Kubernetes 为代表的云原生技术的崛起，可观察性 ( Observability ) 作为一种新的理念逐渐走入人们的视野。云原生基金会 ( CNCF ) 在其 Landscape 里已经将可观察性单独列为一个分类，狭义上主要包含监控、日志和追踪等，广义上还包括告警、事件、审计等。在此领域陆续涌现出了众多新兴开源软件如 Prometheus, Grafana, Fluentd, Loki, Jaeger 等。
 日志作为可观察性的重要组成部分在开发、运维、测试、审计等过程中起着非常重要的作用。著名的应用开发十二要素中提到：“日志使得应用程序运行的动作变得透明，应用本身从不考虑存储自己的输出流。 不应该试图去写或者管理日志文件。每一个运行的进程都会直接输出到标准输出（stdout）。每个进程的输出流由运行环境截获，并将其他输出流整理在一起，然后一并发送给一个或多个最终的处理程序，用于查看或是长期存档。”
 在物理机或者虚拟机的环境中，日志通常是输出到文件，并由用户自己管理，这使得日志的集中管理和分析变得困难和不便。而 Kubernetes 、docker 等容器技术直接将日志输出到 stdout，这使得日志的集中管理和分析变得更为便捷和水到渠成。
@@ -302,6 +1263,18 @@ pipeline { agent { node { label &#39;go&#39; } } stages { stage(&#39;testing&#39
 什么是 vGPU vGPU 又称 虚拟 GPU，早在几年前就由 NVIDIA 推出了这个概念以及相关的产品。vGPU 是通过对数据中心（物理机）的 GPU 进行虚拟化，用户可在多个虚拟机或容器中 共享该数据中心的物理 GPU 资源，有效地提高性能并降低成本。vGPU 使得 GPU 与用户之间的关系不再是一对一，而是 一对多。
 为什么需要 vGPU 随着 AI 技术的快速发展，越来越多的企业开始将 AI 技术应用到自身业务之中。目前，云端 AI 算力主要由三类 AI 加速器来提供：GPU，FPGA 和 AI ASIC 芯片。这些加速器的优点是性能非常高，缺点是 成本高昂，缺少异构加速管理和调度。大部分企业因无法构建高效的加速器资源池，而不得不独占式地使用这些昂贵的加速器资源，导致 资源利用率低，成本高。
 以 GPU 为例，通过创新的 vGPU 虚拟化技术，能够帮助用户无需任务修改就能透明地共享和使用数据中心内任何服务器之上的 AI 加速器，不但能够帮助用户提高资源利用率，而且可以 极大便利 AI 应用的部署，构建数据中心级的 AI 加速器资源池。</description>
+    </item>
+    
+    <item>
+      <title>在 VMware vSphere 安装 KubeSphere</title>
+      <link>https://kubesphere.eu/zh/docs/installing-on-linux/on-premises/install-kubesphere-on-vmware-vsphere/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kubesphere.eu/zh/docs/installing-on-linux/on-premises/install-kubesphere-on-vmware-vsphere/</guid>
+      <description>在 VMware vSphere 部署高可用的 KubeSphere 对于生产环境，我们需要考虑集群的高可用性。如果关键组件（例如 kube-apiserver，kube-scheduler 和 kube-controller-manager）都在同一主节点上运行，则一旦主节点出现故障，Kubernetes 和 KubeSphere 将不可用。因此，我们需要通过为负载均衡器配置多个主节点来设置高可用性集群。您可以使用任何云负载平衡器或任何硬件负载平衡器（例如F5）。另外，Keepalived 和HAproxy 或 Nginx 也是创建高可用性集群的替代方法。
+本教程为您提供了一个示例，说明如何使用 keepalived + haproxy 对 kube-apiserver 进行负载均衡，实现高可用 kubernetes 集群。
+前提条件  请遵循该指南，确保您已经知道如何将 KubeSphere 与多节点集群一起安装。有关用于安装的 config yaml 文件的详细信息，请参阅多节点安装。本教程重点介绍如何配置负载均衡器。 您需要一个 VMware vSphere 帐户来创建VM资源。 考虑到数据的持久性，对于生产环境，我们建议您准备持久化存储。若搭建开发和测试，您可以直接使用默认集成的 OpenEBS 准备 LocalPV。  部署架构 创建主机 本示例创建 9 台 CentOS Linux release 7.6.1810（Core） 的虚拟机，默认的最小化安装，每台配置为 2 Core 4 GB 40 G 即可。
+   主机 IP 主机名称 角色     10.</description>
     </item>
     
     <item>

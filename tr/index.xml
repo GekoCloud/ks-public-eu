@@ -12,51 +12,6 @@
     
     
     <item>
-      <title>aaaaaa</title>
-      <link>https://kubesphere.eu/tr/docs/quick-start/second/third/aaa/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kubesphere.eu/tr/docs/quick-start/second/third/aaa/</guid>
-      <description>test test</description>
-    </item>
-    
-    <item>
-      <title>quick-start-guide</title>
-      <link>https://kubesphere.eu/tr/docs/quick-start/quick-start-guide/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kubesphere.eu/tr/docs/quick-start/quick-start-guide/</guid>
-      <description>test test</description>
-    </item>
-    
-    <item>
-      <title>what-is-kubesphere</title>
-      <link>https://kubesphere.eu/tr/docs/introductions/what-is-kubesphere/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kubesphere.eu/tr/docs/introductions/what-is-kubesphere/</guid>
-      <description>test test</description>
-    </item>
-    
-    <item>
-      <title>all-in-one</title>
-      <link>https://kubesphere.eu/tr/docs/introductions/all-in-one/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kubesphere.eu/tr/docs/introductions/all-in-one/</guid>
-      <description>test test</description>
-    </item>
-    
-    <item>
-      <title>second-a</title>
-      <link>https://kubesphere.eu/tr/docs/quick-start/second/a/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kubesphere.eu/tr/docs/quick-start/second/a/</guid>
-      <description>test test</description>
-    </item>
-    
-    <item>
       <title>Multi-tenant Management: Creating Accounts, Roles, Workspaces, Projects and DevOps Projects</title>
       <link>https://kubesphere.eu/tr/conferences/admin-quick-start/</link>
       <pubDate>Mon, 24 Jun 2019 00:00:00 +0000</pubDate>
